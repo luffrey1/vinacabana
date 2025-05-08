@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Viña & Cabaña - Experiencias premium de enoturismo y alojamiento ecológico de lujo entre viñedos en la Ribera del Duero">
+  <meta name="keywords" content="enoturismo, Ribera del Duero, cabañas de lujo, vinos, experiencias, wine tourism, catas">
+  <meta name="author" content="Viña & Cabaña">
+  <meta name="theme-color" content="#7A3040">
+  
+  <title>Viña & Cabaña - Experiencias Premium de Enoturismo</title>
+  
+  <!-- Preconecta a orígenes de terceros para mejorar la velocidad -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net">
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+  
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- ScrollReveal para animaciones al hacer scroll -->
+  <script src="https://unpkg.com/scrollreveal@4.0.9/dist/scrollreveal.min.js" defer></script>
+  
+  <!-- Splide.js para carruseles optimizados -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  
+  <style>
+    /* Estilos específicos para esta página */
+    .hero-section {
+      background-image: url('assets/img/fondo.avif');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+    }
+    
+    .splide__slide img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+    
+    .splide__slide:hover img {
+      transform: scale(1.03);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+    
+    .btn {
+      transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    }
+    
+    .btn:hover {
+      transform: translateY(-3px);
+    }
+    
+    .about-image img {
+      transition: transform 0.5s ease;
+    }
+    
+    .about-image:hover img {
+      transform: scale(1.05);
+    }
+    
+    /* Mejora de espaciado */
+    section {
+      padding: 5rem 0;
+    }
+    
+    .section-title {
+      margin-bottom: 2.5rem;
+    }
+    
+    /* Mejora de accesibilidad */
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border-width: 0;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top bg-glass">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <img src="assets/img/logo.png" alt="Viña & Cabaña Logo" height="40" width="auto">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link active" href="index.html" aria-current="page">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">Nosotros</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="experiencias.html">Experiencias</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="reservas.html">Reservas</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="testimonios.html">Testimonios</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contacto.html">Contacto</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section with Parallax -->
+  <header class="hero-section">
+    <div class="hero-content" data-sr-id="1">
+      <h1>Vive una experiencia única entre viñedos</h1>
+      <div class="hero-description bg-glass p-4 mb-4 rounded shadow">
+        <div class="row">
+          <div class="col-md-4 border-end border-light py-2">
+            <div class="text-center mb-2">
+              <i class="fas fa-leaf text-primary fa-2x mb-2"></i>
+              <h5 class="text-wine-red">Alojamiento Ecológico</h5>
+            </div>
+            <p class="small">Cabañas de lujo sostenibles en plena Ribera del Duero</p>
+          </div>
+          <div class="col-md-4 border-end border-light py-2">
+            <div class="text-center mb-2">
+              <i class="fas fa-wine-glass-alt text-primary fa-2x mb-2"></i>
+              <h5 class="text-wine-red">Enoturismo Premium</h5>
+            </div>
+            <p class="small">Experiencias únicas con los mejores vinos de la región</p>
+          </div>
+          <div class="col-md-4 py-2">
+            <div class="text-center mb-2">
+              <i class="fas fa-utensils text-primary fa-2x mb-2"></i>
+              <h5 class="text-wine-red">Gastronomía Local</h5>
+            </div>
+            <p class="small">Sabores auténticos en un entorno de tranquilidad absoluta</p>
+          </div>
+        </div>
+      </div>
+      <div class="hero-buttons">
+        <a href="experiencias.html" class="btn btn-primary btn-lg">Descubre nuestras experiencias</a>
+        <a href="reservas.html" class="btn btn-olive btn-lg">Reserva tu cabaña</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- About Section -->
+  <section id="about">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-6" data-sr-id="2">
+          <h2 class="section-title">Sobre Viña & Cabaña</h2>
+          <p class="lead">Experiencias premium de enoturismo y alojamiento ecológico de lujo entre viñedos en la Ribera del Duero.</p>
+          <p>En el corazón de la Ribera del Duero, Viña & Cabaña ofrece una experiencia única que combina la pasión por el vino, el confort de nuestras cabañas ecológicas de lujo y la conexión con la naturaleza.</p>
+          <p>Nuestras cabañas están construidas con materiales sostenibles y diseñadas para integrarse perfectamente en el paisaje de viñedos, ofreciendo privacidad, confort y vistas espectaculares.</p>
+          <div class="mt-4">
+            <a href="about.html" class="btn btn-outline-primary">Conoce nuestra historia</a>
+          </div>
+        </div>
+        <div class="col-md-6" data-sr-id="3">
+          <!-- Imagen de vinos -->
+          <div class="about-image">
+            <img src="assets/img/vinosvarios.jpg" alt="Selección de vinos premium de la región" class="img-fluid rounded shadow" width="100%" height="auto" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery Section -->
+  <section id="gallery" class="bg-light">
+    <div class="container">
+      <h2 class="section-title text-center" data-sr-id="4">Nuestra Galería</h2>
+      
+      <!-- Splide Gallery -->
+      <div class="splide" role="group" aria-label="Galería de imágenes" data-sr-id="5">
+        <div class="splide__track">
+          <ul class="splide__list">
+            <li class="splide__slide">
+              <!-- Imagen de viñedos al amanecer -->
+              <img src="assets/img/parejavino.jpg" alt="Viñedos al amanecer" class="img-fluid rounded shadow" loading="lazy">
+            </li>
+            <li class="splide__slide">
+              <!-- Imagen de interior de cabaña de lujo -->
+              <img src="assets/img/cabañalujo.jpg" alt="Interior de cabaña de lujo" class="img-fluid rounded shadow" loading="lazy">
+            </li>
+            <li class="splide__slide">
+              <!-- Imagen de cena romántica con vino -->
+              <img src="assets/img/cenaromantica.png" alt="Cena romántica con vino" class="img-fluid rounded shadow" loading="lazy">
+            </li>
+            <li class="splide__slide">
+              <!-- Imagen de pareja disfrutando un vino al atardecer -->
+              <img src="assets/img/viñedos.webp" alt="Pareja disfrutando un vino al atardecer" class="img-fluid rounded shadow" loading="lazy">
+            </li>
+          </ul>
+        </div>
+        <div class="splide__arrows">
+          <button class="splide__arrow splide__arrow--prev">
+            <span class="sr-only">Anterior</span>
+            <i class="fas fa-chevron-left"></i>
+          </button>
+          <button class="splide__arrow splide__arrow--next">
+            <span class="sr-only">Siguiente</span>
+            <i class="fas fa-chevron-right"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section id="cta" class="bg-accent text-white text-center">
+    <div class="container">
+      <div class="cta-content" data-sr-id="6">
+        <h2>Reserva tu experiencia única ahora</h2>
+        <p class="lead mb-4">Escápate a la naturaleza y disfruta del mejor vino en un entorno incomparable</p>
+        <a href="reservas.html" class="btn btn-light btn-lg">Reservar ahora</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 mb-4 mb-lg-0">
+          <h5>Viña & Cabaña</h5>
+          <p>Experiencias premium de enoturismo y alojamiento ecológico de lujo entre viñedos.</p>
+        </div>
+        <div class="col-lg-4 mb-4 mb-lg-0">
+          <h5>Enlaces rápidos</h5>
+          <ul class="list-unstyled footer-links">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="experiencias.html">Experiencias</a></li>
+            <li><a href="reservas.html">Reservas</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+            <li><a href="legal.html">Aviso legal</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-4">
+          <h5>Contacto</h5>
+          <address>
+            <p><i class="fas fa-map-marker-alt me-2"></i> Bodegas Viña Mayor, Quintanilla de Onésimo (Valladolid)</p>
+            <p><i class="fas fa-phone me-2"></i> <a href="tel:+34123456789" class="text-white">+34 123 456 789</a></p>
+            <p><i class="fas fa-envelope me-2"></i> <a href="mailto:info@viñaycabana.com" class="text-white">info@viñaycabana.com</a></p>
+            <p><i class="fas fa-envelope me-2"></i> <a href="mailto:reservas@viña&cabaña.com" class="text-white">reservas@viña&cabaña.com</a></p>
+          </address>
+          <div class="social-icons">
+            <a href="https://www.facebook.com/share/18VQR5HABd/?mibextid=wwXIfr" aria-label="Facebook" target="_blank" rel="noopener"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/vina_y_cabana_experience?igsh=MW14Z2MyeTg2djRwOQ==" aria-label="Instagram" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="row mt-4">
+        <div class="col-12 text-center">
+          <p class="mb-0">Vive con nosotros – Viña & Cabaña &copy; <span id="year"></span></p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Botón volver arriba -->
+  <button id="backToTop" class="btn btn-primary rounded-circle position-fixed bottom-0 end-0 m-4 d-none" aria-label="Volver arriba">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <!-- Bootstrap Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" defer></script>
+  
+  <!-- Splide.js para carruseles optimizados -->
+  <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+  
+  <!-- Parallax.js mejorado -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax.js/1.5.0/parallax.min.js" defer></script>
+  
+  <!-- Custom JavaScript -->
+  <script src="assets/js/script.js" defer></script>
+  
+  <!-- Inicialización del carrusel optimizado y animaciones -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Inicializar ScrollReveal para animaciones al hacer scroll
+      const sr = ScrollReveal({
+        origin: 'bottom',
+        distance: '20px',
+        duration: 800,
+        delay: 200,
+        easing: 'cubic-bezier(0.25, 0.1, 0.25, 1)',
+        reset: false
+      });
+      
+      sr.reveal('[data-sr-id]');
+      
+      // Inicializar carrusel con Splide.js
+      new Splide('.splide', {
+        type: 'loop',
+        perPage: 3,
+        perMove: 1,
+        gap: 20,
+        padding: '2rem',
+        arrows: true,
+        pagination: true,
+        autoplay: true,
+        interval: 3000,
+        pauseOnHover: true,
+        breakpoints: {
+          1024: {
+            perPage: 3,
+          },
+          768: {
+            perPage: 2,
+          },
+          640: {
+            perPage: 1,
+          },
+        }
+      }).mount();
+      
+      // Establecer el año actual en el footer
+      document.getElementById('year').innerText = new Date().getFullYear();
+      
+      // Botón volver arriba
+      const backToTopBtn = document.getElementById('backToTop');
+      window.addEventListener('scroll', function() {
+        if (window.scrollY > 300) {
+          backToTopBtn.classList.remove('d-none');
+          backToTopBtn.classList.add('d-block');
+        } else {
+          backToTopBtn.classList.remove('d-block');
+          backToTopBtn.classList.add('d-none');
+        }
+      }, { passive: true });
+      
+      backToTopBtn.addEventListener('click', function() {
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+        });
+      });
+    });
+  </script>
+</body>
+</html> 

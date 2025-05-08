@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Opiniones de Clientes - Viña & Cabaña</title>
+  
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- AOS Animate On Scroll -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  
+  <!-- Swiper Carousel -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  
+  <style>
+    .testimonial-section {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('assets/img/vineyard-blur.jpg');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      color: var(--white);
+      padding: 6rem 0;
+    }
+    
+    .testimonial-card {
+      background-color: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 10px;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      transition: transform 0.3s;
+    }
+    
+    .testimonial-card:hover {
+      transform: translateY(-10px);
+    }
+    
+    .rating {
+      color: #FFD700;
+      margin-bottom: 1rem;
+    }
+    
+    .testimonial-text {
+      font-style: italic;
+      font-size: 1.1rem;
+      margin-bottom: 1.5rem;
+    }
+    
+    .testimonial-author {
+      display: flex;
+      align-items: center;
+    }
+    
+    .testimonial-author img {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-right: 1rem;
+    }
+    
+    .author-name {
+      font-weight: 600;
+    }
+    
+    .author-info {
+      color: rgba(255, 255, 255, 0.8);
+      font-size: 0.9rem;
+    }
+    
+    .review-card {
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      padding: 2rem;
+      height: 100%;
+      transition: transform 0.3s;
+    }
+    
+    .review-card:hover {
+      transform: translateY(-10px);
+    }
+    
+    .review-source {
+      font-weight: 600;
+      color: var(--wine-red);
+      display: flex;
+      align-items: center;
+      margin-bottom: 1rem;
+    }
+    
+    .review-source i {
+      margin-right: 0.5rem;
+      font-size: 1.2rem;
+    }
+    
+    .review-text {
+      font-style: italic;
+    }
+    
+    .swiper-testimonial {
+      padding-bottom: 50px;
+    }
+    
+    .swiper-pagination-bullet-active {
+      background-color: var(--white);
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top bg-glass">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <img src="assets/img/logo.png" alt="Viña & Cabaña Logo" height="40">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">Nosotros</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="experiencias.html">Experiencias</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="reservas.html">Reservas</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="testimonios.html">Testimonios</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contacto.html">Contacto</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+  <!-- Testimonials Carousel Section -->
+  <section class="testimonial-section">
+    <div class="container">
+      <h2 class="section-title text-center mb-5 text-white" data-aos="fade-up">Experiencias de nuestros clientes</h2>
+      
+      <!-- Swiper Testimonials -->
+      <div class="swiper swiper-testimonial" data-aos="fade-up">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="testimonial-card">
+              <div class="rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+              <p class="testimonial-text">"Una experiencia única entre viñedos. Las cabañas son espectaculares, con vistas increíbles y totalmente equipadas. La cata de vinos al atardecer fue mágica. Volveremos seguro en nuestra próxima escapada."</p>
+              <div class="testimonial-author">
+                <div>
+                  <p class="author-name mb-0">Carlos y Laura</p>
+                  <p class="author-info mb-0">Madrid - Abril 2023</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="swiper-slide">
+            <div class="testimonial-card">
+              <div class="rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+              <p class="testimonial-text">"Sin duda, la mejor experiencia enoturística que hemos tenido. La Suite Entre Viñas con jacuzzi es espectacular, perfecta para una escapada romántica. Las visitas a las bodegas muy completas y el personal encantador."</p>
+              <div class="testimonial-author">
+                <div>
+                  <p class="author-name mb-0">Elena Martínez</p>
+                  <p class="author-info mb-0">Barcelona - Junio 2023</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="swiper-slide">
+            <div class="testimonial-card">
+              <div class="rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+              </div>
+              <p class="testimonial-text">"Celebramos nuestro aniversario de bodas en Viña & Cabaña y fue perfecto. La cena privada en la terraza de la cabaña, el servicio, los detalles personalizados... todo cuidado al máximo. Gracias por hacer de nuestro día algo tan especial."</p>
+              <div class="testimonial-author">
+                <div>
+                  <p class="author-name mb-0">Antonio y María</p>
+                  <p class="author-info mb-0">Valencia - Mayo 2023</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="swiper-slide">
+            <div class="testimonial-card">
+              <div class="rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+              <p class="testimonial-text">"Estuvimos en la Cabaña Familiar con nuestro perro y ha sido una experiencia fantástica. El entorno es precioso, las actividades muy interesantes y la cabaña súper acogedora. La ruta de senderismo entre viñedos con picnic incluido fue espectacular."</p>
+              <div class="testimonial-author">
+                <div>
+                  <p class="author-name mb-0">Familia Rodríguez</p>
+                  <p class="author-info mb-0">Bilbao - Julio 2023</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reviews Section -->
+  <section class="py-5">
+    <div class="container">
+      <h2 class="section-title text-center mb-5" data-aos="fade-up">Lo que dicen sobre nosotros</h2>
+      
+      <div class="row">
+        <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="review-card">
+            <div class="review-source">
+              <i class="fab fa-tripadvisor"></i> Tripadvisor
+            </div>
+            <div class="rating mb-3">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <p class="review-text">"Un lugar para desconectar y disfrutar. Las cabañas están perfectamente integradas en el paisaje, el personal es atento y las experiencias son únicas. Calidad precio excelente."</p>
+            <p class="text-end text-muted fst-italic">- JavierG84</p>
+          </div>
+        </div>
+        
+        <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="200">
+          <div class="review-card">
+            <div class="review-source">
+              <i class="fab fa-google"></i> Google Reviews
+            </div>
+            <div class="rating mb-3">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <p class="review-text">"Alojamiento espectacular, ecológico y sostenible. Las vistas son impresionantes, y las experiencias de cata de vinos y visita a las bodegas muy educativas y divertidas. Volveremos seguro."</p>
+            <p class="text-end text-muted fst-italic">- Lucía Fernández</p>
+          </div>
+        </div>
+        
+        <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="300">
+          <div class="review-card">
+            <div class="review-source">
+              <i class="fab fa-booking"></i> Booking.com
+            </div>
+            <div class="rating mb-3">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
+            </div>
+            <p class="review-text">"Cabaña perfectamente equipada, muy limpia y confortable. El entorno es precioso y la tranquilidad absoluta. El desayuno es excelente, con productos caseros. La atención del personal exquisita."</p>
+            <p class="text-end text-muted fst-italic">- Pedro S.</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="row mt-4">
+        <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="400">
+          <div class="review-card">
+            <div class="review-source">
+              <i class="fas fa-newspaper"></i> El Viajero - El País
+            </div>
+            <div class="rating mb-3">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <p class="review-text">"Viña & Cabaña representa una nueva forma de entender el enoturismo. Un concepto sostenible, elegante y auténtico que combina a la perfección el respeto por la tierra con experiencias exclusivas."</p>
+            <p class="text-end text-muted fst-italic">- Crítica especializada</p>
+          </div>
+        </div>
+        
+        <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="500">
+          <div class="review-card">
+            <div class="review-source">
+              <i class="fab fa-tripadvisor"></i> Tripadvisor
+            </div>
+            <div class="rating mb-3">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <p class="review-text">"Las cenas con maridaje son espectaculares, con platos elaborados con productos de la zona y vinos excelentes. El chef explica cada plato y el sumiller cada vino. Una experiencia gastronómica completa."</p>
+            <p class="text-end text-muted fst-italic">- MariaViajera</p>
+          </div>
+        </div>
+        
+        <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="600">
+          <div class="review-card">
+            <div class="review-source">
+              <i class="fab fa-instagram"></i> Instagram
+            </div>
+            <div class="rating mb-3">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <p class="review-text">"El lugar más instagrameable de la Ribera del Duero. Las cabañas son preciosas, súper cómodas y con vistas increíbles. Las fotos del atardecer desde la terraza son espectaculares. #VinoCabañaSunset"</p>
+            <p class="text-end text-muted fst-italic">- @viajeros_por_españa</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call to Action -->
+  <section class="py-5 bg-accent text-white text-center">
+    <div class="container">
+      <h2 data-aos="fade-up">¿Te gustaría vivir tu propia experiencia?</h2>
+      <p class="lead mb-4" data-aos="fade-up" data-aos-delay="100">Reserva ahora y únete a nuestros clientes satisfechos</p>
+      <div data-aos="fade-up" data-aos-delay="200">
+        <a href="reservas.html" class="btn btn-light btn-lg me-3">Reservar alojamiento</a>
+        <a href="experiencias.html" class="btn btn-outline-light btn-lg">Ver experiencias</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 mb-4 mb-lg-0">
+          <h5>Viña & Cabaña</h5>
+          <p>Experiencias premium de enoturismo y alojamiento ecológico de lujo entre viñedos.</p>
+        </div>
+        <div class="col-lg-4 mb-4 mb-lg-0">
+          <h5>Enlaces rápidos</h5>
+          <ul class="list-unstyled footer-links">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="experiencias.html">Experiencias</a></li>
+            <li><a href="reservas.html">Reservas</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+            <li><a href="legal.html">Aviso legal</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-4">
+          <h5>Contacto</h5>
+          <address>
+            <p><i class="fas fa-map-marker-alt me-2"></i> Bodegas Viña Mayor, Quintanilla de Onésimo (Valladolid)</p>
+            <p><i class="fas fa-phone me-2"></i> +34 123 456 789</p>
+            <p><i class="fas fa-envelope me-2"></i> info@viñaycabana.com</p>
+            <p><i class="fas fa-envelope me-2"></i> reservas@viña&cabaña.com</p>
+          </address>
+          <div class="social-icons">
+            <a href="https://www.facebook.com/share/18VQR5HABd/?mibextid=wwXIfr"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/vina_y_cabana_experience?igsh=MW14Z2MyeTg2djRwOQ=="><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="row mt-4">
+        <div class="col-12 text-center">
+          <p class="mb-0">Vive con nosotros – Viña & Cabaña &copy; <span id="year"></span></p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  
+  <!-- AOS Library -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+  
+  <!-- Parallax.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax.js/1.5.0/parallax.min.js"></script>
+  
+  <!-- Custom JavaScript -->
+  <script src="assets/js/script.js"></script>
+  
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Initialize testimonials swiper
+      const swiperTestimonial = new Swiper('.swiper-testimonial', {
+        slidesPerView: 1,
+        spaceBetween: 30,
+        loop: true,
+        autoplay: {
+          delay: 5000,
+          disableOnInteraction: false,
+        },
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        },
+        breakpoints: {
+          768: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+          },
+          1024: {
+            slidesPerView: 3,
+            spaceBetween: 30,
+          },
+        },
+      });
+    });
+  </script>
+</body>
+</html>

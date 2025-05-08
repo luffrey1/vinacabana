@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacta con Nosotros - Viña & Cabaña</title>
+  
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- AOS Animate On Scroll -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="">
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  
+  <style>
+    .contact-form {
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      padding: 2rem;
+    }
+    
+    .contact-info {
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      padding: 2rem;
+      height: 100%;
+    }
+    
+    .contact-info-item {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 1.5rem;
+    }
+    
+    .contact-icon {
+      width: 50px;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: var(--wine-red);
+      color: white;
+      border-radius: 50%;
+      margin-right: 1rem;
+      flex-shrink: 0;
+    }
+    
+    #map {
+      height: 400px;
+      border-radius: 10px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    }
+    
+    .form-label {
+      font-weight: 500;
+    }
+    
+    .required-field::after {
+      content: "*";
+      color: red;
+      margin-left: 4px;
+    }
+    
+    .business-hours {
+      margin-top: 2rem;
+    }
+    
+    .business-hours h5 {
+      margin-bottom: 1rem;
+      color: var(--wine-red);
+    }
+    
+    .hours-item {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 0.5rem;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top bg-glass">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <img src="assets/img/logo.png" alt="Viña & Cabaña Logo" height="40">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">Nosotros</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="experiencias.html">Experiencias</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="reservas.html">Reservas</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="testimonios.html">Testimonios</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="contacto.html">Contacto</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Contact Section -->
+  <section class="py-5 mt-8">
+    <div class="container">
+      <div class="row g-5">
+        <!-- Contact Form -->
+        <div class="col-lg-7" data-aos="fade-right">
+          <div class="contact-form">
+            <h2 class="section-title mb-4">Envíanos un mensaje</h2>
+            <p class="mb-4">¿Tienes alguna pregunta o comentario? ¡Escríbenos! Nuestro equipo estará encantado de atenderte.</p>
+            <form>
+              <div class="row mb-3">
+                <div class="col-md-6 mb-3 mb-md-0">
+                  <label for="firstName" class="form-label required-field">Nombre</label>
+                  <input type="text" class="form-control" id="firstName" required>
+                </div>
+                <div class="col-md-6">
+                  <label for="lastName" class="form-label required-field">Apellido</label>
+                  <input type="text" class="form-control" id="lastName" required>
+                </div>
+              </div>
+              
+              <div class="row mb-3">
+                <div class="col-md-6 mb-3 mb-md-0">
+                  <label for="email" class="form-label required-field">Email</label>
+                  <input type="email" class="form-control" id="email" required>
+                </div>
+                <div class="col-md-6">
+                  <label for="phone" class="form-label">Teléfono</label>
+                  <input type="tel" class="form-control" id="phone">
+                </div>
+              </div>
+              
+              <div class="mb-3">
+                <label for="subject" class="form-label required-field">Asunto</label>
+                <input type="text" class="form-control" id="subject" required>
+              </div>
+              
+              <div class="mb-3">
+                <label for="message" class="form-label required-field">Mensaje</label>
+                <textarea class="form-control" id="message" rows="5" required></textarea>
+              </div>
+              
+              <div class="mb-3 form-check">
+                <input type="checkbox" class="form-check-input" id="privacyPolicy" required>
+                <label class="form-check-label" for="privacyPolicy">
+                  He leído y acepto la <a href="legal.html">política de privacidad</a>
+                </label>
+              </div>
+              
+              <button type="submit" class="btn btn-primary">Enviar mensaje</button>
+            </form>
+          </div>
+        </div>
+        
+        <!-- Contact Information -->
+        <div class="col-lg-5" data-aos="fade-left">
+          <div class="contact-info">
+            <h2 class="section-title mb-4">Información de contacto</h2>
+            
+            <div class="contact-info-item">
+              <div class="contact-icon">
+                <i class="fas fa-map-marker-alt"></i>
+              </div>
+              <div>
+                <h5>Dirección</h5>
+                <p>Bodegas Viña Mayor<br>Quintanilla de Onésimo<br>Valladolid, España</p>
+              </div>
+            </div>
+            
+            <div class="contact-info-item">
+              <div class="contact-icon">
+                <i class="fas fa-phone"></i>
+              </div>
+              <div>
+                <h5>Teléfono</h5>
+                <p>+34 123 456 789</p>
+              </div>
+            </div>
+            
+            <div class="contact-info-item">
+              <div class="contact-icon">
+                <i class="fas fa-envelope"></i>
+              </div>
+              <div>
+                <h5>Email</h5>
+                <p>info@viñaycabana.com<br>reservas@viña&cabaña.com</p>
+              </div>
+            </div>
+            
+            <div class="business-hours">
+              <h5><i class="far fa-clock me-2"></i> Horario de atención</h5>
+              <div class="mb-3">
+                <h6 class="text-muted mb-2">Temporada Baja:</h6>
+                <div class="hours-item">
+                  <span>Mañanas:</span>
+                  <span>8:00 - 16:00</span>
+                </div>
+                <div class="hours-item">
+                  <span>Tardes:</span>
+                  <span>16:00 - 22:00</span>
+                </div>
+              </div>
+              <div>
+                <h6 class="text-muted mb-2">Temporada Alta:</h6>
+                <div class="hours-item">
+                  <span>Mañanas:</span>
+                  <span>8:00 - 22:00</span>
+                </div>
+                <div class="hours-item">
+                  <span>Tardes:</span>
+                  <span>13:00 - 22:00</span>
+                </div>
+              </div>
+            </div>
+            
+            <div class="mt-4">
+              <h5>Síguenos en redes sociales</h5>
+              <div class="social-icons mt-3">
+                <a href="https://www.facebook.com/share/18VQR5HABd/?mibextid=wwXIfr" class="me-2"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/vina_y_cabana_experience?igsh=MW14Z2MyeTg2djRwOQ==" class="me-2"><i class="fab fa-instagram"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Map Section -->
+  <section class="py-5 bg-light">
+    <div class="container">
+      <h2 class="section-title text-center mb-5" data-aos="fade-up">Cómo llegar</h2>
+      <div id="map" data-aos="zoom-in"></div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer py-5 mt-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 mb-4 mb-lg-0">
+          <h5>Viña & Cabaña</h5>
+          <p>Experiencias premium de enoturismo y alojamiento ecológico de lujo entre viñedos.</p>
+        </div>
+        <div class="col-lg-4 mb-4 mb-lg-0">
+          <h5>Enlaces rápidos</h5>
+          <ul class="list-unstyled footer-links">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="experiencias.html">Experiencias</a></li>
+            <li><a href="reservas.html">Reservas</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+            <li><a href="legal.html">Aviso legal</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-4">
+          <h5>Contacto</h5>
+          <address>
+            <p><i class="fas fa-map-marker-alt me-2"></i> Bodegas Viña Mayor, Quintanilla de Onésimo (Valladolid)</p>
+            <p><i class="fas fa-phone me-2"></i> +34 123 456 789</p>
+            <p><i class="fas fa-envelope me-2"></i> info@viñaycabana.com</p>
+            <p><i class="fas fa-envelope me-2"></i> reservas@viña&cabaña.com</p>
+          </address>
+          <div class="social-icons">
+            <a href="https://www.facebook.com/share/18VQR5HABd/?mibextid=wwXIfr"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/vina_y_cabana_experience?igsh=MW14Z2MyeTg2djRwOQ=="><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="row mt-4">
+        <div class="col-12 text-center">
+          <p class="mb-0">Vive con nosotros – Viña & Cabaña &copy; <span id="year"></span></p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  
+  <!-- AOS Library -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  
+  <!-- Leaflet JS -->
+  <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js" integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
+  
+  <!-- Parallax.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax.js/1.5.0/parallax.min.js"></script>
+  
+  <!-- Custom JavaScript -->
+  <script src="assets/js/script.js"></script>
+  
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Initialize map
+      const map = L.map('map').setView([41.619670, -4.295608], 15); // Coordenadas actualizadas para Viña & Cabaña
+      
+      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+      }).addTo(map);
+      
+      // Add marker
+      const marker = L.marker([41.619670, -4.295608]).addTo(map);
+      marker.bindPopup("<b>Viña & Cabaña</b><br>Bodegas Viña Mayor, Quintanilla de Onésimo (Valladolid)<br><a href='https://maps.app.goo.gl/yd5TLueBXwFUGPGr9' target='_blank'>Ver en Google Maps</a>").openPopup();
+    });
+  </script>
+</body>
+</html>
