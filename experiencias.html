@@ -26,6 +26,9 @@
   <!-- Custom CSS -->
   <link rel="stylesheet" href="assets/css/style.css">
   
+  <!-- Estilos para multiidioma -->
+  <link rel="stylesheet" href="assets/css/i18n.css">
+  
   <style>
     .experience-card {
       border: none;
@@ -123,22 +126,34 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item">
-            <a class="nav-link" href="index.html">Inicio</a>
+            <a class="nav-link" href="index.html" data-i18n="nav_home">Inicio</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="about.html">Nosotros</a>
+            <a class="nav-link" href="about.html" data-i18n="nav_about">Nosotros</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" href="experiencias.html">Experiencias</a>
+            <a class="nav-link active" href="experiencias.html" data-i18n="nav_experiences">Experiencias</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="reservas.html">Reservas</a>
+            <a class="nav-link" href="reservas.html" data-i18n="nav_bookings">Reservas</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="testimonios.html">Testimonios</a>
+            <a class="nav-link" href="testimonios.html" data-i18n="nav_testimonials">Testimonios</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="contacto.html">Contacto</a>
+            <a class="nav-link" href="contacto.html" data-i18n="nav_contact">Contacto</a>
+          </li>
+          <li class="nav-item language-selector dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="languageDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="fas fa-globe-americas"></i> <span data-i18n="language">Idioma</span>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="languageDropdown" id="languageSelector">
+              <li><button class="dropdown-item" data-language="es"><img src="assets/img/flags/españa.webp" alt="Español" width="20"> Español</button></li>
+              <li><button class="dropdown-item" data-language="en"><img src="assets/img/flags/ingles.webp" alt="English" width="20"> English</button></li>
+              <li><button class="dropdown-item" data-language="fr"><img src="assets/img/flags/francia.png" alt="Français" width="20"> Français</button></li>
+              <li><button class="dropdown-item" data-language="it"><img src="assets/img/flags/italia.webp" alt="Italiano" width="20"> Italiano</button></li>
+              <li><button class="dropdown-item" data-language="de"><img src="assets/img/flags/alemania.png" alt="Deutsch" width="20"> Deutsch</button></li>
+            </ul>
           </li>
         </ul>
       </div>
@@ -150,15 +165,15 @@
     <div class="container">
       <div class="row justify-content-center">
         <div class="col-lg-8 text-center" data-aos="fade-up">
-          <h2 class="section-title">Vive las Rutas</h2>
+          <h2 class="section-title" data-i18n="exp_intro_title">Vive las Rutas</h2>
           <div class="divider-wine my-3 mx-auto"></div>
-          <p class="lead">Sumérgete en un mundo de sensaciones únicas donde el vino, la naturaleza y el lujo sostenible se fusionan para crear momentos inolvidables.</p>
-          <p class="mb-4">En Viña & Cabaña hemos diseñado cada experiencia pensando en conectarte con la esencia de la Ribera del Duero. Desde catas exclusivas hasta rutas entre viñedos, pasando por gastronomía local y visitas a bodegas históricas, todo está cuidadosamente seleccionado para ofrecerte vivencias auténticas y memorables.</p>
+          <p class="lead" data-i18n="exp_intro_lead">Sumérgete en un mundo de sensaciones únicas donde el vino, la naturaleza y el lujo sostenible se fusionan para crear momentos inolvidables.</p>
+          <p class="mb-4" data-i18n="exp_intro_text">En Viña & Cabaña hemos diseñado cada experiencia pensando en conectarte con la esencia de la Ribera del Duero. Desde catas exclusivas hasta rutas entre viñedos, pasando por gastronomía local y visitas a bodegas históricas, todo está cuidadosamente seleccionado para ofrecerte vivencias auténticas y memorables.</p>
           <div class="mt-4 d-flex justify-content-center flex-wrap">
-            <span class="badge bg-gold me-2 mb-2 p-2 text-dark"><i class="fas fa-warning me-1"></i> Catas Premium</span>
-            <span class="badge bg-olive-green me-2 mb-2 p-2 text-white"><i class="fas fa-hiking me-1"></i> Rutas</span>
-            <span class="badge bg-accent me-2 mb-2 p-2 text-white"><i class="fas fa-warehouse me-1"></i> Visitas a Bodegas</span>
-            <span class="badge bg-primary mb-2 p-2 text-white"><i class="fas fa-utensils me-1"></i> Gastronomía Local</span>
+            <span class="badge bg-gold me-2 mb-2 p-2 text-dark"><i class="fas fa-warning me-1"></i> <span data-i18n="exp_tag_catas">Catas Premium</span></span>
+            <span class="badge bg-olive-green me-2 mb-2 p-2 text-white"><i class="fas fa-hiking me-1"></i> <span data-i18n="exp_tag_rutas">Rutas</span></span>
+            <span class="badge bg-accent me-2 mb-2 p-2 text-white"><i class="fas fa-warehouse me-1"></i> <span data-i18n="exp_tag_bodegas">Visitas a Bodegas</span></span>
+            <span class="badge bg-primary mb-2 p-2 text-white"><i class="fas fa-utensils me-1"></i> <span data-i18n="exp_tag_gastronomia">Gastronomía Local</span></span>
           </div>
         </div>
       </div>
@@ -171,22 +186,22 @@
       <div class="row align-items-center mb-5">
         <div class="col-lg-6" data-aos="fade-right" data-aos-duration="1000">
           <div class="position-relative overflow-hidden rounded shadow">
-            <img src="assets/img/cabañaecologica.jpg" alt="Cabañas ecológicas" class="img-fluid">
+            <img src="assets/img/cabañaecologica.jpg" alt="Cabañas ecológicas" class="img-fluid" data-i18n-alt="cabin_img_alt">
             <div class="position-absolute top-0 end-0 m-3">
               <span class="badge bg-success p-2">Eco-friendly</span>
             </div>
           </div>
         </div>
         <div class="col-lg-6 ps-lg-5" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
-          <h2 class="section-title mb-4">Alojamiento Premium</h2>
-          <p>Nuestras cabañas ecológicas ubicadas en el corazón de nuestros viñedos ofrecen una experiencia única combinando lujo y sostenibilidad. Construidas con materiales locales y diseñadas para minimizar el impacto ambiental, cada cabaña cuenta con:</p>
+          <h2 class="section-title mb-4" data-i18n="exp_acco_title">Alojamiento Premium</h2>
+          <p data-i18n="exp_acco_text">Nuestras cabañas ecológicas ubicadas en el corazón de nuestros viñedos ofrecen una experiencia única combinando lujo y sostenibilidad. Construidas con materiales locales y diseñadas para minimizar el impacto ambiental, cada cabaña cuenta con:</p>
           <div class="row mt-4">
             <div class="col-md-6">
               <div class="d-flex align-items-center mb-3">
                 <div class="icon-box bg-light-green rounded-circle p-3 me-3">
                   <i class="fas fa-solar-panel text-olive-green"></i>
                 </div>
-                <span>Energía solar</span>
+                <span data-i18n="exp_eco_feature1">Energía solar</span>
               </div>
             </div>
             <div class="col-md-6">
@@ -194,28 +209,28 @@
                 <div class="icon-box bg-light-green rounded-circle p-3 me-3">
                   <i class="fas fa-water text-olive-green"></i>
                 </div>
-                <span>Sistemas de agua sostenible</span>
+                <span data-i18n="exp_eco_feature2">Sistemas de agua sostenible</span>
               </div>
             </div>
             <div class="col-md-6">
               <div class="d-flex align-items-center mb-3">
                 <div class="icon-box bg-light-green rounded-circle p-3 me-3">
-                  <i class="fas fa-wine-glass-alt text-olive-green"></i>
+                  <i class="fas fa-recycle text-olive-green"></i>
                 </div>
-                <span>Minibar con vinos locales</span>
+                <span data-i18n="exp_eco_feature3">Materiales reciclados</span>
               </div>
             </div>
             <div class="col-md-6">
               <div class="d-flex align-items-center mb-3">
                 <div class="icon-box bg-light-green rounded-circle p-3 me-3">
-                  <i class="fas fa-swimming-pool text-olive-green"></i>
+                  <i class="fas fa-temperature-low text-olive-green"></i>
                 </div>
-                <span>Acceso a piscina ecológica</span>
+                <span data-i18n="exp_eco_feature4">Aislamiento térmico natural</span>
               </div>
             </div>
           </div>
-          <div class="text-center mt-4">
-            <a href="reservas.html" class="btn btn-primary rounded-pill px-4">Reservar Alojamiento</a>
+          <div class="mt-4">
+            <a href="reservas.html" class="btn btn-primary" data-i18n="exp_book_cabin">Reserva tu cabaña</a>
           </div>
         </div>
       </div>
@@ -227,9 +242,9 @@
     <div class="container">
       <div class="row justify-content-center">
         <div class="col-lg-8 text-center" data-aos="fade-up">
-          <h2 class="section-title mb-2">Nuestras Experiencias</h2>
+          <h2 class="section-title mb-2" data-i18n="exp_our_experiences_title">Nuestras Experiencias</h2>
           <div class="divider-wine my-3 mx-auto"></div>
-          <p class="lead">Cada experiencia está diseñada para conectarte con la esencia de la Ribera del Duero</p>
+          <p class="lead" data-i18n="exp_our_experiences_subtitle">Cada experiencia está diseñada para conectarte con la esencia de la Ribera del Duero</p>
         </div>
       </div>
     </div>
@@ -244,30 +259,30 @@
         <div class="col-lg-6 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="100">
           <div class="card experience-card">
             <!-- Mesa de cata entre viñedos con puesta de sol -->
-            <img src="assets/img/catavinoamanecer.jpg" class="card-img-top" alt="Mesa de cata entre viñedos con puesta de sol">
+            <img src="assets/img/catavinoamanecer.jpg" class="card-img-top" alt="Mesa de cata entre viñedos con puesta de sol" data-i18n-alt="exp_tasting_sunset_alt">
             <div class="card-body d-flex flex-column">
               <div class="text-center mb-3">
                 <i class="fas fa-wine-glass-alt experience-icon"></i>
               </div>
-              <h3 class="card-title text-center">Cata privada al atardecer</h3>
-              <p class="price text-center">40€/persona</p>
-              <p class="card-text">Disfruta de una experiencia única de cata dirigida por nuestros expertos sommeliers mientras el sol se pone entre los viñedos. Incluye degustación de cuatro vinos premium de la región y selección de tapas locales.</p>
+              <h3 class="card-title text-center" data-i18n="exp_tasting_sunset_card_title">Cata privada al atardecer</h3>
+              <p class="price text-center" data-i18n="exp_tasting_sunset_price">40€/persona</p>
+              <p class="card-text" data-i18n="exp_tasting_sunset_desc">Disfruta de una experiencia única de cata dirigida por nuestros expertos sommeliers mientras el sol se pone entre los viñedos. Incluye degustación de cuatro vinos premium de la región y selección de tapas locales.</p>
               
               <div class="features-list p-3 mb-4 bg-light rounded shadow-sm">
-                <h5 class="mb-3 border-bottom pb-2"><i class="fas fa-glass-cheers me-2 text-wine-red"></i> La experiencia incluye</h5>
+                <h5 class="mb-3 border-bottom pb-2"><i class="fas fa-glass-cheers me-2 text-wine-red"></i> <span data-i18n="exp_tasting_sunset_includes_title">La experiencia incluye</span></h5>
                 <ul class="list-group list-group-flush">
                   <li class="list-group-item bg-transparent d-flex align-items-center">
                     <i class="fas fa-clock me-3 text-wine-red"></i>
                     <div>
-                      <strong>Duración: 2 horas</strong>
-                      <p class="small text-muted mb-0">Desde el atardecer hasta la puesta de sol</p>
+                      <strong data-i18n="exp_tasting_sunset_duration_label">Duración:</strong> <span data-i18n="exp_tasting_sunset_duration_time">2 horas</span>
+                      <p class="small text-muted mb-0" data-i18n="exp_tasting_sunset_duration_detail">Desde el atardecer hasta la puesta de sol</p>
                     </div>
                   </li>
                   <li class="list-group-item bg-transparent d-flex align-items-center">
                     <i class="fas fa-users me-3 text-wine-red"></i>
                     <div>
-                      <strong>Grupos reducidos</strong>
-                      <p class="small text-muted mb-0">Máximo 8 personas para una experiencia personalizada</p>
+                      <strong data-i18n="exp_tasting_sunset_groups_label">Grupos reducidos</strong>
+                      <p class="small text-muted mb-0" data-i18n="exp_tasting_sunset_groups_detail">Máximo 8 personas para una experiencia personalizada</p>
                     </div>
                   </li>
                   <li class="list-group-item bg-transparent d-flex align-items-center">
@@ -298,44 +313,44 @@
         <div class="col-lg-6 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="200">
           <div class="card experience-card">
             <!-- Interior de bodega antigua -->
-            <img src="assets/img/visitabodega.jpg" class="card-img-top" alt="Interior de bodega antigua">
+            <img src="assets/img/visitabodega.jpg" class="card-img-top" alt="Interior de bodega antigua" data-i18n-alt="exp_winery_visit_alt">
             <div class="card-body d-flex flex-column">
               <div class="text-center mb-3">
                 <i class="fas fa-warehouse experience-icon"></i>
               </div>
-              <h3 class="card-title text-center">Visitas a Bodegas</h3>
-              <p class="price text-center">Precio según ruta</p>
-              <p class="card-text">Recorre las bodegas más emblemáticas de la Ribera del Duero con nuestras visitas guiadas. Conoce nuestra bodega propia y otros referentes de la región como Viña Mayor, Arzuaga y Abadía Retuerta.</p>
+              <h3 class="card-title text-center" data-i18n="exp_winery_visit_card_title">Visitas a Bodegas</h3>
+              <p class="price text-center" data-i18n="exp_winery_visit_price">Precio según ruta</p>
+              <p class="card-text" data-i18n="exp_winery_visit_desc">Recorre las bodegas más emblemáticas de la Ribera del Duero con nuestras visitas guiadas. Conoce nuestra bodega propia y otros referentes de la región como Viña Mayor, Arzuaga y Abadía Retuerta.</p>
               
               <div class="features-list p-3 mb-4 bg-light rounded shadow-sm">
-                <h5 class="mb-3 border-bottom pb-2"><i class="fas fa-map-marked-alt me-2 text-wine-red"></i> Detalles de la experiencia</h5>
+                <h5 class="mb-3 border-bottom pb-2"><i class="fas fa-map-marked-alt me-2 text-wine-red"></i> <span data-i18n="exp_winery_visit_details_title">Detalles de la experiencia</span></h5>
                 <ul class="list-group list-group-flush">
                   <li class="list-group-item bg-transparent d-flex align-items-center">
                     <i class="fas fa-clock me-3 text-wine-red"></i>
                     <div>
-                      <strong>Duración: 4-5 horas</strong>
-                      <p class="small text-muted mb-0">Ruta completa por las mejores bodegas</p>
+                      <strong data-i18n="exp_winery_visit_duration_label">Duración:</strong> <span data-i18n="exp_winery_visit_duration_time">4-5 horas</span>
+                      <p class="small text-muted mb-0" data-i18n="exp_winery_visit_duration_detail">Ruta completa por las mejores bodegas</p>
                     </div>
                   </li>
                   <li class="list-group-item bg-transparent d-flex align-items-center">
                     <i class="fas fa-car me-3 text-wine-red"></i>
                     <div>
-                      <strong>Transporte incluido</strong>
-                      <p class="small text-muted mb-0">Recogida y retorno a nuestras instalaciones</p>
+                      <strong data-i18n="exp_winery_visit_transport_label">Transporte incluido</strong>
+                      <p class="small text-muted mb-0" data-i18n="exp_winery_visit_transport_detail">Recogida y retorno a nuestras instalaciones</p>
                     </div>
                   </li>
                   <li class="list-group-item bg-transparent d-flex align-items-center">
                     <i class="fas fa-wine-glass me-3 text-wine-red"></i>
                     <div>
-                      <strong>Catas incluidas</strong>
-                      <p class="small text-muted mb-0">Degustación exclusiva en cada bodega</p>
+                      <strong data-i18n="exp_winery_visit_tastings_label">Catas incluidas</strong>
+                      <p class="small text-muted mb-0" data-i18n="exp_winery_visit_tastings_detail">Degustación exclusiva en cada bodega</p>
                     </div>
                   </li>
                   <li class="list-group-item bg-transparent d-flex align-items-center">
                     <i class="fas fa-info-circle me-3 text-wine-red"></i>
                     <div>
-                      <strong>Guía especializado</strong>
-                      <p class="small text-muted mb-0">Experto en vinos y enología local</p>
+                      <strong data-i18n="exp_winery_visit_guide_label">Guía especializado</strong>
+                      <p class="small text-muted mb-0" data-i18n="exp_winery_visit_guide_detail">Experto en vinos y enología local</p>
                     </div>
                   </li>
                 </ul>
@@ -344,13 +359,13 @@
               <div class="winery-recommendation p-3 bg-olive-green text-white rounded shadow-sm mb-4">
                 <div class="d-flex align-items-center mb-2">
                   <i class="fas fa-star me-2"></i>
-                  <h5 class="mb-0">Ruta más solicitada</h5>
+                  <h5 class="mb-0" data-i18n="exp_winery_visit_most_requested_title">Ruta más solicitada</h5>
                 </div>
-                <p class="mb-0">Nuestro tour "Esencias de la Ribera": Visita a 3 bodegas de diferentes estilos (tradicional, moderna y familiar) con cata de sus mejores vinos. Duración: 5 horas · Precio: 85€/persona.</p>
+                <p class="mb-0" data-i18n="exp_winery_visit_most_requested_desc">Nuestro tour "Esencias de la Ribera": Visita a 3 bodegas de diferentes estilos (tradicional, moderna y familiar) con cata de sus mejores vinos. Duración: 5 horas · Precio: 85€/persona.</p>
               </div>
               
               <div class="text-center mt-auto">
-                <a href="reservas.html" class="btn btn-primary btn-lg rounded-pill px-4">Reservar experiencia</a>
+                <a href="reservas.html" class="btn btn-primary btn-lg rounded-pill px-4" data-i18n="exp_book_experience_button">Reservar experiencia</a>
               </div>
             </div>
           </div>
@@ -360,51 +375,26 @@
         <div class="col-lg-6 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="300">
           <div class="card experience-card">
             <!-- Sendero entre viñedos con picnic montado -->
-            <img src="assets/img/andarviñedo.jpg" class="card-img-top" alt="Sendero entre viñedos con picnic montado">
+            <img src="assets/img/andarviñedo.jpg" class="card-img-top" alt="Sendero entre viñedos con picnic montado" data-i18n-alt="exp_hiking_alt">
             <div class="card-body d-flex flex-column">
               <div class="text-center mb-3">
                 <i class="fas fa-hiking experience-icon"></i>
               </div>
-              <h3 class="card-title text-center">Rutas de Senderismo</h3>
-              <p class="price text-center">Gratuitas</p>
-              <p class="card-text">Descubre los paisajes más impresionantes de la Ribera del Duero siguiendo los carteles de los itinerarios. Explora rutas como Valle del Cuco, Senda del Duero y Riberas de Castronuño por tu cuenta.</p>
+              <h3 class="card-title text-center" data-i18n="exp_hiking_card_title">Rutas de Senderismo</h3>
+              <p class="price text-center" data-i18n="exp_hiking_price">Gratuitas</p>
               
-              <div class="features-list p-3 mb-4 bg-light rounded shadow-sm">
-                <h5 class="mb-3 border-bottom pb-2"><i class="fas fa-leaf me-2 text-wine-red"></i> Información sobre las rutas</h5>
-                <ul class="list-group list-group-flush">
-                  <li class="list-group-item bg-transparent d-flex align-items-center">
-                    <i class="fas fa-clock me-3 text-wine-red"></i>
-                    <div>
-                      <strong>Duración: 3-4 horas</strong>
-                      <p class="small text-muted mb-0">Dependiendo de la ruta seleccionada</p>
-                    </div>
-                  </li>
-                  <li class="list-group-item bg-transparent d-flex align-items-center">
-                    <i class="fas fa-mountain me-3 text-wine-red"></i>
-                    <div>
-                      <strong>Nivel medio</strong>
-                      <p class="small text-muted mb-0">Adecuado para personas con condición física normal</p>
-                    </div>
-                  </li>
-                  <li class="list-group-item bg-transparent d-flex align-items-center">
-                    <i class="fas fa-map me-3 text-wine-red"></i>
-                    <div>
-                      <strong>Mapas disponibles</strong>
-                      <p class="small text-muted mb-0">En recepción te proporcionamos mapas detallados</p>
-                    </div>
-                  </li>
-                  <li class="list-group-item bg-transparent d-flex align-items-center">
-                    <i class="fas fa-info-circle me-3 text-wine-red"></i>
-                    <div>
-                      <strong>Autoguiadas</strong>
-                      <p class="small text-muted mb-0">Sigue los carteles de los itinerarios</p>
-                    </div>
-                  </li>
-                </ul>
+              <!-- Nueva sección de Información Importante -->
+              <div class="hiking-info-card p-3 mb-4 bg-light rounded shadow-sm">
+                <h5 class="mb-3 border-bottom pb-2" data-i18n="exp_hiking_card_info_section_title"><i class="fas fa-info-circle me-2 text-wine-red"></i> Información importante</h5>
+                <p data-i18n="exp_hiking_card_main_text">Todas estas rutas son autoguiadas y gratuitas. Ofrecemos recomendaciones sobre los mejores recorridos de la zona y puedes seguir los carteles de los itinerarios. Solicita mapas e información detallada en nuestra recepción.</p>
+                <div class="alert alert-success mt-3">
+                  <i class="fas fa-map-marked-alt me-2"></i> <strong data-i18n="exp_hiking_card_free_routes_label">Rutas gratuitas:</strong>
+                  <span data-i18n="exp_hiking_card_free_routes_text">No se cobra por estas rutas ya que no incluyen guía.</span>
+                </div>
               </div>
               
               <div class="text-center mt-auto">
-                <a href="contacto.html" class="btn btn-primary btn-lg rounded-pill px-4">Solicitar información</a>
+                <a href="contacto.html" class="btn btn-primary btn-lg rounded-pill px-4" data-i18n="exp_request_info_button">Solicitar información</a>
               </div>
             </div>
           </div>
@@ -413,69 +403,52 @@
         <!-- Gastronomy Experience -->
         <div class="col-lg-6 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="400">
           <div class="card experience-card">
-            <!-- Plato tradicional con copa de vino -->
-            <img src="assets/img/cenaconvino.jpg" class="card-img-top" alt="Plato tradicional con copa de vino">
+            <!-- Pareja disfrutando de una cena romántica en la terraza de la cabaña con vistas al viñedo -->
+            <img src="assets/img/cenaconvino.jpg" class="card-img-top" alt="Pareja disfrutando de una cena romántica en la terraza de la cabaña con vistas al viñedo" data-i18n-alt="exp_gastronomy_alt">
             <div class="card-body d-flex flex-column">
               <div class="text-center mb-3">
                 <i class="fas fa-utensils experience-icon"></i>
               </div>
-              <h3 class="card-title text-center">Gastronomía Local</h3>
-              <p class="price text-center">Desde 15€/persona</p>
-              <p class="card-text">Descubre los sabores auténticos de Castilla con nuestras experiencias gastronómicas, elaboradas con productos locales de temporada y maridadas con los mejores vinos de nuestra región.</p>
+              <h3 class="card-title text-center" data-i18n="exp_gastronomy_card_title">Experiencia Gastronómica</h3>
+              <p class="price text-center" data-i18n="exp_gastronomy_price">Desde 60€/persona</p>
+              <p class="card-text" data-i18n="exp_gastronomy_desc">Disfruta de una cena privada en tu cabaña o terraza, con un menú degustación maridado con vinos locales. También ofrecemos cestas de picnic gourmet y desayunos con productos de la zona.</p>
               
-              <div class="pricing-options p-3 mb-4 bg-light rounded shadow-sm">
-                <h5 class="mb-3 border-bottom pb-2"><i class="fas fa-list-alt me-2 text-wine-red"></i> Opciones gastronómicas</h5>
+              <div class="features-list p-3 mb-4 bg-light rounded shadow-sm">
+                <h5 class="mb-3 border-bottom pb-2"><i class="fas fa-concierge-bell me-2 text-wine-red"></i> <span data-i18n="exp_gastronomy_options_title">Opciones Disponibles</span></h5>
                 <ul class="list-group list-group-flush">
-                  <li class="list-group-item bg-transparent d-flex justify-content-between align-items-center">
+                  <li class="list-group-item bg-transparent d-flex align-items-center">
+                    <i class="fas fa-moon me-3 text-wine-red"></i>
                     <div>
-                      <strong><i class="fas fa-wine-glass-alt me-2 text-wine-red"></i> Cena degustación con maridaje</strong>
-                      <p class="small text-muted mb-0">Una experiencia sensorial con 5 platos y sus vinos</p>
-                    </div>
-                    <span class="badge bg-wine-red rounded-pill px-3 py-2">40€/persona</span>
-                  </li>
-                  <li class="list-group-item bg-transparent small text-muted fst-italic mb-2">
-                    <i class="fas fa-info-circle me-1"></i> No disponible los domingos
-                  </li>
-                  
-                  <li class="list-group-item bg-transparent d-flex justify-content-between align-items-center">
-                    <div>
-                      <strong><i class="fas fa-utensils me-2 text-wine-red"></i> Comida degustación con maridaje</strong>
-                      <p class="small text-muted mb-0">4 platos con maridaje de vinos seleccionados</p>
-                    </div>
-                    <span class="badge bg-wine-red rounded-pill px-3 py-2">35€/persona</span>
-                  </li>
-                  
-                  <li class="list-group-item bg-transparent d-flex justify-content-between align-items-center">
-                    <div>
-                      <strong><i class="fas fa-clipboard-list me-2 text-wine-red"></i> Carta restaurante</strong>
-                      <p class="small text-muted mb-0">Varía según temporada y platos</p>
-                    </div>
-                    <div class="text-end">
-                      <span class="badge bg-olive-green rounded-pill px-3 py-2">15€ sin bebida</span><br>
-                      <span class="badge bg-olive-green rounded-pill px-3 py-2 mt-1">20€ con bebida</span>
+                      <strong data-i18n="exp_gastronomy_dinner_label">Cena Privada en Cabaña:</strong> <span data-i18n="exp_gastronomy_dinner_detail">Menú degustación con maridaje.</span>
+                      <p class="small text-muted mb-0" data-i18n="exp_gastronomy_dinner_booking">Reserva con 24h de antelación.</p>
                     </div>
                   </li>
-                  
-                  <li class="list-group-item bg-transparent d-flex justify-content-between align-items-center">
+                  <li class="list-group-item bg-transparent d-flex align-items-center">
+                    <i class="fas fa-shopping-basket me-3 text-wine-red"></i>
                     <div>
-                      <strong><i class="fas fa-wine-bottle me-2 text-wine-red"></i> Servicio de botellas en habitación</strong>
-                      <p class="small text-muted mb-0">Selección premium de vinos locales</p>
+                      <strong data-i18n="exp_gastronomy_picnic_label">Cesta de Picnic Gourmet:</strong> <span data-i18n="exp_gastronomy_picnic_detail">Selección de productos locales y vino.</span>
+                      <p class="small text-muted mb-0" data-i18n="exp_gastronomy_picnic_price_detail">Precio: 45€ para dos.</p>
                     </div>
-                    <span class="badge bg-olive-green rounded-pill px-3 py-2">7€-45€</span>
+                  </li>
+                  <li class="list-group-item bg-transparent d-flex align-items-center">
+                    <i class="fas fa-coffee me-3 text-wine-red"></i>
+                    <div>
+                      <strong data-i18n="exp_gastronomy_breakfast_label">Desayuno Kilómetro Cero:</strong> <span data-i18n="exp_gastronomy_breakfast_detail">Productos frescos y de proximidad.</span>
+                      <p class="small text-muted mb-0" data-i18n="exp_gastronomy_breakfast_availability">Incluido con tu estancia o bajo petición.</p>
+                    </div>
+                  </li>
+                  <li class="list-group-item bg-transparent d-flex align-items-center">
+                    <i class="fas fa-star me-3 text-wine-red"></i>
+                    <div>
+                      <strong data-i18n="exp_gastronomy_chef_label">Chef Privado para Eventos:</strong> <span data-i18n="exp_gastronomy_chef_detail">Organiza una comida o cena especial.</span>
+                      <p class="small text-muted mb-0" data-i18n="exp_gastronomy_chef_contact">Contáctanos para más detalles.</p>
+                    </div>
                   </li>
                 </ul>
               </div>
-              
-              <div class="chef-recommendation p-3 bg-wine-red text-white rounded shadow-sm mb-4">
-                <div class="d-flex align-items-center mb-2">
-                  <i class="fas fa-star me-2"></i>
-                  <h5 class="mb-0">Recomendación del Chef</h5>
-                </div>
-                <p class="mb-0">Nuestro menú degustación cambia semanalmente para ofrecerte siempre lo mejor de la temporada. Pregunta por el menú especial de maridaje con vinos de nuestra bodega.</p>
-              </div>
-              
+
               <div class="text-center mt-auto">
-                <a href="reservas.html" class="btn btn-primary btn-lg rounded-pill px-4">Reservar experiencia</a>
+                <a href="reservas.html" class="btn btn-primary btn-lg rounded-pill px-4" data-i18n="exp_gastronomy_book_button">Reservar Experiencia</a>
               </div>
             </div>
           </div>
@@ -490,9 +463,9 @@
     <div class="container">
       <div class="row mb-5">
         <div class="col-12 text-center" data-aos="fade-up">
-          <h2 class="section-title">Experiencias de Cata</h2>
+          <h2 class="section-title" data-i18n="exp_tasting_table_title">Experiencias de Cata</h2>
           <div class="divider-wine mb-4 mx-auto"></div>
-          <p class="lead mb-5">Descubre el fascinante mundo del vino con nuestras catas especializadas</p>
+          <p class="lead mb-5" data-i18n="exp_tasting_table_subtitle">Descubre el fascinante mundo del vino con nuestras catas especializadas</p>
         </div>
       </div>
 
@@ -503,55 +476,55 @@
               <table class="table table-hover pricing-table">
                 <thead>
                   <tr>
-                    <th>Experiencia</th>
-                    <th>Duración</th>
-                    <th>Precio</th>
-                    <th>Detalles</th>
+                    <th data-i18n="exp_tasting_table_header_experience">Experiencia</th>
+                    <th data-i18n="exp_tasting_table_header_duration">Duración</th>
+                    <th data-i18n="exp_tasting_table_header_price">Precio</th>
+                    <th data-i18n="exp_tasting_table_header_details">Detalles</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
                     <td>
-                      <strong>Cata de Introducción</strong><br>
-                      <small>Descubre el fascinante mundo del vino</small>
+                      <strong data-i18n="exp_tasting_table_intro_title">Cata de Introducción</strong><br>
+                      <small data-i18n="exp_tasting_table_intro_desc">Descubre el fascinante mundo del vino</small>
                     </td>
-                    <td>45 min</td>
-                    <td>25 €</td>
+                    <td data-i18n="exp_tasting_table_intro_duration">45 min</td>
+                    <td data-i18n="exp_tasting_table_intro_price">25 €</td>
                     <td>
                       <ul class="small list-unstyled mb-0">
-                        <li><i class="fas fa-check text-success me-1"></i> 3 vinos</li>
-                        <li><i class="fas fa-check text-success me-1"></i> Introducción a la cata</li>
-                        <li><i class="fas fa-check text-success me-1"></i> Aperitivo básico</li>
+                        <li><i class="fas fa-check text-success me-1"></i> <span data-i18n="exp_tasting_table_intro_detail1">3 vinos</span></li>
+                        <li><i class="fas fa-check text-success me-1"></i> <span data-i18n="exp_tasting_table_intro_detail2">Introducción a la cata</span></li>
+                        <li><i class="fas fa-check text-success me-1"></i> <span data-i18n="exp_tasting_table_intro_detail3">Aperitivo básico</span></li>
                       </ul>
                     </td>
                   </tr>
                   <tr>
                     <td>
-                      <strong>Cata Sensorial Premium</strong><br>
-                      <small>Vinos exclusivos con maridaje</small>
+                      <strong data-i18n="exp_tasting_table_sensory_title">Cata Sensorial Premium</strong><br>
+                      <small data-i18n="exp_tasting_table_sensory_desc">Vinos exclusivos con maridaje</small>
                     </td>
-                    <td>1h 15min</td>
-                    <td>40 €</td>
+                    <td data-i18n="exp_tasting_table_sensory_duration">1h 15min</td>
+                    <td data-i18n="exp_tasting_table_sensory_price">40 €</td>
                     <td>
                       <ul class="small list-unstyled mb-0">
-                        <li><i class="fas fa-check text-success me-1"></i> 5 vinos premium</li>
-                        <li><i class="fas fa-check text-success me-1"></i> Maridaje gourmet</li>
-                        <li><i class="fas fa-check text-success me-1"></i> Cata a ciegas</li>
+                        <li><i class="fas fa-check text-success me-1"></i> <span data-i18n="exp_tasting_table_sensory_detail1">5 vinos premium</span></li>
+                        <li><i class="fas fa-check text-success me-1"></i> <span data-i18n="exp_tasting_table_sensory_detail2">Maridaje gourmet</span></li>
+                        <li><i class="fas fa-check text-success me-1"></i> <span data-i18n="exp_tasting_table_sensory_detail3">Cata a ciegas</span></li>
                       </ul>
                     </td>
                   </tr>
                   <tr>
                     <td>
-                      <strong>Cata en Barrica</strong><br>
-                      <small>Visita a la bodega y cata especial</small>
+                      <strong data-i18n="exp_tasting_table_barrel_title">Cata en Barrica</strong><br>
+                      <small data-i18n="exp_tasting_table_barrel_desc">Visita a la bodega y cata especial</small>
                     </td>
-                    <td>1h</td>
-                    <td>35 €</td>
+                    <td data-i18n="exp_tasting_table_barrel_duration">1h</td>
+                    <td data-i18n="exp_tasting_table_barrel_price">35 €</td>
                     <td>
                       <ul class="small list-unstyled mb-0">
-                        <li><i class="fas fa-check text-success me-1"></i> 4 vinos en distintas fases</li>
-                        <li><i class="fas fa-check text-success me-1"></i> Visita a la bodega</li>
-                        <li><i class="fas fa-check text-success me-1"></i> Aperitivo regional</li>
+                        <li><i class="fas fa-check text-success me-1"></i> <span data-i18n="exp_tasting_table_barrel_detail1">4 vinos en distintas fases</span></li>
+                        <li><i class="fas fa-check text-success me-1"></i> <span data-i18n="exp_tasting_table_barrel_detail2">Visita a la bodega</span></li>
+                        <li><i class="fas fa-check text-success me-1"></i> <span data-i18n="exp_tasting_table_barrel_detail3">Aperitivo regional</span></li>
                       </ul>
                     </td>
                   </tr>
@@ -559,15 +532,15 @@
               </table>
             </div>
             <div class="text-center mt-4">
-              <a href="reservas.html" class="btn btn-primary btn-lg rounded-pill px-4">Reservar Cata</a>
+              <a href="reservas.html" class="btn btn-primary btn-lg rounded-pill px-4" data-i18n="exp_tasting_table_book_button">Reservar Cata</a>
             </div>
             <div class="info-box p-3 bg-light rounded mt-4" data-aos="fade-up">
-              <p class="mb-0"><i class="fas fa-info-circle text-primary me-2"></i> <strong>Horario de catas:</strong> Disponibles todos los días de 12:00 a 22:00. Reserva con al menos 24h de antelación.</p>
+              <p class="mb-0"><i class="fas fa-info-circle text-primary me-2"></i> <strong data-i18n="exp_tasting_table_schedule_label">Horario de catas:</strong> <span data-i18n="exp_tasting_table_schedule_text">Disponibles todos los días de 12:00 a 22:00. Reserva con al menos 24h de antelación.</span></p>
             </div>
             
             <div class="alert alert-info mt-4" data-aos="fade-up">
-              <h5><i class="fas fa-exclamation-circle me-2"></i> Información importante sobre catas en Bodegas Viña Mayor</h5>
-              <p>Las catas en Bodegas Viña Mayor son gestionadas directamente por la bodega. Podemos ayudarte a gestionar tu reserva, pero debes solicitarlo con tiempo suficiente en nuestra recepción para que podamos consultar disponibilidad. No tenemos acceso directo a las reservas de la bodega, por lo que actuamos como intermediarios.</p>
+              <h5><i class="fas fa-exclamation-circle me-2"></i> <span data-i18n="exp_tasting_table_viña_mayor_title">Información importante sobre catas en Bodegas Viña Mayor</span></h5>
+              <p data-i18n="exp_tasting_table_viña_mayor_text">Las catas en Bodegas Viña Mayor son gestionadas directamente por la bodega. Podemos ayudarte a gestionar tu reserva, pero debes solicitarlo con tiempo suficiente en nuestra recepción para que podamos consultar disponibilidad. No tenemos acceso directo a las reservas de la bodega, por lo que actuamos como intermediarios.</p>
             </div>
           </div>
         </div>
@@ -575,14 +548,14 @@
     </div>
   </section>
 
-  <!-- Hiking Routes -->
+  <!-- Hiking Routes Section -->
   <section class="py-5">
     <div class="container">
       <div class="row mb-5">
         <div class="col-12 text-center" data-aos="fade-up">
-          <h2 class="section-title">Rutas de Senderismo</h2>
+          <h2 class="section-title" data-i18n="exp_hiking_section_title">Rutas de Senderismo</h2>
           <div class="divider-wine mb-4 mx-auto"></div>
-          <p class="lead mb-5">Descubre los paisajes más impresionantes de la Ribera del Duero siguiendo los carteles de los itinerarios</p>
+          <p class="lead mb-5" data-i18n="exp_hiking_section_subtitle">Descubre los paisajes más impresionantes de la Ribera del Duero siguiendo los carteles de los itinerarios</p>
         </div>
       </div>
 
@@ -595,8 +568,8 @@
                   <i class="fas fa-mountain text-wine-red"></i>
                 </div>
                 <div>
-                  <h4 class="mb-1">Ruta del Valle del Cuco</h4>
-                  <p class="text-muted mb-0"><i class="fas fa-route me-2"></i> 8 km | <i class="fas fa-clock me-2"></i> 3h</p>
+                  <h4 class="mb-1" data-i18n="exp_hiking_route_cuco_title">Ruta del Valle del Cuco</h4>
+                  <p class="text-muted mb-0"><i class="fas fa-route me-2"></i> <span data-i18n="exp_hiking_route_cuco_distance">8 km</span> | <i class="fas fa-clock me-2"></i> <span data-i18n="exp_hiking_route_cuco_duration">3h</span></p>
                 </div>
               </div>
             </div>
@@ -607,9 +580,9 @@
                   <i class="fas fa-water text-wine-red"></i>
                 </div>
                 <div>
-                  <h4 class="mb-1">Senda del Duero (GR-14)</h4>
-                  <p class="text-muted mb-0"><i class="fas fa-route me-2"></i> 12 km | <i class="fas fa-clock me-2"></i> 4h</p>
-                  <p class="mb-0 small">Tramo Quintanilla de Onésimo – Peñafiel</p>
+                  <h4 class="mb-1" data-i18n="exp_hiking_route_duero_title">Senda del Duero (GR-14)</h4>
+                  <p class="text-muted mb-0"><i class="fas fa-route me-2"></i> <span data-i18n="exp_hiking_route_duero_distance">12 km</span> | <i class="fas fa-clock me-2"></i> <span data-i18n="exp_hiking_route_duero_duration">4h</span></p>
+                  <p class="mb-0 small" data-i18n="exp_hiking_route_duero_detail">Tramo Quintanilla de Onésimo – Peñafiel</p>
                 </div>
               </div>
             </div>
@@ -620,9 +593,9 @@
                   <i class="fas fa-tree text-wine-red"></i>
                 </div>
                 <div>
-                  <h4 class="mb-1">Sendero de las Riberas de Castronuño</h4>
-                  <p class="text-muted mb-0"><i class="fas fa-route me-2"></i> 6 km | <i class="fas fa-clock me-2"></i> 2.5h</p>
-                  <p class="mb-0 small">Reserva Natural</p>
+                  <h4 class="mb-1" data-i18n="exp_hiking_route_castronuno_title">Sendero de las Riberas de Castronuño</h4>
+                  <p class="text-muted mb-0"><i class="fas fa-route me-2"></i> <span data-i18n="exp_hiking_route_castronuno_distance">6 km</span> | <i class="fas fa-clock me-2"></i> <span data-i18n="exp_hiking_route_castronuno_duration">2.5h</span></p>
+                  <p class="mb-0 small" data-i18n="exp_hiking_route_castronuno_detail">Reserva Natural</p>
                 </div>
               </div>
             </div>
@@ -633,9 +606,9 @@
                   <i class="fas fa-hiking text-wine-red"></i>
                 </div>
                 <div>
-                  <h4 class="mb-1">Ruta del Pico Cuchillejo</h4>
-                  <p class="text-muted mb-0"><i class="fas fa-route me-2"></i> 10 km | <i class="fas fa-clock me-2"></i> 4h</p>
-                  <p class="mb-0 small">Punto más alto de Valladolid (931 m)</p>
+                  <h4 class="mb-1" data-i18n="exp_hiking_route_cuchillejo_title">Ruta del Pico Cuchillejo</h4>
+                  <p class="text-muted mb-0"><i class="fas fa-route me-2"></i> <span data-i18n="exp_hiking_route_cuchillejo_distance">10 km</span> | <i class="fas fa-clock me-2"></i> <span data-i18n="exp_hiking_route_cuchillejo_duration">4h</span></p>
+                  <p class="mb-0 small" data-i18n="exp_hiking_route_cuchillejo_detail">Punto más alto de Valladolid (931 m)</p>
                 </div>
               </div>
             </div>
@@ -650,8 +623,8 @@
                   <i class="fas fa-landmark text-wine-red"></i>
                 </div>
                 <div>
-                  <h4 class="mb-1">Sendero de los Cortados de Simancas</h4>
-                  <p class="text-muted mb-0"><i class="fas fa-route me-2"></i> 7 km | <i class="fas fa-clock me-2"></i> 2.5h</p>
+                  <h4 class="mb-1" data-i18n="exp_hiking_route_simancas_title">Sendero de los Cortados de Simancas</h4>
+                  <p class="text-muted mb-0"><i class="fas fa-route me-2"></i> <span data-i18n="exp_hiking_route_simancas_distance">7 km</span> | <i class="fas fa-clock me-2"></i> <span data-i18n="exp_hiking_route_simancas_duration">2.5h</span></p>
                 </div>
               </div>
             </div>
@@ -662,20 +635,20 @@
                   <i class="fas fa-wine-bottle text-wine-red"></i>
                 </div>
                 <div>
-                  <h4 class="mb-1">Ruta del Valle de Esgueva</h4>
-                  <p class="text-muted mb-0"><i class="fas fa-route me-2"></i> 9 km | <i class="fas fa-clock me-2"></i> 3.5h</p>
+                  <h4 class="mb-1" data-i18n="exp_hiking_route_esgueva_title">Ruta del Valle de Esgueva</h4>
+                  <p class="text-muted mb-0"><i class="fas fa-route me-2"></i> <span data-i18n="exp_hiking_route_esgueva_distance">9 km</span> | <i class="fas fa-clock me-2"></i> <span data-i18n="exp_hiking_route_esgueva_duration">3.5h</span></p>
                 </div>
               </div>
             </div>
             
             <div class="hiking-info p-4 rounded bg-light-olive mt-4" data-aos="fade-up" data-aos-delay="700">
-              <h5><i class="fas fa-info-circle me-2 text-olive-green"></i> Información importante</h5>
-              <p>Todas estas rutas son autoguiadas y gratuitas. Ofrecemos recomendaciones sobre los mejores recorridos de la zona y puedes seguir los carteles de los itinerarios. Solicita mapas e información detallada en nuestra recepción.</p>
+              <h5><i class="fas fa-info-circle me-2 text-olive-green"></i> <span data-i18n="exp_hiking_info_title">Información importante</span></h5>
+              <p data-i18n="exp_hiking_info_text">Todas estas rutas son autoguiadas y gratuitas. Ofrecemos recomendaciones sobre los mejores recorridos de la zona y puedes seguir los carteles de los itinerarios. Solicita mapas e información detallada en nuestra recepción.</p>
               <div class="alert alert-success mt-3">
-                <i class="fas fa-map-marked-alt me-2"></i> <strong>Rutas gratuitas:</strong> No se cobra por estas rutas ya que no incluyen guía.
+                <i class="fas fa-map-marked-alt me-2"></i> <strong data-i18n="exp_hiking_info_free_routes_label">Rutas gratuitas:</strong> <span data-i18n="exp_hiking_info_free_routes_text">No se cobra por estas rutas ya que no incluyen guía.</span>
               </div>
               <div class="text-center mt-4">
-                <a href="contacto.html" class="btn btn-primary rounded-pill px-4">Solicitar información</a>
+                <a href="contacto.html" class="btn btn-primary rounded-pill px-4" data-i18n="exp_hiking_info_button">Solicitar información</a>
               </div>
             </div>
           </div>
@@ -689,9 +662,9 @@
     <div class="container">
       <div class="row mb-5">
         <div class="col-12 text-center" data-aos="fade-up">
-          <h2 class="section-title">Recomendaciones Gastronómicas</h2>
+          <h2 class="section-title" data-i18n="exp_gastronomy_title">Recomendaciones Gastronómicas</h2>
           <div class="divider-wine mb-4 mx-auto"></div>
-          <p class="lead mb-5">Los mejores lugares para disfrutar de la gastronomía local</p>
+          <p class="lead mb-5" data-i18n="exp_gastronomy_desc">Los mejores lugares para disfrutar de la gastronomía local</p>
         </div>
       </div>
 
@@ -699,12 +672,12 @@
         <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="100">
           <div class="card restaurant-card h-100">
             <div class="card-body">
-              <h5 class="card-title">Panadería Los Manjares de la Ribera</h5>
-              <p class="card-text"><i class="fas fa-map-marker-alt me-2 text-muted"></i> Quintanilla de Onésimo</p>
-              <p class="card-text">Artesanos del pan y repostería tradicional castellana. Prueba sus hogazas de trigo y centeno.</p>
+              <h5 class="card-title" data-i18n="exp_gastronomy_panaderia_title">Panadería Los Manjares de la Ribera</h5>
+              <p class="card-text"><i class="fas fa-map-marker-alt me-2 text-muted"></i> <span data-i18n="exp_gastronomy_panaderia_location">Quintanilla de Onésimo</span></p>
+              <p class="card-text" data-i18n="exp_gastronomy_panaderia_desc">Artesanos del pan y repostería tradicional castellana. Prueba sus hogazas de trigo y centeno.</p>
             </div>
             <div class="card-footer bg-transparent border-0">
-              <a href="#" class="btn btn-sm btn-outline-primary">Ver ubicación</a>
+              <a href="#" class="btn btn-sm btn-outline-primary" data-i18n="exp_gastronomy_location_button">Ver ubicación</a>
             </div>
           </div>
         </div>
@@ -712,12 +685,12 @@
         <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="200">
           <div class="card restaurant-card h-100">
             <div class="card-body">
-              <h5 class="card-title">Asador Mauro</h5>
-              <p class="card-text"><i class="fas fa-map-marker-alt me-2 text-muted"></i> Peñafiel</p>
-              <p class="card-text">Especialistas en carnes a la brasa. Su cordero lechal asado en horno de leña es imprescindible.</p>
+              <h5 class="card-title" data-i18n="exp_gastronomy_asador_title">Asador Mauro</h5>
+              <p class="card-text"><i class="fas fa-map-marker-alt me-2 text-muted"></i> <span data-i18n="exp_gastronomy_asador_location">Peñafiel</span></p>
+              <p class="card-text" data-i18n="exp_gastronomy_asador_desc">Especialistas en carnes a la brasa. Su cordero lechal asado en horno de leña es imprescindible.</p>
             </div>
             <div class="card-footer bg-transparent border-0">
-              <a href="#" class="btn btn-sm btn-outline-primary">Ver ubicación</a>
+              <a href="#" class="btn btn-sm btn-outline-primary" data-i18n="exp_gastronomy_location_button">Ver ubicación</a>
             </div>
           </div>
         </div>
@@ -725,12 +698,12 @@
         <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="300">
           <div class="card restaurant-card h-100">
             <div class="card-body">
-              <h5 class="card-title">El Rincón del Chorro</h5>
-              <p class="card-text"><i class="fas fa-map-marker-alt me-2 text-muted"></i> Pesquera de Duero</p>
-              <p class="card-text">Cocina tradicional castellana con toques modernos. Excelente carta de vinos locales.</p>
+              <h5 class="card-title" data-i18n="exp_gastronomy_rincon_title">El Rincón del Chorro</h5>
+              <p class="card-text"><i class="fas fa-map-marker-alt me-2 text-muted"></i> <span data-i18n="exp_gastronomy_rincon_location">Pesquera de Duero</span></p>
+              <p class="card-text" data-i18n="exp_gastronomy_rincon_desc">Cocina tradicional castellana con toques modernos. Excelente carta de vinos locales.</p>
             </div>
             <div class="card-footer bg-transparent border-0">
-              <a href="#" class="btn btn-sm btn-outline-primary">Ver ubicación</a>
+              <a href="#" class="btn btn-sm btn-outline-primary" data-i18n="exp_gastronomy_location_button">Ver ubicación</a>
             </div>
           </div>
         </div>
@@ -738,15 +711,15 @@
         <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="400">
           <div class="card restaurant-card h-100 special-restaurant">
             <div class="ribbon">
-              <span style="background-color: #722f37; color: white; padding: 5px 10px; border-radius: 3px;">Estrella Michelin</span>
+              <span style="background-color: #722f37; color: white; padding: 5px 10px; border-radius: 3px;" data-i18n="exp_gastronomy_michelin_label">Estrella Michelin</span>
             </div>
             <div class="card-body">
-              <h5 class="card-title">Ambivium</h5>
-              <p class="card-text"><i class="fas fa-map-marker-alt me-2 text-muted"></i> Peñafiel</p>
-              <p class="card-text">Alta cocina con estrella Michelin. Menú degustación que refleja el terroir de la Ribera del Duero.</p>
+              <h5 class="card-title" data-i18n="exp_gastronomy_ambivium_title">Ambivium</h5>
+              <p class="card-text"><i class="fas fa-map-marker-alt me-2 text-muted"></i> <span data-i18n="exp_gastronomy_ambivium_location">Peñafiel</span></p>
+              <p class="card-text" data-i18n="exp_gastronomy_ambivium_desc">Alta cocina con estrella Michelin. Menú degustación que refleja el terroir de la Ribera del Duero.</p>
             </div>
             <div class="card-footer bg-transparent border-0">
-              <a href="#" class="btn btn-sm btn-outline-primary">Ver ubicación</a>
+              <a href="#" class="btn btn-sm btn-outline-primary" data-i18n="exp_gastronomy_location_button">Ver ubicación</a>
             </div>
           </div>
         </div>
@@ -759,17 +732,17 @@
     <div class="container">
       <div class="row align-items-center">
         <div class="col-lg-6" data-aos="fade-right">
-          <h2 class="section-title mb-4">Servicio en la habitación</h2>
+          <h2 class="section-title mb-4" data-i18n="exp_room_service_title">Servicio en la habitación</h2>
           <div class="divider-wine mb-4"></div>
-          <p class="mb-4">Disfruta de la comodidad de nuestro servicio de habitaciones mientras contemplas el paisaje de viñedos desde tu cabaña.</p>
+          <p class="mb-4" data-i18n="exp_room_service_desc">Disfruta de la comodidad de nuestro servicio de habitaciones mientras contemplas el paisaje de viñedos desde tu cabaña.</p>
           
           <div class="room-service-feature d-flex align-items-center mb-4">
             <div class="icon-box bg-light rounded-circle p-3 me-3">
               <i class="fas fa-utensils text-wine-red"></i>
             </div>
             <div>
-              <h5 class="mb-1">Menú completo</h5>
-              <p class="mb-0 text-muted">Disfruta de nuestra carta completa sin moverte de tu cabaña</p>
+              <h5 class="mb-1" data-i18n="exp_room_service_menu_title">Menú completo</h5>
+              <p class="mb-0 text-muted" data-i18n="exp_room_service_menu_desc">Disfruta de nuestra carta completa sin moverte de tu cabaña</p>
             </div>
           </div>
           
@@ -778,8 +751,8 @@
               <i class="fas fa-wine-bottle text-wine-red"></i>
             </div>
             <div>
-              <h5 class="mb-1">Selección de vinos</h5>
-              <p class="mb-0 text-muted">Botellas premium desde 7€ hasta 45€</p>
+              <h5 class="mb-1" data-i18n="exp_room_service_wine_title">Selección de vinos</h5>
+              <p class="mb-0 text-muted" data-i18n="exp_room_service_wine_desc">Botellas premium desde 7€ hasta 45€</p>
             </div>
           </div>
           
@@ -788,8 +761,8 @@
               <i class="fas fa-concierge-bell text-wine-red"></i>
             </div>
             <div>
-              <h5 class="mb-1">Horario ampliado</h5>
-              <p class="mb-0 text-muted">Disponible desde las 7:00 hasta las 23:00</p>
+              <h5 class="mb-1" data-i18n="exp_room_service_hours_title">Horario ampliado</h5>
+              <p class="mb-0 text-muted" data-i18n="exp_room_service_hours_desc">Disponible desde las 7:00 hasta las 23:00</p>
             </div>
           </div>
           
@@ -798,8 +771,8 @@
               <i class="fas fa-bread-slice text-wine-red"></i>
             </div>
             <div>
-              <h5 class="mb-1">Desayuno completo</h5>
-              <p class="mb-0 text-muted">Con productos locales y artesanales recién hechos</p>
+              <h5 class="mb-1" data-i18n="exp_room_service_breakfast_title">Desayuno completo</h5>
+              <p class="mb-0 text-muted" data-i18n="exp_room_service_breakfast_desc">Con productos locales y artesanales recién hechos</p>
             </div>
           </div>
         </div>
@@ -808,8 +781,8 @@
             <img src="assets/img/serviciohabitaciones.webp" alt="Servicio de habitaciones" class="img-fluid rounded shadow">
             <div class="position-absolute bottom-0 end-0 p-4 bg-white shadow rounded-circle m-4" data-aos="zoom-in" data-aos-delay="400">
               <div class="price-tag text-center">
-                <span class="d-block text-muted small">desde</span>
-                <span class="fs-2 fw-bold text-wine-red">7€</span>
+                <span class="d-block text-muted small" data-i18n="exp_room_service_price_from">desde</span>
+                <span class="fs-2 fw-bold text-wine-red" data-i18n="exp_room_service_price">7€</span>
               </div>
             </div>
           </div>
@@ -823,9 +796,9 @@
     <div class="container">
       <div class="row mb-4">
         <div class="col-12 text-center" data-aos="fade-up">
-          <h2 class="section-title">Turismo Local</h2>
+          <h2 class="section-title" data-i18n="exp_tourism_title">Turismo Local</h2>
           <div class="divider-wine mb-4 mx-auto"></div>
-          <p class="lead">Ofrecemos 2 excursiones diarias para descubrir la riqueza cultural de la zona</p>
+          <p class="lead" data-i18n="exp_tourism_desc">Ofrecemos 2 excursiones diarias para descubrir la riqueza cultural de la zona</p>
         </div>
       </div>
 
@@ -834,27 +807,27 @@
         <div class="col-12" data-aos="fade-up">
           <div class="card border-0 shadow-sm">
             <div class="card-body p-4">
-              <h3 class="card-title mb-4"><i class="fas fa-map-marked-alt me-2 text-wine-red"></i> Visitas Guiadas</h3>
-              <p>A diferencia de las rutas de senderismo autoguiadas, ofrecemos visitas guiadas a las poblaciones cercanas como Peñafiel y su castillo, acompañados por guías expertos en la historia y cultura local.</p>
+              <h3 class="card-title mb-4"><i class="fas fa-map-marked-alt me-2 text-wine-red"></i> <span data-i18n="exp_guided_tours_title">Visitas Guiadas</span></h3>
+              <p data-i18n="exp_guided_tours_desc">A diferencia de las rutas de senderismo autoguiadas, ofrecemos visitas guiadas a las poblaciones cercanas como Peñafiel y su castillo, acompañados por guías expertos en la historia y cultura local.</p>
               
               <div class="row mt-4">
                 <div class="col-md-6">
                   <div class="guided-tour p-3 bg-light rounded mb-3">
-                    <h5><i class="fas fa-castle me-2 text-wine-red"></i> Visita a Peñafiel</h5>
-                    <p class="mb-2">Descubre el imponente Castillo de Peñafiel, el Museo Provincial del Vino y la histórica Plaza del Coso.</p>
+                    <h5><i class="fas fa-castle me-2 text-wine-red"></i> <span data-i18n="exp_guided_tour_penafiel_title">Visita a Peñafiel</span></h5>
+                    <p class="mb-2" data-i18n="exp_guided_tour_penafiel_desc">Descubre el imponente Castillo de Peñafiel, el Museo Provincial del Vino y la histórica Plaza del Coso.</p>
                     <div class="d-flex justify-content-between align-items-center">
-                      <span><i class="fas fa-clock me-1"></i> 3 horas</span>
-                      <span class="badge bg-wine-red">15€/persona</span>
+                      <span><i class="fas fa-clock me-1"></i> <span data-i18n="exp_guided_tour_penafiel_duration">3 horas</span></span>
+                      <span class="badge bg-wine-red" data-i18n="exp_guided_tour_penafiel_price">15€/persona</span>
                     </div>
                   </div>
                 </div>
                 <div class="col-md-6">
                   <div class="guided-tour p-3 bg-light rounded mb-3">
-                    <h5><i class="fas fa-landmark me-2 text-wine-red"></i> Visita a Valladolid</h5>
-                    <p class="mb-2">Recorre el casco histórico, la Plaza Mayor y visita el Museo Nacional de Escultura.</p>
+                    <h5><i class="fas fa-landmark me-2 text-wine-red"></i> <span data-i18n="exp_guided_tour_valladolid_title">Visita a Valladolid</span></h5>
+                    <p class="mb-2" data-i18n="exp_guided_tour_valladolid_desc">Recorre el casco histórico, la Plaza Mayor y visita el Museo Nacional de Escultura.</p>
                     <div class="d-flex justify-content-between align-items-center">
-                      <span><i class="fas fa-clock me-1"></i> 4 horas</span>
-                      <span class="badge bg-wine-red">15€/persona</span>
+                      <span><i class="fas fa-clock me-1"></i> <span data-i18n="exp_guided_tour_valladolid_duration">4 horas</span></span>
+                      <span class="badge bg-wine-red" data-i18n="exp_guided_tour_valladolid_price">15€/persona</span>
                     </div>
                   </div>
                 </div>
@@ -863,36 +836,36 @@
               <div class="row mt-3">
                 <div class="col-md-6">
                   <div class="guided-tour p-3 bg-light rounded mb-3">
-                    <h5><i class="fas fa-church me-2 text-wine-red"></i> Visita a Urueña</h5>
-                    <p class="mb-2">Conoce el "pueblo del libro" con sus librerías y murallas medievales.</p>
+                    <h5><i class="fas fa-church me-2 text-wine-red"></i> <span data-i18n="exp_guided_tour_uruena_title">Visita a Urueña</span></h5>
+                    <p class="mb-2" data-i18n="exp_guided_tour_uruena_desc">Conoce el "pueblo del libro" con sus librerías y murallas medievales.</p>
                     <div class="d-flex justify-content-between align-items-center">
-                      <span><i class="fas fa-clock me-1"></i> 3 horas</span>
-                      <span class="badge bg-wine-red">15€/persona</span>
+                      <span><i class="fas fa-clock me-1"></i> <span data-i18n="exp_guided_tour_uruena_duration">3 horas</span></span>
+                      <span class="badge bg-wine-red" data-i18n="exp_guided_tour_uruena_price">15€/persona</span>
                     </div>
                   </div>
                 </div>
                 <div class="col-md-6">
                   <div class="guided-tour p-3 bg-light rounded mb-3">
-                    <h5><i class="fas fa-water me-2 text-wine-red"></i> Visita a Tudela de Duero</h5>
-                    <p class="mb-2">Descubre la Iglesia de Santa María y el Parque de la Isla junto al río Duero.</p>
+                    <h5><i class="fas fa-water me-2 text-wine-red"></i> <span data-i18n="exp_guided_tour_tudela_title">Visita a Tudela de Duero</span></h5>
+                    <p class="mb-2" data-i18n="exp_guided_tour_tudela_desc">Descubre la Iglesia de Santa María y el Parque de la Isla junto al río Duero.</p>
                     <div class="d-flex justify-content-between align-items-center">
-                      <span><i class="fas fa-clock me-1"></i> 2 horas</span>
-                      <span class="badge bg-wine-red">15€/persona</span>
+                      <span><i class="fas fa-clock me-1"></i> <span data-i18n="exp_guided_tour_tudela_duration">2 horas</span></span>
+                      <span class="badge bg-wine-red" data-i18n="exp_guided_tour_tudela_price">15€/persona</span>
                     </div>
                   </div>
                 </div>
               </div>
               
               <div class="guide-info p-3 bg-light-olive rounded mt-4">
-                <h5><i class="fas fa-user-friends me-2 text-olive-green"></i> Nuestros guías</h5>
-                <p>Todas las visitas se realizan con guías locales expertos conocedores de la historia, arte y cultura local. Disponemos de guías con certificación oficial en turismo.</p>
+                <h5><i class="fas fa-user-friends me-2 text-olive-green"></i> <span data-i18n="exp_guides_title">Nuestros guías</span></h5>
+                <p data-i18n="exp_guides_desc">Todas las visitas se realizan con guías locales expertos conocedores de la historia, arte y cultura local. Disponemos de guías con certificación oficial en turismo.</p>
                 <div class="guide-images d-flex mt-3">
                   <img src="assets/img/guide-1.jpg" alt="Guía turístico" class="rounded-circle me-2" width="60" height="60">
                   <img src="assets/img/guide-2.jpg" alt="Guía turístico" class="rounded-circle me-2" width="60" height="60">
                   <img src="assets/img/guide-3.jpg" alt="Guía turístico" class="rounded-circle" width="60" height="60">
                 </div>
                 <div class="text-center mt-4">
-                  <a href="reservas.html" class="btn btn-primary rounded-pill px-4">Reservar visita</a>
+                  <a href="reservas.html" class="btn btn-primary rounded-pill px-4" data-i18n="exp_guides_book_button">Reservar visita</a>
                 </div>
               </div>
             </div>
@@ -909,9 +882,9 @@
               <div class="card h-100 border-0 shadow">
                 <img src="assets/img/quintanilla.jpeg" class="card-img-top" alt="Quintanilla de Onésimo" style="height: 200px; object-fit: cover;">
                 <div class="card-body">
-                  <h5 class="card-title">Quintanilla de Onésimo</h5>
-                  <p class="card-text"><i class="fas fa-walking me-2 text-muted"></i> 5 min desde Viña & Cabaña</p>
-                  <p class="card-text">Visita la Iglesia de San Millán, ejemplo de arquitectura religiosa castellana, y descubre su puente renacentista sobre el río Duero.</p>
+                  <h5 class="card-title" data-i18n="exp_place_quintanilla_title">Quintanilla de Onésimo</h5>
+                  <p class="card-text"><i class="fas fa-walking me-2 text-muted"></i> <span data-i18n="exp_place_quintanilla_distance">5 min desde Viña & Cabaña</span></p>
+                  <p class="card-text" data-i18n="exp_place_quintanilla_desc">Visita la Iglesia de San Millán, ejemplo de arquitectura religiosa castellana, y descubre su puente renacentista sobre el río Duero.</p>
                 </div>
               </div>
             </li>
@@ -921,9 +894,9 @@
               <div class="card h-100 border-0 shadow">
                 <img src="assets/img/peñafiel.jpg" class="card-img-top" alt="Castillo de Peñafiel" style="height: 200px; object-fit: cover;">
                 <div class="card-body">
-                  <h5 class="card-title">Peñafiel</h5>
-                  <p class="card-text"><i class="fas fa-car me-2 text-muted"></i> 15 min en coche</p>
-                  <p class="card-text">Visita el imponente Castillo de Peñafiel, el Museo Provincial del Vino ubicado en su interior y la histórica Plaza del Coso.</p>
+                  <h5 class="card-title" data-i18n="exp_place_penafiel_title">Peñafiel</h5>
+                  <p class="card-text"><i class="fas fa-car me-2 text-muted"></i> <span data-i18n="exp_place_penafiel_distance">15 min en coche</span></p>
+                  <p class="card-text" data-i18n="exp_place_penafiel_desc">Visita el imponente Castillo de Peñafiel, el Museo Provincial del Vino ubicado en su interior y la histórica Plaza del Coso.</p>
                 </div>
               </div>
             </li>
@@ -933,9 +906,9 @@
               <div class="card h-100 border-0 shadow">
                 <img src="assets/img/tudela.jpeg" class="card-img-top" alt="Tudela de Duero" style="height: 200px; object-fit: cover;">
                 <div class="card-body">
-                  <h5 class="card-title">Tudela de Duero</h5>
-                  <p class="card-text"><i class="fas fa-car me-2 text-muted"></i> 20 min en coche</p>
-                  <p class="card-text">Descubre la Iglesia de Santa María y pasea por el Parque de la Isla junto al río Duero.</p>
+                  <h5 class="card-title" data-i18n="exp_place_tudela_title">Tudela de Duero</h5>
+                  <p class="card-text"><i class="fas fa-car me-2 text-muted"></i> <span data-i18n="exp_place_tudela_distance">20 min en coche</span></p>
+                  <p class="card-text" data-i18n="exp_place_tudela_desc">Descubre la Iglesia de Santa María y pasea por el Parque de la Isla junto al río Duero.</p>
                 </div>
               </div>
             </li>
@@ -945,9 +918,9 @@
               <div class="card h-100 border-0 shadow">
                 <img src="assets/img/valladolid.jpg" class="card-img-top" alt="Valladolid" style="height: 200px; object-fit: cover;">
                 <div class="card-body">
-                  <h5 class="card-title">Valladolid</h5>
-                  <p class="card-text"><i class="fas fa-car me-2 text-muted"></i> 30 min en coche</p>
-                  <p class="card-text">Explora la Plaza Mayor y el casco histórico, visita el Museo Nacional de Escultura o pasea por la Ribera de Castilla, junto al Pisuerga.</p>
+                  <h5 class="card-title" data-i18n="exp_place_valladolid_title">Valladolid</h5>
+                  <p class="card-text"><i class="fas fa-car me-2 text-muted"></i> <span data-i18n="exp_place_valladolid_distance">30 min en coche</span></p>
+                  <p class="card-text" data-i18n="exp_place_valladolid_desc">Explora la Plaza Mayor y el casco histórico, visita el Museo Nacional de Escultura o pasea por la Ribera de Castilla, junto al Pisuerga.</p>
                 </div>
               </div>
             </li>
@@ -957,9 +930,9 @@
               <div class="card h-100 border-0 shadow">
                 <img src="assets/img/urueña.jpg" class="card-img-top" alt="Urueña" style="height: 200px; object-fit: cover;">
                 <div class="card-body">
-                  <h5 class="card-title">Urueña</h5>
-                  <p class="card-text"><i class="fas fa-car me-2 text-muted"></i> 50 min en coche</p>
-                  <p class="card-text">Conocida como el "pueblo del libro" por sus numerosas librerías y con impresionantes murallas medievales.</p>
+                  <h5 class="card-title" data-i18n="exp_place_uruena_title">Urueña</h5>
+                  <p class="card-text"><i class="fas fa-car me-2 text-muted"></i> <span data-i18n="exp_place_uruena_distance">50 min en coche</span></p>
+                  <p class="card-text" data-i18n="exp_place_uruena_desc">Conocida como el "pueblo del libro" por sus numerosas librerías y con impresionantes murallas medievales.</p>
                 </div>
               </div>
             </li>
@@ -967,11 +940,11 @@
         </div>
         <div class="splide__arrows">
           <button class="splide__arrow splide__arrow--prev">
-            <span class="sr-only">Anterior</span>
+            <span class="sr-only" data-i18n="exp_splide_prev">Anterior</span>
             <i class="fas fa-chevron-left"></i>
           </button>
           <button class="splide__arrow splide__arrow--next">
-            <span class="sr-only">Siguiente</span>
+            <span class="sr-only" data-i18n="exp_splide_next">Siguiente</span>
             <i class="fas fa-chevron-right"></i>
           </button>
         </div>
@@ -980,39 +953,39 @@
       <div class="row mt-5">
         <div class="col-12">
           <div class="p-4 bg-light rounded shadow-sm" data-aos="fade-up">
-            <h4 class="mb-3"><i class="fas fa-wine-bottle me-2 text-wine-red"></i> Transporte a Bodegas</h4>
-            <p>Ofrecemos transporte por encargo a las principales bodegas de la región:</p>
+            <h4 class="mb-3"><i class="fas fa-wine-bottle me-2 text-wine-red"></i> <span data-i18n="exp_winery_transport_title">Transporte a Bodegas</span></h4>
+            <p data-i18n="exp_winery_transport_desc">Ofrecemos transporte por encargo a las principales bodegas de la región:</p>
             <div class="row mt-3">
               <div class="col-md-4">
                 <ul class="list-unstyled">
-                  <li class="mb-2"><i class="fas fa-check-circle me-2 text-olive-green"></i> Arzuga Navarro</li>
-                  <li class="mb-2"><i class="fas fa-check-circle me-2 text-olive-green"></i> Quinta Sardonia</li>
-                  <li class="mb-2"><i class="fas fa-check-circle me-2 text-olive-green"></i> Cruz de Alba</li>
-                  <li class="mb-2"><i class="fas fa-check-circle me-2 text-olive-green"></i> Matarromera</li>
-                  <li class="mb-2"><i class="fas fa-check-circle me-2 text-olive-green"></i> Alejandro Herros</li>
+                  <li class="mb-2"><i class="fas fa-check-circle me-2 text-olive-green"></i> <span data-i18n="exp_winery_arzuaga">Arzuga Navarro</span></li>
+                  <li class="mb-2"><i class="fas fa-check-circle me-2 text-olive-green"></i> <span data-i18n="exp_winery_sardonia">Quinta Sardonia</span></li>
+                  <li class="mb-2"><i class="fas fa-check-circle me-2 text-olive-green"></i> <span data-i18n="exp_winery_cruzalba">Cruz de Alba</span></li>
+                  <li class="mb-2"><i class="fas fa-check-circle me-2 text-olive-green"></i> <span data-i18n="exp_winery_matarromera">Matarromera</span></li>
+                  <li class="mb-2"><i class="fas fa-check-circle me-2 text-olive-green"></i> <span data-i18n="exp_winery_alejandro">Alejandro Herros</span></li>
                 </ul>
               </div>
               <div class="col-md-4">
                 <ul class="list-unstyled">
-                  <li class="mb-2"><i class="fas fa-check-circle me-2 text-olive-green"></i> Viña Valdemazón</li>
-                  <li class="mb-2"><i class="fas fa-check-circle me-2 text-olive-green"></i> Abadía Retuerta</li>
-                  <li class="mb-2"><i class="fas fa-check-circle me-2 text-olive-green"></i> Vega Silicia</li>
-                  <li class="mb-2"><i class="fas fa-check-circle me-2 text-olive-green"></i> Tinto Carme</li>
-                  <li class="mb-2"><i class="fas fa-check-circle me-2 text-olive-green"></i> Moral Díez</li>
+                  <li class="mb-2"><i class="fas fa-check-circle me-2 text-olive-green"></i> <span data-i18n="exp_winery_valdemazon">Viña Valdemazón</span></li>
+                  <li class="mb-2"><i class="fas fa-check-circle me-2 text-olive-green"></i> <span data-i18n="exp_winery_retuerta">Abadía Retuerta</span></li>
+                  <li class="mb-2"><i class="fas fa-check-circle me-2 text-olive-green"></i> <span data-i18n="exp_winery_silicia">Vega Silicia</span></li>
+                  <li class="mb-2"><i class="fas fa-check-circle me-2 text-olive-green"></i> <span data-i18n="exp_winery_carme">Tinto Carme</span></li>
+                  <li class="mb-2"><i class="fas fa-check-circle me-2 text-olive-green"></i> <span data-i18n="exp_winery_moral">Moral Díez</span></li>
                 </ul>
               </div>
               <div class="col-md-4">
                 <ul class="list-unstyled">
-                  <li class="mb-2"><i class="fas fa-check-circle me-2 text-olive-green"></i> Tabula</li>
-                  <li class="mb-2"><i class="fas fa-check-circle me-2 text-olive-green"></i> Vega de Yuso</li>
-                  <li class="mb-2"><i class="fas fa-check-circle me-2 text-olive-green"></i> Pagos de Mogar</li>
-                  <li class="mb-2"><i class="fas fa-check-circle me-2 text-olive-green"></i> Arzuaga</li>
-                  <li class="mb-2"><i class="fas fa-check-circle me-2 text-olive-green"></i> Thesaurus</li>
+                  <li class="mb-2"><i class="fas fa-check-circle me-2 text-olive-green"></i> <span data-i18n="exp_winery_tabula">Tabula</span></li>
+                  <li class="mb-2"><i class="fas fa-check-circle me-2 text-olive-green"></i> <span data-i18n="exp_winery_yuso">Vega de Yuso</span></li>
+                  <li class="mb-2"><i class="fas fa-check-circle me-2 text-olive-green"></i> <span data-i18n="exp_winery_mogar">Pagos de Mogar</span></li>
+                  <li class="mb-2"><i class="fas fa-check-circle me-2 text-olive-green"></i> <span data-i18n="exp_winery_arzuaga2">Arzuaga</span></li>
+                  <li class="mb-2"><i class="fas fa-check-circle me-2 text-olive-green"></i> <span data-i18n="exp_winery_thesaurus">Thesaurus</span></li>
                 </ul>
               </div>
             </div>
             <div class="text-center mt-3">
-              <a href="contacto.html" class="btn btn-primary">Solicitar transporte</a>
+              <a href="contacto.html" class="btn btn-primary" data-i18n="exp_winery_request_button">Solicitar transporte</a>
             </div>
           </div>
         </div>
@@ -1025,15 +998,15 @@
     <div class="container">
       <div class="row align-items-center">
         <div class="col-lg-6" data-aos="fade-right">
-          <h2 class="section-title">Experiencias a medida</h2>
-          <p>En Viña & Cabaña podemos diseñar experiencias personalizadas para celebraciones especiales, eventos corporativos o escapadas románticas. Cuéntanos qué tienes en mente y crearemos una propuesta única para ti.</p>
+          <h2 class="section-title" data-i18n="exp_custom_title">Experiencias a medida</h2>
+          <p data-i18n="exp_custom_desc">En Viña & Cabaña podemos diseñar experiencias personalizadas para celebraciones especiales, eventos corporativos o escapadas románticas. Cuéntanos qué tienes en mente y crearemos una propuesta única para ti.</p>
           <ul class="list-unstyled">
-            <li class="mb-3"><i class="fas fa-glass-cheers me-2 text-wine-red"></i> Celebraciones de aniversarios</li>
-            <li class="mb-3"><i class="fas fa-heart me-2 text-wine-red"></i> Propuestas de matrimonio entre viñedos</li>
-            <li class="mb-3"><i class="fas fa-users me-2 text-wine-red"></i> Team building para empresas</li>
-            <li class="mb-3"><i class="fas fa-birthday-cake me-2 text-wine-red"></i> Cumpleaños especiales</li>
+            <li class="mb-3"><i class="fas fa-glass-cheers me-2 text-wine-red"></i> <span data-i18n="exp_custom_anniversaries">Celebraciones de aniversarios</span></li>
+            <li class="mb-3"><i class="fas fa-heart me-2 text-wine-red"></i> <span data-i18n="exp_custom_proposals">Propuestas de matrimonio entre viñedos</span></li>
+            <li class="mb-3"><i class="fas fa-users me-2 text-wine-red"></i> <span data-i18n="exp_custom_team_building">Team building para empresas</span></li>
+            <li class="mb-3"><i class="fas fa-birthday-cake me-2 text-wine-red"></i> <span data-i18n="exp_custom_birthdays">Cumpleaños especiales</span></li>
           </ul>
-          <a href="contacto.html" class="btn btn-outline-primary mt-3">Consulta tu experiencia personalizada</a>
+          <a href="contacto.html" class="btn btn-outline-primary mt-3" data-i18n="exp_custom_contact_button">Consulta tu experiencia personalizada</a>
         </div>
         <div class="col-lg-6" data-aos="fade-left">
           <!-- Imagen de celebración privada -->
@@ -1048,9 +1021,9 @@
     <div class="container">
       <div class="row justify-content-center">
         <div class="col-lg-8" data-aos="fade-up">
-          <h2>¿Listo para vivir una experiencia inolvidable?</h2>
-          <p class="lead">Reserva ahora y prepárate para descubrir los secretos de la Ribera del Duero</p>
-          <a href="reservas.html" class="btn btn-light btn-lg mt-4">Reservar ahora</a>
+          <h2 data-i18n="exp_cta_title">¿Listo para vivir una experiencia inolvidable?</h2>
+          <p class="lead" data-i18n="exp_cta_subtitle">Reserva ahora y prepárate para descubrir los secretos de la Ribera del Duero</p>
+          <a href="reservas.html" class="btn btn-light btn-lg mt-4" data-i18n="exp_cta_button">Reservar ahora</a>
         </div>
       </div>
     </div>
@@ -1062,78 +1035,154 @@
       <div class="row">
         <div class="col-lg-4 mb-4 mb-lg-0">
           <h5>Viña & Cabaña</h5>
-          <p>Experiencias premium de enoturismo y alojamiento ecológico de lujo entre viñedos.</p>
+          <p data-i18n="footer_desc">Experiencias premium de enoturismo y alojamiento ecológico de lujo entre viñedos.</p>
         </div>
         <div class="col-lg-4 mb-4 mb-lg-0">
-          <h5>Enlaces rápidos</h5>
+          <h5 data-i18n="footer_quick_links">Enlaces rápidos</h5>
           <ul class="list-unstyled footer-links">
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="experiencias.html">Experiencias</a></li>
-            <li><a href="reservas.html">Reservas</a></li>
-            <li><a href="contacto.html">Contacto</a></li>
-            <li><a href="legal.html">Aviso legal</a></li>
+            <li><a href="index.html" data-i18n="nav_home">Inicio</a></li>
+            <li><a href="experiencias.html" data-i18n="nav_experiences">Experiencias</a></li>
+            <li><a href="reservas.html" data-i18n="nav_bookings">Reservas</a></li>
+            <li><a href="contacto.html" data-i18n="nav_contact">Contacto</a></li>
+            <li><a href="legal.html" data-i18n="footer_legal">Aviso legal</a></li>
           </ul>
         </div>
         <div class="col-lg-4">
-          <h5>Contacto</h5>
+          <h5 data-i18n="footer_contact">Contacto</h5>
           <address>
-            <p><i class="fas fa-map-marker-alt me-2"></i> Bodegas Viña Mayor, Quintanilla de Onésimo (Valladolid)</p>
-            <p><i class="fas fa-phone me-2"></i> +34 123 456 789</p>
-            <p><i class="fas fa-envelope me-2"></i> info@viñaycabana.com</p>
-            <p><i class="fas fa-envelope me-2"></i> reservas@viña&cabaña.com</p>
+            <p><i class="fas fa-map-marker-alt me-2"></i> Bodegas Viña Mayor, Quintanilla de Onésimo</p>
+            <p><i class="fas fa-phone me-2"></i> <a href="tel:+34123456789" class="text-white">+34 123 456 789</a></p>
+            <p><i class="fas fa-envelope me-2"></i> <a href="mailto:info@viñaycabana.com" class="text-white">info@viñaycabana.com</a></p>
+            <p><i class="fas fa-envelope me-2"></i> <a href="mailto:reservas@viña&cabaña.com" class="text-white">reservas@viña&cabaña.com</a></p>
           </address>
           <div class="social-icons">
-            <a href="https://www.facebook.com/share/18VQR5HABd/?mibextid=wwXIfr"><i class="fab fa-facebook-f"></i></a>
-            <a href="https://www.instagram.com/vina_y_cabana_experience?igsh=MW14Z2MyeTg2djRwOQ=="><i class="fab fa-instagram"></i></a>
+            <a href="https://www.facebook.com/share/18VQR5HABd/?mibextid=wwXIfr" aria-label="Facebook" target="_blank" rel="noopener"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/vina_y_cabana_experience?igsh=MW14Z2MyeTg2djRwOQ==" aria-label="Instagram" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a>
           </div>
         </div>
       </div>
       <div class="row mt-4">
         <div class="col-12 text-center">
-          <p class="mb-0">Vive con nosotros – Viña & Cabaña &copy; <span id="year"></span></p>
+          <p class="mb-0" data-i18n="footer_copyright">Vive con nosotros – Viña & Cabaña &copy; <span id="year"></span></p>
         </div>
       </div>
     </div>
   </footer>
 
+  <!-- Cookie Banner -->
+  <div class="cookie-banner" id="cookieBanner">
+    <p data-i18n="cookie_text">Utilizamos cookies propias y de terceros para mejorar nuestros servicios y mostrarle publicidad relacionada con sus preferencias mediante el análisis de sus hábitos de navegación. Si continúa navegando, consideramos que acepta su uso. Puede cambiar la configuración u obtener más información en nuestra</p> <a href="legal.html" data-i18n="cookie_policy">Política de Cookies</a>.
+    <div class="cookie-actions">
+      <button class="btn btn-reject" id="rejectCookies" data-i18n="cookie_reject">Rechazar</button>
+      <button class="btn btn-accept" id="acceptCookies" data-i18n="cookie_accept">Aceptar</button>
+    </div>
+  </div>
+
+  <!-- Botón volver arriba -->
+  <button id="backToTop" class="btn btn-primary rounded-circle position-fixed bottom-0 end-0 m-4 d-none" aria-label="Volver arriba">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
   <!-- Bootstrap Bundle with Popper -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   
-  <!-- AOS Library -->
+  <!-- AOS Animate On Scroll -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   
-  <!-- Splide.js para carruseles optimizados -->
+  <!-- Splide.js -->
   <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+  
+  <!-- Scripts de traducción -->
+  <script src="assets/js/translations.js"></script>
+  <script src="assets/js/experiencias-translations.js"></script>
+  <script src="assets/js/i18n.js"></script>
   
   <!-- Custom JavaScript -->
   <script src="assets/js/script.js"></script>
   
   <script>
     document.addEventListener('DOMContentLoaded', function() {
-      // Initialize Splide carousel for tourism
-      new Splide('.splide', {
-        type: 'loop',
-        perPage: 3,
-        perMove: 1,
-        gap: 20,
-        padding: '2rem',
-        arrows: true,
-        pagination: true,
-        autoplay: true,
-        interval: 5000,
-        pauseOnHover: true,
-        breakpoints: {
-          1024: {
-            perPage: 3,
-          },
-          768: {
-            perPage: 2,
-          },
-          640: {
-            perPage: 1,
-          },
+      // Inicializar AOS
+      AOS.init({
+        duration: 1000,
+        once: true
+      });
+      
+      // Inicializar Splide para la galería de lugares turísticos
+      if (document.querySelector('.splide')) {
+        new Splide('.splide', {
+          type: 'loop',
+          perPage: 3,
+          perMove: 1,
+          gap: 20,
+          padding: '2rem',
+          arrows: true,
+          pagination: true,
+          autoplay: true,
+          interval: 4000,
+          pauseOnHover: true,
+          breakpoints: {
+            1024: {
+              perPage: 3,
+            },
+            768: {
+              perPage: 2,
+            },
+            640: {
+              perPage: 1,
+            },
+          }
+        }).mount();
+      }
+      
+      // Establecer el año actual en el footer
+      document.getElementById('year').innerText = new Date().getFullYear();
+      
+      // Botón volver arriba
+      const backToTopBtn = document.getElementById('backToTop');
+      window.addEventListener('scroll', function() {
+        if (window.scrollY > 300) {
+          backToTopBtn.classList.remove('d-none');
+          backToTopBtn.classList.add('d-block');
+        } else {
+          backToTopBtn.classList.remove('d-block');
+          backToTopBtn.classList.add('d-none');
         }
-      }).mount();
+      });
+      
+      backToTopBtn.addEventListener('click', function() {
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+        });
+      });
+      
+      // Gestión de cookies
+      const cookieBanner = document.getElementById('cookieBanner');
+      const acceptCookies = document.getElementById('acceptCookies');
+      const rejectCookies = document.getElementById('rejectCookies');
+      
+      // Comprobar si ya se ha mostrado el aviso de cookies
+      const cookiesAccepted = localStorage.getItem('cookiesAccepted');
+      
+      if (cookiesAccepted === null) {
+        // Mostrar el aviso de cookies después de un breve retraso
+        setTimeout(() => {
+          cookieBanner.classList.add('show');
+        }, 1500);
+      }
+      
+      // Función para aceptar cookies
+      acceptCookies.addEventListener('click', () => {
+        localStorage.setItem('cookiesAccepted', 'true');
+        cookieBanner.classList.remove('show');
+      });
+      
+      // Función para rechazar cookies
+      rejectCookies.addEventListener('click', () => {
+        localStorage.setItem('cookiesAccepted', 'false');
+        cookieBanner.classList.remove('show');
+      });
     });
   </script>
 </body>

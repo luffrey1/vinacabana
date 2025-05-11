@@ -132,58 +132,67 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item">
-            <a class="nav-link" href="index.html">Inicio</a>
+            <a class="nav-link" href="index.html" data-i18n="nav_home">Inicio</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="about.html">Nosotros</a>
+            <a class="nav-link" href="about.html" data-i18n="nav_about">Nosotros</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="experiencias.html">Experiencias</a>
+            <a class="nav-link" href="experiencias.html" data-i18n="nav_experiences">Experiencias</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" href="reservas.html">Reservas</a>
+            <a class="nav-link active" href="reservas.html" data-i18n="nav_bookings">Reservas</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="testimonios.html">Testimonios</a>
+            <a class="nav-link" href="testimonios.html" data-i18n="nav_testimonials">Testimonios</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="contacto.html">Contacto</a>
+            <a class="nav-link" href="contacto.html" data-i18n="nav_contact">Contacto</a>
+          </li>
+          <li class="nav-item language-selector dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="languageDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="fas fa-globe-americas"></i> <span data-i18n="language">Idioma</span>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="languageDropdown" id="languageSelector">
+              <li><button class="dropdown-item" data-language="es"><img src="assets/img/flags/españa.webp" alt="Español" width="20"> Español</button></li>
+              <li><button class="dropdown-item" data-language="en"><img src="assets/img/flags/ingles.webp" alt="English" width="20"> English</button></li>
+              <li><button class="dropdown-item" data-language="fr"><img src="assets/img/flags/francia.png" alt="Français" width="20"> Français</button></li>
+              <li><button class="dropdown-item" data-language="it"><img src="assets/img/flags/italia.webp" alt="Italiano" width="20"> Italiano</button></li>
+              <li><button class="dropdown-item" data-language="de"><img src="assets/img/flags/alemania.png" alt="Deutsch" width="20"> Deutsch</button></li>
+            </ul>
           </li>
         </ul>
       </div>
     </div>
   </nav>
-
- 
-
   <!-- Cabins Section -->
   <section class="py-5 bg-light mt-8">
     <div class="container">
-      <h2 class="section-title text-center mb-3" data-aos="fade-up">Nuestros Alojamientos</h2>
-      <p class="text-center mb-5 lead" data-aos="fade-up">Cabañas ecológicas de lujo para una experiencia inolvidable entre viñedos</p>
+      <h2 class="section-title text-center mb-3" data-aos="fade-up" data-i18n="booking_title">Nuestros Alojamientos</h2>
+      <p class="text-center mb-5 lead" data-aos="fade-up" data-i18n="booking_subtitle">Cabañas ecológicas de lujo para una experiencia inolvidable entre viñedos</p>
       
       <div class="row">
         <!-- Cabin 1: Tempranillo (RIVER) -->
         <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="100">
           <div class="cabin-card card">
             <div class="ribbon ribbon-top-right"><span>RIVER</span></div>
-            <img src="assets/img/casariver.jpg" class="card-img-top" alt="Cabaña Tempranillo">
+            <img src="assets/img/casariver.jpg" class="card-img-top" alt="Cabaña Tempranillo" data-i18n-alt="cabin1_alt">
             <div class="card-body">
-              <h5 class="card-title">Cabaña Tempranillo</h5>
-              <p class="card-price">290€/noche</p>
-              <p class="card-text">Cabaña ecológica para 6 personas con terraza privada, vista al viñedo y todas las comodidades.</p>
+              <h5 class="card-title" data-i18n="cabin1_title">Cabaña Tempranillo</h5>
+              <p class="card-price" data-i18n="cabin1_price">290€/noche</p>
+              <p class="card-text" data-i18n="cabin1_description">Cabaña ecológica para 6 personas con terraza privada, vista al viñedo y todas las comodidades.</p>
               <div class="cabin-features mb-3">
-                <span class="badge bg-wine-red me-2 mb-2">6 personas</span>
-                <span class="badge bg-wine-red me-2 mb-2">120 m²</span>
-                <span class="badge bg-wine-red me-2 mb-2">3 dormitorios</span>
+                <span class="badge bg-wine-red me-2 mb-2" data-i18n="cabin1_feature1">6 personas</span>
+                <span class="badge bg-wine-red me-2 mb-2" data-i18n="cabin1_feature2">120 m²</span>
+                <span class="badge bg-wine-red me-2 mb-2" data-i18n="cabin1_feature3">3 dormitorios</span>
               </div>
               <ul class="list-unstyled mb-4">
-                <li><i class="fas fa-utensils me-2"></i> Cocina equipada</li>
-                <li><i class="fas fa-bath me-2"></i> Baño completo</li>
-                <li><i class="fas fa-wifi me-2"></i> Wi-Fi de alta velocidad</li>
-                <li><i class="fas fa-coffee me-2"></i> Desayuno incluido</li>
+                <li><i class="fas fa-utensils me-2"></i> <span data-i18n="feature_kitchen">Cocina equipada</span></li>
+                <li><i class="fas fa-bath me-2"></i> <span data-i18n="feature_bathroom">Baño completo</span></li>
+                <li><i class="fas fa-wifi me-2"></i> <span data-i18n="feature_wifi">Wi-Fi de alta velocidad</span></li>
+                <li><i class="fas fa-coffee me-2"></i> <span data-i18n="feature_breakfast">Desayuno incluido</span></li>
               </ul>
-              <a href="#booking-form" class="btn btn-outline-primary w-100">Reservar ahora</a>
+              <a href="#booking-form" class="btn btn-outline-primary w-100" data-i18n="btn_book_now">Reservar ahora</a>
             </div>
           </div>
         </div>
@@ -192,48 +201,48 @@
         <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="200">
           <div class="cabin-card card">
             <div class="ribbon ribbon-top-right"><span>EROS</span></div>
-            <img src="assets/img/casaeros.jpg" class="card-img-top" alt="Cabaña Cabernet Sauvignon">
+            <img src="assets/img/casaeros.jpg" class="card-img-top" alt="Cabaña Cabernet Sauvignon" data-i18n-alt="cabin2_alt">
             <div class="card-body">
-              <h5 class="card-title">Cabaña Cabernet Sauvignon</h5>
-              <p class="card-price">240€/noche</p>
-              <p class="card-text">Romántica cabaña con jacuzzi exterior, chimenea y vistas panorámicas a los viñedos.</p>
+              <h5 class="card-title" data-i18n="cabin2_title">Cabaña Cabernet Sauvignon</h5>
+              <p class="card-price" data-i18n="cabin2_price">240€/noche</p>
+              <p class="card-text" data-i18n="cabin2_description">Romántica cabaña con jacuzzi exterior, chimenea y vistas panorámicas a los viñedos.</p>
               <div class="cabin-features mb-3">
-                <span class="badge bg-wine-red me-2 mb-2">2 personas</span>
-                <span class="badge bg-wine-red me-2 mb-2">48 m²</span>
-                <span class="badge bg-wine-red me-2 mb-2">1 dormitorio</span>
+                <span class="badge bg-wine-red me-2 mb-2" data-i18n="cabin2_feature1">2 personas</span>
+                <span class="badge bg-wine-red me-2 mb-2" data-i18n="cabin2_feature2">48 m²</span>
+                <span class="badge bg-wine-red me-2 mb-2" data-i18n="cabin2_feature3">1 dormitorio</span>
               </div>
               <ul class="list-unstyled mb-4">
-                <li><i class="fas fa-utensils me-2"></i> Cocina equipada</li>
-                <li><i class="fas fa-hot-tub me-2"></i> Jacuzzi privado</li>
-                <li><i class="fas fa-fire me-2"></i> Chimenea</li>
-                <li><i class="fas fa-glass-cheers me-2"></i> Botella de vino de bienvenida</li>
+                <li><i class="fas fa-utensils me-2"></i> <span data-i18n="feature_kitchen">Cocina equipada</span></li>
+                <li><i class="fas fa-hot-tub me-2"></i> <span data-i18n="feature_jacuzzi">Jacuzzi privado</span></li>
+                <li><i class="fas fa-fire me-2"></i> <span data-i18n="feature_fireplace">Chimenea</span></li>
+                <li><i class="fas fa-glass-cheers me-2"></i> <span data-i18n="feature_welcome_bottle">Botella de vino de bienvenida</span></li>
               </ul>
-              <a href="#booking-form" class="btn btn-outline-primary w-100">Reservar ahora</a>
+              <a href="#booking-form" class="btn btn-outline-primary w-100" data-i18n="btn_book_now">Reservar ahora</a>
             </div>
           </div>
         </div>
         
-        <!-- Cabin 3: Merlot (EROS) -->
+        <!-- Cabin 3: Garnacha (VENTURA) -->
         <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="300">
           <div class="cabin-card card">
-            <div class="ribbon ribbon-top-right"><span>EROS</span></div>
-            <img src="assets/img/eros.jpg" class="card-img-top" alt="Cabaña Merlot">
+            <div class="ribbon ribbon-top-right"><span>VENTURA</span></div>
+            <img src="assets/img/eros.jpg" class="card-img-top" alt="Cabaña Garnacha" data-i18n-alt="cabin3_alt">
             <div class="card-body">
-              <h5 class="card-title">Cabaña Merlot</h5>
-              <p class="card-price">230€/noche</p>
-              <p class="card-text">Elegante cabaña tipo EROS con terraza privada, vistas al amanecer y detalles únicos.</p>
+              <h5 class="card-title" data-i18n="cabin3_title">Cabaña Garnacha</h5>
+              <p class="card-price" data-i18n="cabin3_price">200€/noche</p>
+              <p class="card-text" data-i18n="cabin3_description">Ideal para familias con niños y mascotas. Amplio espacio exterior y zona de barbacoa.</p>
               <div class="cabin-features mb-3">
-                <span class="badge bg-wine-red me-2 mb-2">2 personas</span>
-                <span class="badge bg-wine-red me-2 mb-2">48 m²</span>
-                <span class="badge bg-wine-red me-2 mb-2">1 dormitorio</span>
+                <span class="badge bg-wine-red me-2 mb-2" data-i18n="cabin3_feature1">4 personas</span>
+                <span class="badge bg-wine-red me-2 mb-2" data-i18n="cabin3_feature2">90 m²</span>
+                <span class="badge bg-wine-red me-2 mb-2" data-i18n="cabin3_feature3">2 dormitorios</span>
               </div>
               <ul class="list-unstyled mb-4">
-                <li><i class="fas fa-utensils me-2"></i> Cocina equipada</li>
-                <li><i class="fas fa-bed me-2"></i> Cama king size</li>
-                <li><i class="fas fa-moon me-2"></i> Iluminación ambiental</li>
-                <li><i class="fas fa-heart me-2"></i> Perfecta para parejas</li>
+                <li><i class="fas fa-utensils me-2"></i> <span data-i18n="feature_kitchen">Cocina equipada</span></li>
+                <li><i class="fas fa-paw me-2"></i> <span data-i18n="feature_pets">Mascotas bienvenidas</span></li>
+                <li><i class="fas fa-drumstick-bite me-2"></i> <span data-i18n="feature_bbq">Zona de barbacoa</span></li>
+                <li><i class="fas fa-bicycle me-2"></i> <span data-i18n="feature_bikes">Bicicletas disponibles</span></li>
               </ul>
-              <a href="#booking-form" class="btn btn-outline-primary w-100">Reservar ahora</a>
+              <a href="#booking-form" class="btn btn-outline-primary w-100" data-i18n="btn_book_now">Reservar ahora</a>
             </div>
           </div>
         </div>
@@ -242,23 +251,23 @@
         <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="400">
           <div class="cabin-card card">
             <div class="ribbon ribbon-top-right"><span>EROS</span></div>
-            <img src="assets/img/casaeros.jpg" class="card-img-top" alt="Cabaña Malbec">
+            <img src="assets/img/casaeros.jpg" class="card-img-top" alt="Cabaña Malbec" data-i18n-alt="cabin4_alt">
             <div class="card-body">
-              <h5 class="card-title">Cabaña Malbec</h5>
-              <p class="card-price">235€/noche</p>
-              <p class="card-text">Acogedora cabaña para dos personas con detalles de diseño y máximo confort.</p>
+              <h5 class="card-title" data-i18n="cabin4_title">Cabaña Malbec</h5>
+              <p class="card-price" data-i18n="cabin4_price">235€/noche</p>
+              <p class="card-text" data-i18n="cabin4_description">Acogedora cabaña para dos personas con detalles de diseño y máximo confort.</p>
               <div class="cabin-features mb-3">
-                <span class="badge bg-wine-red me-2 mb-2">2 personas</span>
-                <span class="badge bg-wine-red me-2 mb-2">48 m²</span>
-                <span class="badge bg-wine-red me-2 mb-2">1 dormitorio</span>
+                <span class="badge bg-wine-red me-2 mb-2" data-i18n="cabin4_feature1">2 personas</span>
+                <span class="badge bg-wine-red me-2 mb-2" data-i18n="cabin4_feature2">48 m²</span>
+                <span class="badge bg-wine-red me-2 mb-2" data-i18n="cabin4_feature3">1 dormitorio</span>
               </div>
               <ul class="list-unstyled mb-4">
-                <li><i class="fas fa-utensils me-2"></i> Cocina equipada</li>
-                <li><i class="fas fa-bed me-2"></i> Cama extragrande</li>
-                <li><i class="fas fa-bath me-2"></i> Baño con ducha efecto lluvia</li>
-                <li><i class="fas fa-umbrella-beach me-2"></i> Terraza con tumbonas</li>
+                <li><i class="fas fa-utensils me-2"></i> <span data-i18n="feature_kitchen">Cocina equipada</span></li>
+                <li><i class="fas fa-bed me-2"></i> <span data-i18n="feature_king_bed">Cama extragrande</span></li>
+                <li><i class="fas fa-bath me-2"></i> <span data-i18n="feature_rain_shower">Baño con ducha efecto lluvia</span></li>
+                <li><i class="fas fa-umbrella-beach me-2"></i> <span data-i18n="feature_terrace">Terraza con tumbonas</span></li>
               </ul>
-              <a href="#booking-form" class="btn btn-outline-primary w-100">Reservar ahora</a>
+              <a href="#booking-form" class="btn btn-outline-primary w-100" data-i18n="btn_book_now">Reservar ahora</a>
             </div>
           </div>
         </div>
@@ -267,23 +276,23 @@
         <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="500">
           <div class="cabin-card card">
             <div class="ribbon ribbon-top-right"><span>GRECIA</span></div>
-            <img src="assets/img/casagrecia.jpg" class="card-img-top" alt="Cabaña Garnacha Tinta">
+            <img src="assets/img/casagrecia.jpg" class="card-img-top" alt="Cabaña Garnacha Tinta" data-i18n-alt="cabin5_alt">
             <div class="card-body">
-              <h5 class="card-title">Cabaña Garnacha Tinta</h5>
-              <p class="card-price">260€/noche</p>
-              <p class="card-text">Espaciosa cabaña familiar con dos dormitorios y amplia zona común.</p>
+              <h5 class="card-title" data-i18n="cabin5_title">Cabaña Garnacha Tinta</h5>
+              <p class="card-price" data-i18n="cabin5_price">260€/noche</p>
+              <p class="card-text" data-i18n="cabin5_description">Espaciosa cabaña familiar con dos dormitorios y amplia zona común.</p>
               <div class="cabin-features mb-3">
-                <span class="badge bg-wine-red me-2 mb-2">4 personas</span>
-                <span class="badge bg-wine-red me-2 mb-2">54 m²</span>
-                <span class="badge bg-wine-red me-2 mb-2">2 dormitorios</span>
+                <span class="badge bg-wine-red me-2 mb-2" data-i18n="cabin5_feature1">4 personas</span>
+                <span class="badge bg-wine-red me-2 mb-2" data-i18n="cabin5_feature2">54 m²</span>
+                <span class="badge bg-wine-red me-2 mb-2" data-i18n="cabin5_feature3">2 dormitorios</span>
               </div>
               <ul class="list-unstyled mb-4">
-                <li><i class="fas fa-utensils me-2"></i> Cocina equipada</li>
-                <li><i class="fas fa-door-closed me-2"></i> 2 dormitorios separados</li>
-                <li><i class="fas fa-couch me-2"></i> Sala de estar</li>
-                <li><i class="fas fa-paw me-2"></i> Pet-friendly</li>
+                <li><i class="fas fa-utensils me-2"></i> <span data-i18n="feature_kitchen">Cocina equipada</span></li>
+                <li><i class="fas fa-door-closed me-2"></i> <span data-i18n="feature_separate_rooms">2 dormitorios separados</span></li>
+                <li><i class="fas fa-couch me-2"></i> <span data-i18n="feature_living_room">Sala de estar</span></li>
+                <li><i class="fas fa-paw me-2"></i> <span data-i18n="feature_pets">Pet-friendly</span></li>
               </ul>
-              <a href="#booking-form" class="btn btn-outline-primary w-100">Reservar ahora</a>
+              <a href="#booking-form" class="btn btn-outline-primary w-100" data-i18n="btn_book_now">Reservar ahora</a>
             </div>
           </div>
         </div>
@@ -292,23 +301,23 @@
         <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="600">
           <div class="cabin-card card">
             <div class="ribbon ribbon-top-right"><span>GRECIA</span></div>
-            <img src="assets/img/casagrecia.jpg" class="card-img-top" alt="Cabaña Albillo Mayor">
+            <img src="assets/img/casagrecia.jpg" class="card-img-top" alt="Cabaña Albillo Mayor" data-i18n-alt="cabin6_alt">
             <div class="card-body">
-              <h5 class="card-title">Cabaña Albillo Mayor</h5>
-              <p class="card-price">255€/noche</p>
-              <p class="card-text">Luminosa cabaña tipo GRECIA con vista a los viñedos y decoración contemporánea.</p>
+              <h5 class="card-title" data-i18n="cabin6_title">Cabaña Albillo Mayor</h5>
+              <p class="card-price" data-i18n="cabin6_price">255€/noche</p>
+              <p class="card-text" data-i18n="cabin6_description">Luminosa cabaña tipo GRECIA con vista a los viñedos y decoración contemporánea.</p>
               <div class="cabin-features mb-3">
-                <span class="badge bg-wine-red me-2 mb-2">4 personas</span>
-                <span class="badge bg-wine-red me-2 mb-2">54 m²</span>
-                <span class="badge bg-wine-red me-2 mb-2">2 dormitorios</span>
+                <span class="badge bg-wine-red me-2 mb-2" data-i18n="cabin6_feature1">4 personas</span>
+                <span class="badge bg-wine-red me-2 mb-2" data-i18n="cabin6_feature2">54 m²</span>
+                <span class="badge bg-wine-red me-2 mb-2" data-i18n="cabin6_feature3">2 dormitorios</span>
               </div>
               <ul class="list-unstyled mb-4">
-                <li><i class="fas fa-utensils me-2"></i> Cocina equipada</li>
-                <li><i class="fas fa-bath me-2"></i> Baño con bañera</li>
-                <li><i class="fas fa-tv me-2"></i> Smart TV en cada habitación</li>
-                <li><i class="fas fa-umbrella-beach me-2"></i> Porche con vistas</li>
+                <li><i class="fas fa-utensils me-2"></i> <span data-i18n="feature_kitchen">Cocina equipada</span></li>
+                <li><i class="fas fa-bath me-2"></i> <span data-i18n="feature_bathtub">Baño con bañera</span></li>
+                <li><i class="fas fa-tv me-2"></i> <span data-i18n="feature_smart_tv">Smart TV en cada habitación</span></li>
+                <li><i class="fas fa-umbrella-beach me-2"></i> <span data-i18n="feature_porch">Porche con vistas</span></li>
               </ul>
-              <a href="#booking-form" class="btn btn-outline-primary w-100">Reservar ahora</a>
+              <a href="#booking-form" class="btn btn-outline-primary w-100" data-i18n="btn_book_now">Reservar ahora</a>
             </div>
           </div>
         </div>
@@ -317,23 +326,23 @@
         <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="700">
           <div class="cabin-card card">
             <div class="ribbon ribbon-top-right"><span>RIVER</span></div>
-            <img src="assets/img/casarivergrande.jpg" class="card-img-top" alt="Cabaña Mencía">
+            <img src="assets/img/casarivergrande.jpg" class="card-img-top" alt="Cabaña Mencía" data-i18n-alt="cabin7_alt">
             <div class="card-body">
-              <h5 class="card-title">Cabaña Mencía</h5>
-              <p class="card-price">285€/noche</p>
-              <p class="card-text">Gran cabaña tipo RIVER ideal para grupos y familias con amplio espacio y todas las comodidades.</p>
+              <h5 class="card-title" data-i18n="cabin7_title">Cabaña Mencía</h5>
+              <p class="card-price" data-i18n="cabin7_price">285€/noche</p>
+              <p class="card-text" data-i18n="cabin7_description">Gran cabaña tipo RIVER ideal para grupos y familias con amplio espacio y todas las comodidades.</p>
               <div class="cabin-features mb-3">
-                <span class="badge bg-wine-red me-2 mb-2">6 personas</span>
-                <span class="badge bg-wine-red me-2 mb-2">120 m²</span>
-                <span class="badge bg-wine-red me-2 mb-2">3 dormitorios</span>
+                <span class="badge bg-wine-red me-2 mb-2" data-i18n="cabin7_feature1">6 personas</span>
+                <span class="badge bg-wine-red me-2 mb-2" data-i18n="cabin7_feature2">120 m²</span>
+                <span class="badge bg-wine-red me-2 mb-2" data-i18n="cabin7_feature3">3 dormitorios</span>
               </div>
               <ul class="list-unstyled mb-4">
-                <li><i class="fas fa-utensils me-2"></i> Cocina equipada</li>
-                <li><i class="fas fa-couch me-2"></i> Amplio salón</li>
-                <li><i class="fas fa-users me-2"></i> Ideal para grupos</li>
-                <li><i class="fas fa-music me-2"></i> Sistema de sonido integrado</li>
+                <li><i class="fas fa-utensils me-2"></i> <span data-i18n="feature_kitchen">Cocina equipada</span></li>
+                <li><i class="fas fa-couch me-2"></i> <span data-i18n="feature_living_room">Amplio salón</span></li>
+                <li><i class="fas fa-users me-2"></i> <span data-i18n="feature_group">Ideal para grupos</span></li>
+                <li><i class="fas fa-music me-2"></i> <span data-i18n="feature_sound">Sistema de sonido integrado</span></li>
               </ul>
-              <a href="#booking-form" class="btn btn-outline-primary w-100">Reservar ahora</a>
+              <a href="#booking-form" class="btn btn-outline-primary w-100" data-i18n="btn_book_now">Reservar ahora</a>
             </div>
           </div>
         </div>
@@ -341,28 +350,28 @@
       
       <!-- Cabin Pricing Section -->
       <section class="mb-5">
-        <h3 class="text-center mb-4" data-aos="fade-up">Precios por noche</h3>
+        <h3 class="text-center mb-4" data-aos="fade-up" data-i18n="prices_per_night">Precios por noche</h3>
         
         <div class="container">
           <div class="table-responsive" data-aos="fade-up">
             <table class="table table-hover pricing-table">
               <thead>
                 <tr>
-                  <th>Tipo de Cabaña</th>
-                  <th>Temporada Baja</th>
-                  <th>Temporada Alta</th>
-                  <th>Suplemento Fin de Semana</th>
+                  <th data-i18n="cabin_type">Tipo de Cabaña</th>
+                  <th data-i18n="low_season">Temporada Baja</th>
+                  <th data-i18n="high_season">Temporada Alta</th>
+                  <th data-i18n="weekend_supplement">Suplemento Fin de Semana</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
                   <td>
                     <strong>Casa EROS</strong><br>
-                    <small>2 personas</small>
+                    <small data-i18n="people">2 personas</small>
                   </td>
                   <td>120 €</td>
                   <td>160 €</td>
-                  <td>20 € por día<br><small>(viernes, sábado y domingo)</small></td>
+                  <td>20 € <span data-i18n="per_day">por día</span><br><small data-i18n="friday_saturday_sunday">(viernes, sábado y domingo)</small></td>
                 </tr>
                 <tr>
                   <td>
@@ -371,7 +380,7 @@
                   </td>
                   <td>160 €</td>
                   <td>220 €</td>
-                  <td>20 € por día<br><small>(viernes, sábado y domingo)</small></td>
+                  <td>20 € <span data-i18n="per_day">por día</span><br><small data-i18n="friday_saturday_sunday">(viernes, sábado y domingo)</small></td>
                 </tr>
                 <tr>
                   <td>
@@ -380,7 +389,7 @@
                   </td>
                   <td>240 €</td>
                   <td>280 €</td>
-                  <td>20 € por día<br><small>(viernes, sábado y domingo)</small></td>
+                  <td>20 € <span data-i18n="per_day">por día</span><br><small data-i18n="friday_saturday_sunday">(viernes, sábado y domingo)</small></td>
                 </tr>
               </tbody>
             </table>
@@ -391,7 +400,7 @@
       
       <!-- Promotional Packs Section -->
       <section class="mb-5">
-        <h3 class="text-center mb-4" data-aos="fade-up">Packs Promocionales</h3>
+        <h3 class="text-center mb-4" data-aos="fade-up" data-i18n="promotional_packs">Packs Promocionales</h3>
         
         <div class="container">
           <div class="row">
@@ -399,28 +408,28 @@
             <div class="col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="100">
               <div class="card pricing-card h-100">
                 <div class="card-header bg-light text-center">
-                  <h4 class="my-0">Pack 1</h4>
-                  <p class="mb-0">Ideal para parejas</p>
+                  <h4 class="my-0" data-i18n="pack1_title">Pack 1</h4>
+                  <p class="mb-0" data-i18n="pack1_subtitle">Ideal para parejas</p>
                 </div>
                 <div class="card-body">
                   <div class="price-container text-center">
-                    <span class="price-label">Desde</span>
+                    <span class="price-label" data-i18n="from">Desde</span>
                     <span class="price-value">310 €</span>
                     <span class="price-info">
-                      Temporada baja: 310 €<br>
-                      Temporada alta: 350 €<br>
-                      <small>Suplemento fin de semana: 20 €</small>
+                      <span data-i18n="low_season_price">Temporada baja:</span> 310 €<br>
+                      <span data-i18n="high_season_price">Temporada alta:</span> 350 €<br>
+                      <small data-i18n="weekend_supplement_short">Suplemento fin de semana: 20 €</small>
                     </span>
                   </div>
                   <ul class="package-features list-unstyled mt-4">
-                    <li><i class="fas fa-moon me-2 text-wine-red"></i> 2 noches en cabaña con desayuno incluido</li>
-                    <li><i class="fas fa-wine-glass me-2 text-wine-red"></i> Visita guiada a la bodega con cata de vinos premium</li>
-                    <li><i class="fas fa-utensils me-2 text-wine-red"></i> Cena maridaje y vinos seleccionados</li>
-                    <li><i class="fas fa-gift me-2 text-wine-red"></i> Botella de vino de bienvenida</li>
+                    <li><i class="fas fa-moon me-2 text-wine-red"></i> <span data-i18n="pack1_feature1">2 noches en cabaña con desayuno incluido</span></li>
+                    <li><i class="fas fa-wine-glass me-2 text-wine-red"></i> <span data-i18n="pack1_feature2">Visita guiada a la bodega con cata de vinos premium</span></li>
+                    <li><i class="fas fa-utensils me-2 text-wine-red"></i> <span data-i18n="pack1_feature3">Cena maridaje y vinos seleccionados</span></li>
+                    <li><i class="fas fa-gift me-2 text-wine-red"></i> <span data-i18n="pack1_feature4">Botella de vino de bienvenida</span></li>
                   </ul>
                 </div>
                 <div class="card-footer text-center bg-white border-0 pb-4">
-                  <a href="#booking-form" class="btn btn-outline-primary">Reservar pack</a>
+                  <a href="#booking-form" class="btn btn-outline-primary" data-i18n="book_pack">Reservar pack</a>
                 </div>
               </div>
             </div>
@@ -429,28 +438,28 @@
             <div class="col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="200">
               <div class="card pricing-card h-100">
                 <div class="card-header bg-light text-center">
-                  <h4 class="my-0">Pack 2</h4>
-                  <p class="mb-0">Ideal para grupos de amigos</p>
+                  <h4 class="my-0" data-i18n="pack2_title">Pack 2</h4>
+                  <p class="mb-0" data-i18n="pack2_subtitle">Ideal para grupos de amigos</p>
                 </div>
                 <div class="card-body">
                   <div class="price-container text-center">
-                    <span class="price-label">Desde</span>
+                    <span class="price-label" data-i18n="from">Desde</span>
                     <span class="price-value">500 €</span>
                     <span class="price-info">
-                      Temporada baja: 500 €<br>
-                      Temporada alta: 550 €<br>
-                      <small>Suplemento fin de semana: 20 €</small>
+                      <span data-i18n="low_season_price">Temporada baja:</span> 500 €<br>
+                      <span data-i18n="high_season_price">Temporada alta:</span> 550 €<br>
+                      <small data-i18n="weekend_supplement_short">Suplemento fin de semana: 20 €</small>
                     </span>
                   </div>
                   <ul class="package-features list-unstyled mt-4">
-                    <li><i class="fas fa-moon me-2 text-wine-red"></i> 3 noches en cabaña (2-4 personas) con desayuno incluido</li>
-                    <li><i class="fas fa-wine-bottle me-2 text-wine-red"></i> Clase privada de cata con un sommelier</li>
-                    <li><i class="fas fa-tree me-2 text-wine-red"></i> Recorrido exclusivo por los viñedos</li>
-                    <li><i class="fas fa-info-circle me-2 text-wine-red"></i> Explicación del proceso de vinificación</li>
+                    <li><i class="fas fa-moon me-2 text-wine-red"></i> <span data-i18n="pack2_feature1">3 noches en cabaña (2-4 personas) con desayuno incluido</span></li>
+                    <li><i class="fas fa-wine-bottle me-2 text-wine-red"></i> <span data-i18n="pack2_feature2">Clase privada de cata con un sommelier</span></li>
+                    <li><i class="fas fa-tree me-2 text-wine-red"></i> <span data-i18n="pack2_feature3">Recorrido exclusivo por los viñedos</span></li>
+                    <li><i class="fas fa-info-circle me-2 text-wine-red"></i> <span data-i18n="pack2_feature4">Explicación del proceso de vinificación</span></li>
                   </ul>
                 </div>
                 <div class="card-footer text-center bg-white border-0 pb-4">
-                  <a href="#booking-form" class="btn btn-outline-primary">Reservar pack</a>
+                  <a href="#booking-form" class="btn btn-outline-primary" data-i18n="book_pack">Reservar pack</a>
                 </div>
               </div>
             </div>
@@ -459,29 +468,29 @@
             <div class="col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="300">
               <div class="card pricing-card h-100">
                 <div class="card-header bg-light text-center">
-                  <h4 class="my-0">Pack 3</h4>
-                  <p class="mb-0">Ideal para grupos</p>
+                  <h4 class="my-0" data-i18n="pack3_title">Pack 3</h4>
+                  <p class="mb-0" data-i18n="pack3_subtitle">Ideal para grupos</p>
                 </div>
                 <div class="card-body">
                   <div class="price-container text-center">
-                    <span class="price-label">Desde</span>
+                    <span class="price-label" data-i18n="from">Desde</span>
                     <span class="price-value">670 €</span>
                     <span class="price-info">
-                      Temporada baja: 670 €<br>
-                      Temporada alta: 710 €<br>
-                      <small>Suplemento fin de semana: 20 €</small>
+                      <span data-i18n="low_season_price">Temporada baja:</span> 670 €<br>
+                      <span data-i18n="high_season_price">Temporada alta:</span> 710 €<br>
+                      <small data-i18n="weekend_supplement_short">Suplemento fin de semana: 20 €</small>
                     </span>
                   </div>
                   <ul class="package-features list-unstyled mt-4">
-                    <li><i class="fas fa-moon me-2 text-wine-red"></i> 3 noches en cabaña (4-6 personas) con desayuno incluido</li>
-                    <li><i class="fas fa-warehouse me-2 text-wine-red"></i> Recorrido guiado por la bodega</li>
-                    <li><i class="fas fa-wine-glass-alt me-2 text-wine-red"></i> Cata de vinos premium</li>
-                    <li><i class="fas fa-map-marked-alt me-2 text-wine-red"></i> Tour guiado por el pueblo y zonas turísticas</li>
-                    <li><i class="fas fa-gift me-2 text-wine-red"></i> Regalo de una botella de vino de despedida</li>
+                    <li><i class="fas fa-moon me-2 text-wine-red"></i> <span data-i18n="pack3_feature1">3 noches en cabaña (4-6 personas) con desayuno incluido</span></li>
+                    <li><i class="fas fa-warehouse me-2 text-wine-red"></i> <span data-i18n="pack3_feature2">Recorrido guiado por la bodega</span></li>
+                    <li><i class="fas fa-wine-glass-alt me-2 text-wine-red"></i> <span data-i18n="pack3_feature3">Cata de vinos premium</span></li>
+                    <li><i class="fas fa-map-marked-alt me-2 text-wine-red"></i> <span data-i18n="pack3_feature4">Tour guiado por el pueblo y zonas turísticas</span></li>
+                    <li><i class="fas fa-gift me-2 text-wine-red"></i> <span data-i18n="pack3_feature5">Regalo de una botella de vino de despedida</span></li>
                   </ul>
                 </div>
                 <div class="card-footer text-center bg-white border-0 pb-4">
-                  <a href="#booking-form" class="btn btn-outline-primary">Reservar pack</a>
+                  <a href="#booking-form" class="btn btn-outline-primary" data-i18n="book_pack">Reservar pack</a>
                 </div>
               </div>
             </div>
@@ -490,8 +499,8 @@
           <!-- Info Alert -->
           <div class="alert alert-info" role="alert" data-aos="fade-up">
             <i class="fas fa-info-circle me-2"></i>
-            <strong>Información sobre temporadas:</strong> La temporada alta comprende los meses de Marzo, Abril, Mayo, Junio, Julio, Agosto y Septiembre (210 días). 
-            La temporada baja comprende los meses de Octubre, Noviembre, Diciembre, Enero y Febrero (155 días). Los precios pueden variar según disponibilidad y promociones especiales.
+            <strong data-i18n="seasons_info">Información sobre temporadas:</strong> <span data-i18n="seasons_info_text">La temporada alta comprende los meses de Marzo, Abril, Mayo, Junio, Julio, Agosto y Septiembre (210 días). 
+            La temporada baja comprende los meses de Octubre, Noviembre, Diciembre, Enero y Febrero (155 días). Los precios pueden variar según disponibilidad y promociones especiales.</span>
           </div>
         </div>
       </section>
@@ -504,43 +513,43 @@
       <div class="row justify-content-center">
         <div class="col-lg-10" data-aos="fade-up">
           <div class="booking-form">
-            <h3 class="mb-4 text-center">Realiza tu Reserva</h3>
+            <h3 class="mb-4 text-center" data-i18n="form_booking_title">Realiza tu Reserva</h3>
             <form>
               <div class="row mb-4">
                 <div class="col-md-6 mb-3">
-                  <label for="checkIn" class="form-label required-field">Fecha de llegada</label>
+                  <label for="checkIn" class="form-label required-field" data-i18n="form_check_in">Fecha de llegada</label>
                   <div class="input-group">
                     <span class="input-group-text"><i class="fas fa-calendar-alt"></i></span>
-                    <input type="text" class="form-control datepicker" id="checkIn" placeholder="Selecciona fecha" required>
+                    <input type="text" class="form-control datepicker" id="checkIn" placeholder="Selecciona fecha" data-i18n-placeholder="form_date_placeholder" required>
                   </div>
                 </div>
                 <div class="col-md-6 mb-3">
-                  <label for="checkOut" class="form-label required-field">Fecha de salida</label>
+                  <label for="checkOut" class="form-label required-field" data-i18n="form_check_out">Fecha de salida</label>
                   <div class="input-group">
                     <span class="input-group-text"><i class="fas fa-calendar-alt"></i></span>
-                    <input type="text" class="form-control datepicker" id="checkOut" placeholder="Selecciona fecha" required>
+                    <input type="text" class="form-control datepicker" id="checkOut" placeholder="Selecciona fecha" data-i18n-placeholder="form_date_placeholder" required>
                   </div>
                 </div>
               </div>
               
               <div class="row mb-4">
                 <div class="col-md-6 mb-3">
-                  <label for="adults" class="form-label required-field">Adultos</label>
+                  <label for="adults" class="form-label required-field" data-i18n="form_adults">Adultos</label>
                   <div class="input-group">
                     <span class="input-group-text"><i class="fas fa-user"></i></span>
                     <select class="form-select" id="adults" required>
-                      <option value="">Seleccionar</option>
-                      <option value="1">1 adulto</option>
-                      <option value="2">2 adultos</option>
-                      <option value="3">3 adultos</option>
-                      <option value="4">4 adultos</option>
-                      <option value="5">5 adultos</option>
-                      <option value="6">6 adultos</option>
+                      <option value="" data-i18n="form_select">Seleccionar</option>
+                      <option value="1" data-i18n="form_one_adult">1 adulto</option>
+                      <option value="2" data-i18n="form_two_adults">2 adultos</option>
+                      <option value="3" data-i18n="form_three_adults">3 adultos</option>
+                      <option value="4" data-i18n="form_four_adults">4 adultos</option>
+                      <option value="5" data-i18n="form_five_adults">5 adultos</option>
+                      <option value="6" data-i18n="form_six_adults">6 adultos</option>
                     </select>
                   </div>
                 </div>
                 <div class="col-md-6 mb-3">
-                  <label for="email" class="form-label required-field">Email</label>
+                  <label for="email" class="form-label required-field" data-i18n="form_email">Email</label>
                   <input type="email" class="form-control" id="email" required>
                 </div>
               </div>
@@ -566,9 +575,9 @@
                   </div>
                   <div class="col-md-4 mb-3">
                     <div class="form-check">
-                      <input class="form-check-input" type="radio" name="cabinType" id="merlot" value="merlot">
-                      <label class="form-check-label" for="merlot">
-                        Merlot (230€/noche)
+                      <input class="form-check-input" type="radio" name="cabinType" id="garnacha" value="garnacha">
+                      <label class="form-check-label" for="garnacha">
+                        Garnacha Tinta (260€/noche)
                       </label>
                     </div>
                   </div>
@@ -577,14 +586,6 @@
                       <input class="form-check-input" type="radio" name="cabinType" id="malbec" value="malbec">
                       <label class="form-check-label" for="malbec">
                         Malbec (235€/noche)
-                      </label>
-                    </div>
-                  </div>
-                  <div class="col-md-4 mb-3">
-                    <div class="form-check">
-                      <input class="form-check-input" type="radio" name="cabinType" id="garnacha" value="garnacha">
-                      <label class="form-check-label" for="garnacha">
-                        Garnacha Tinta (260€/noche)
                       </label>
                     </div>
                   </div>
@@ -607,41 +608,110 @@
                 </div>
               </div>
               
-              <h4 class="mb-3">Datos personales</h4>
-              <div class="row mb-4">
-                <div class="col-md-6 mb-3">
-                  <label for="firstName" class="form-label required-field">Nombre</label>
-                  <input type="text" class="form-control" id="firstName" required>
-                </div>
-                <div class="col-md-6 mb-3">
-                  <label for="lastName" class="form-label required-field">Apellidos</label>
-                  <input type="text" class="form-control" id="lastName" required>
+              <div class="mb-4">
+                <h5 data-i18n="form_extras_title">Extras</h5>
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-check mb-2">
+                      <input class="form-check-input" type="checkbox" value="wine-tasting" id="wineTasting">
+                      <label class="form-check-label" for="wineTasting" data-i18n="extra_wine_tasting">
+                        Cata de vinos (+40€)
+                      </label>
+                    </div>
+                    <div class="form-check mb-2">
+                      <input class="form-check-input" type="checkbox" value="breakfast" id="breakfastService">
+                      <label class="form-check-label" for="breakfastService" data-i18n="extra_breakfast">
+                        Servicio de desayuno gourmet (+15€/persona/día)
+                      </label>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-check mb-2">
+                      <input class="form-check-input" type="checkbox" value="vineyard-tour" id="vineyardTour">
+                      <label class="form-check-label" for="vineyardTour" data-i18n="extra_vineyard_tour">
+                        Tour por los viñedos (+25€/persona)
+                      </label>
+                    </div>
+                    <div class="form-check mb-2">
+                      <input class="form-check-input" type="checkbox" value="romantic-dinner" id="romanticDinner">
+                      <label class="form-check-label" for="romanticDinner" data-i18n="extra_romantic_dinner">
+                        Cena romántica (+65€/pareja)
+                      </label>
+                    </div>
+                  </div>
                 </div>
               </div>
               
               <div class="row mb-4">
-                <div class="col-md-6 mb-3">
-                  <label for="phone" class="form-label required-field">Teléfono</label>
-                  <input type="tel" class="form-control" id="phone" required>
+                <div class="col-md-6 mb-3 mb-md-0">
+                  <label for="firstName" class="form-label required-field" data-i18n="form_first_name">Nombre</label>
+                  <input type="text" class="form-control" id="firstName" required data-i18n-placeholder="form_first_name_placeholder">
+                </div>
+                <div class="col-md-6">
+                  <label for="lastName" class="form-label required-field" data-i18n="form_last_name">Apellidos</label>
+                  <input type="text" class="form-control" id="lastName" required data-i18n-placeholder="form_last_name_placeholder">
+                </div>
+              </div>
+              
+              <div class="row mb-4">
+                <div class="col-md-6 mb-3 mb-md-0">
+                  <label for="email" class="form-label required-field" data-i18n="form_email">Email</label>
+                  <input type="email" class="form-control" id="email" required data-i18n-placeholder="form_email_placeholder">
+                </div>
+                <div class="col-md-6">
+                  <label for="phone" class="form-label required-field" data-i18n="form_phone">Teléfono</label>
+                  <input type="tel" class="form-control" id="phone" required data-i18n-placeholder="form_phone_placeholder">
                 </div>
               </div>
               
               <div class="mb-4">
-                <label for="specialRequests" class="form-label">Solicitudes especiales o comentarios</label>
-                <textarea class="form-control" id="specialRequests" rows="3"></textarea>
+                <label for="specialRequests" class="form-label" data-i18n="form_special_requests">Peticiones especiales</label>
+                <textarea class="form-control" id="specialRequests" rows="3" data-i18n-placeholder="form_special_requests_placeholder"></textarea>
               </div>
               
               <div class="mb-4">
                 <div class="form-check">
-                  <input class="form-check-input" type="checkbox" id="termsConditions" required>
-                  <label class="form-check-label" for="termsConditions">
-                    Acepto los <a href="legal.html">términos y condiciones</a> y la <a href="legal.html">política de privacidad</a>
+                  <input class="form-check-input" type="checkbox" value="" id="termsCheck" required>
+                  <label class="form-check-label" for="termsCheck">
+                    <span data-i18n="form_terms_accept">Acepto los</span> <a href="legal.html" target="_blank" data-i18n="form_terms_conditions">términos y condiciones</a> <span data-i18n="form_and">y la</span> <a href="legal.html" target="_blank" data-i18n="form_privacy_policy">política de privacidad</a>
                   </label>
                 </div>
               </div>
               
+              <div class="mb-4">
+                <h5 data-i18n="payment_info_title">Información de pago</h5>
+                <p class="mb-3" data-i18n="payment_info_text">Para confirmar tu reserva, se requiere un depósito del 30% del total. El resto se abonará a la llegada.</p>
+                
+                <div class="row">
+                  <div class="col-md-6 mb-3 mb-md-0">
+                    <label for="cardName" class="form-label required-field" data-i18n="form_card_name">Nombre en la tarjeta</label>
+                    <input type="text" class="form-control" id="cardName" required data-i18n-placeholder="form_card_name_placeholder">
+                  </div>
+                  <div class="col-md-6">
+                    <label for="cardNumber" class="form-label required-field" data-i18n="form_card_number">Número de tarjeta</label>
+                    <input type="text" class="form-control" id="cardNumber" required data-i18n-placeholder="form_card_number_placeholder">
+                  </div>
+                </div>
+                
+                <div class="row mt-3">
+                  <div class="col-md-6 mb-3 mb-md-0">
+                    <label for="expiryDate" class="form-label required-field" data-i18n="form_card_expiry">Fecha de caducidad</label>
+                    <input type="text" class="form-control" id="expiryDate" required placeholder="MM/AA" data-i18n-placeholder="form_card_expiry_placeholder">
+                  </div>
+                  <div class="col-md-6">
+                    <label for="cvv" class="form-label required-field" data-i18n="form_card_cvv">CVV</label>
+                    <input type="text" class="form-control" id="cvv" required data-i18n-placeholder="form_card_cvv_placeholder">
+                  </div>
+                </div>
+              </div>
+              
+              <div class="mb-4">
+                <h5 data-i18n="cancellation_policy_title">Política de cancelación</h5>
+                <p data-i18n="cancellation_policy_text">Cancelación gratuita hasta 7 días antes de la llegada. Cancelaciones posteriores o no presentaciones supondrán un cargo del 30% del precio total.</p>
+              </div>
+              
               <div class="text-center">
-                <button type="submit" class="btn btn-primary btn-lg">Completar Reserva</button>
+                <button type="submit" class="btn btn-primary btn-lg" data-i18n="btn_confirm_booking">Confirmar reserva</button>
               </div>
             </form>
           </div>
@@ -655,82 +725,82 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-6" data-aos="fade-right">
-          <h3 class="section-title">Información adicional</h3>
+          <h3 class="section-title" data-i18n="additional_info">Información adicional</h3>
           <div class="accordion" id="bookingInfo">
             <div class="accordion-item">
               <h2 class="accordion-header" id="headingOne">
-                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" data-i18n="booking_policy">
                   Política de reservas
                 </button>
               </h2>
               <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#bookingInfo">
                 <div class="accordion-body">
-                  <p>Se requiere un depósito del 30% para confirmar la reserva. El resto del pago se realizará a la llegada. Aceptamos tarjetas de crédito, transferencia bancaria y efectivo.</p>
+                  <p data-i18n="booking_policy_text">Se requiere un depósito del 30% para confirmar la reserva. El resto del pago se realizará a la llegada. Aceptamos tarjetas de crédito, transferencia bancaria y efectivo.</p>
                 </div>
               </div>
             </div>
             <div class="accordion-item">
               <h2 class="accordion-header" id="headingTwo">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" data-i18n="cancellation_policy_title">
                   Política de cancelación
                 </button>
               </h2>
               <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#bookingInfo">
                 <div class="accordion-body">
-                  <p>Para confirmar la reserva se requiere un depósito del 30% del importe total. Si cancelas con más de 7 días de antelación a la fecha de llegada, se devolverá el depósito íntegramente. Para cancelaciones realizadas dentro de los 7 días previos a la llegada, no se devolverá el depósito del 30%.</p>
+                  <p data-i18n="cancellation_policy_full">Para confirmar la reserva se requiere un depósito del 30% del importe total. Si cancelas con más de 7 días de antelación a la fecha de llegada, se devolverá el depósito íntegramente. Para cancelaciones realizadas dentro de los 7 días previos a la llegada, no se devolverá el depósito del 30%.</p>
                 </div>
               </div>
             </div>
             <div class="accordion-item">
               <h2 class="accordion-header" id="headingThree">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree" data-i18n="pet_policy">
                   Política de mascotas
                 </button>
               </h2>
               <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#bookingInfo">
                 <div class="accordion-body">
-                  <p>Admitimos mascotas únicamente en las Cabañas Familiares con un suplemento de 20€/noche. Por favor, infórmanos al hacer la reserva si traerás mascota.</p>
+                  <p data-i18n="pet_policy_text">Admitimos mascotas únicamente en las Cabañas Familiares con un suplemento de 20€/noche. Por favor, infórmanos al hacer la reserva si traerás mascota.</p>
                 </div>
               </div>
             </div>
           </div>
         </div>
         <div class="col-lg-6" data-aos="fade-left">
-          <h3 class="section-title">Preguntas frecuentes</h3>
+          <h3 class="section-title" data-i18n="faq">Preguntas frecuentes</h3>
           <div class="accordion" id="faqAccordion">
             <div class="accordion-item">
               <h2 class="accordion-header" id="headingFour">
-                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour" data-i18n="faq1_question">
                   ¿A qué hora puedo hacer el check-in y check-out?
                 </button>
               </h2>
               <div id="collapseFour" class="accordion-collapse collapse show" aria-labelledby="headingFour" data-bs-parent="#faqAccordion">
                 <div class="accordion-body">
-                  <p>El check-in es a partir de las 15:00h y el check-out antes de las 12:00h. Si necesitas flexibilidad en estos horarios, consúltanos y haremos lo posible por adaptarnos.</p>
+                  <p data-i18n="faq1_answer">El check-in es a partir de las 15:00h y el check-out antes de las 12:00h. Si necesitas flexibilidad en estos horarios, consúltanos y haremos lo posible por adaptarnos.</p>
                 </div>
               </div>
             </div>
             <div class="accordion-item">
               <h2 class="accordion-header" id="headingFive">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive" data-i18n="faq2_question">
                   ¿Las experiencias y actividades se reservan aparte?
                 </button>
               </h2>
               <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#faqAccordion">
                 <div class="accordion-body">
-                  <p>Sí, las experiencias y actividades se reservan por separado. Puedes reservarlas al mismo tiempo que tu alojamiento o durante tu estancia, sujeto a disponibilidad.</p>
+                  <p data-i18n="faq2_answer">Sí, las experiencias y actividades se reservan por separado. Puedes reservarlas al mismo tiempo que tu alojamiento o durante tu estancia, sujeto a disponibilidad.</p>
                 </div>
               </div>
             </div>
             <div class="accordion-item">
               <h2 class="accordion-header" id="headingSix">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix" data-i18n="faq3_question">
                   ¿Hay restaurante en las instalaciones?
                 </button>
               </h2>
               <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#faqAccordion">
                 <div class="accordion-body">
-                  <p>No contamos con restaurante común. Sin embargo, ofrecemos servicio de comidas y cenas que se sirven directamente en tu cabaña. El desayuno está incluido en el precio de la habitación.</p>
+                  <p data-i18n="faq3_answer">No contamos con restaurante común. Sin embargo, ofrecemos servicio de comidas y cenas que se sirven directamente en tu cabaña. El desayuno está incluido en el precio de la habitación.</p>
                 </div>
               </div>
             </div>
@@ -741,47 +811,56 @@
   </section>
 
   <!-- Footer -->
-  <footer class="footer py-5">
+  <footer class="footer py-5 mt-5">
     <div class="container">
       <div class="row">
         <div class="col-lg-4 mb-4 mb-lg-0">
           <h5>Viña & Cabaña</h5>
-          <p>Experiencias premium de enoturismo y alojamiento ecológico de lujo entre viñedos.</p>
+          <p data-i18n="footer_desc">Experiencias premium de enoturismo y alojamiento ecológico de lujo entre viñedos.</p>
         </div>
         <div class="col-lg-4 mb-4 mb-lg-0">
-          <h5>Enlaces rápidos</h5>
+          <h5 data-i18n="footer_quick_links">Enlaces rápidos</h5>
           <ul class="list-unstyled footer-links">
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="experiencias.html">Experiencias</a></li>
-            <li><a href="reservas.html">Reservas</a></li>
-            <li><a href="contacto.html">Contacto</a></li>
-            <li><a href="legal.html">Aviso legal</a></li>
+            <li><a href="index.html" data-i18n="nav_home">Inicio</a></li>
+            <li><a href="experiencias.html" data-i18n="nav_experiences">Experiencias</a></li>
+            <li><a href="reservas.html" data-i18n="nav_bookings">Reservas</a></li>
+            <li><a href="contacto.html" data-i18n="nav_contact">Contacto</a></li>
+            <li><a href="legal.html" data-i18n="footer_legal">Aviso legal</a></li>
           </ul>
         </div>
         <div class="col-lg-4">
-          <h5>Contacto</h5>
+          <h5 data-i18n="footer_contact">Contacto</h5>
           <address>
             <p><i class="fas fa-map-marker-alt me-2"></i> Bodegas Viña Mayor, Quintanilla de Onésimo (Valladolid)</p>
-            <p><i class="fas fa-phone me-2"></i> +34 123 456 789</p>
-            <p><i class="fas fa-envelope me-2"></i> info@viñaycabana.com</p>
-            <p><i class="fas fa-envelope me-2"></i> reservas@viña&cabaña.com</p>
+            <p><i class="fas fa-phone me-2"></i> <a href="tel:+34123456789" class="text-white">+34 123 456 789</a></p>
+            <p><i class="fas fa-envelope me-2"></i> <a href="mailto:info@viñaycabana.com" class="text-white">info@viñaycabana.com</a></p>
+            <p><i class="fas fa-envelope me-2"></i> <a href="mailto:reservas@viña&cabaña.com" class="text-white">reservas@viña&cabaña.com</a></p>
           </address>
           <div class="social-icons">
-            <a href="https://www.facebook.com/share/18VQR5HABd/?mibextid=wwXIfr"><i class="fab fa-facebook-f"></i></a>
-            <a href="https://www.instagram.com/vina_y_cabana_experience?igsh=MW14Z2MyeTg2djRwOQ=="><i class="fab fa-instagram"></i></a>
+            <a href="https://www.facebook.com/share/18VQR5HABd/?mibextid=wwXIfr" aria-label="Facebook" target="_blank" rel="noopener"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/vina_y_cabana_experience?igsh=MW14Z2MyeTg2djRwOQ==" aria-label="Instagram" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a>
           </div>
         </div>
       </div>
       <div class="row mt-4">
         <div class="col-12 text-center">
-          <p class="mb-0">Vive con nosotros – Viña & Cabaña &copy; <span id="year"></span></p>
+          <p class="mb-0" data-i18n="footer_copyright">Vive con nosotros – Viña & Cabaña &copy; <span id="year"></span></p>
         </div>
       </div>
     </div>
   </footer>
 
+  <!-- Cookies Banner -->
+  <div class="cookie-banner" id="cookieBanner">
+    <p data-i18n="cookie_text">Utilizamos cookies propias y de terceros para mejorar nuestros servicios y mostrarle publicidad relacionada con sus preferencias mediante el análisis de sus hábitos de navegación. Si continúa navegando, consideramos que acepta su uso. Puede cambiar la configuración u obtener más información en nuestra</p> <a href="legal.html" data-i18n="cookie_policy">Política de Cookies</a>.
+    <div class="cookie-actions">
+      <button class="btn btn-reject" id="rejectCookies" data-i18n="cookie_reject">Rechazar</button>
+      <button class="btn btn-accept" id="acceptCookies" data-i18n="cookie_accept">Aceptar</button>
+    </div>
+  </div>
+
   <!-- Bootstrap Bundle with Popper -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" defer></script>
   
   <!-- AOS Library -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
@@ -796,35 +875,44 @@
   <!-- Custom JavaScript -->
   <script src="assets/js/script.js"></script>
   
+  <!-- Scripts de traducción -->
+  <script src="assets/js/translations.js"></script>
+  <script src="assets/js/reservas-translations.js"></script>
+  <script src="assets/js/i18n.js"></script>
+  
   <script>
     document.addEventListener('DOMContentLoaded', function() {
-      // Initialize date pickers with improved configuration
-      flatpickr(".datepicker", {
-        locale: "es",
-        dateFormat: "d/m/Y",
+      // Inicializar AOS
+      AOS.init({
+        duration: 800,
+        easing: 'ease-in-out',
+        once: true
+      });
+      
+      // Inicializar Flatpickr para las fechas (español por defecto)
+      flatpickr("#checkIn", {
         minDate: "today",
-        disableMobile: true,
-        showMonths: 1,
-        animate: true,
-        mode: "single",
-        enableTime: false,
+        dateFormat: "d-m-Y",
         altInput: true,
-        altFormat: "j F Y",
-        nextArrow: '<i class="fas fa-arrow-right"></i>',
-        prevArrow: '<i class="fas fa-arrow-left"></i>'
+        altFormat: "d M Y",
+        locale: "es"
       });
       
-      // Initialize check-in date picker
-      const checkInPicker = flatpickr("#checkIn", {
-        onChange: function(selectedDates, dateStr) {
-          // Update check-out minimum date
-          checkOutPicker.set("minDate", selectedDates[0]);
-        }
+      flatpickr("#checkOut", {
+        minDate: new Date().fp_incr(1),
+        dateFormat: "d-m-Y",
+        altInput: true,
+        altFormat: "d M Y",
+        locale: "es"
       });
       
-      // Initialize check-out date picker
-      const checkOutPicker = flatpickr("#checkOut", {
-        minDate: "today"
+      // Obtener el año actual
+      document.getElementById('year').textContent = new Date().getFullYear();
+      
+      // Manejar el submit del formulario
+      document.getElementById('reservationForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        alert('¡Gracias por tu reserva! En breve recibirás un email con la confirmación.');
       });
     });
   </script>

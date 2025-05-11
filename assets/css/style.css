@@ -609,7 +609,7 @@ h1, h2, h3, h4, h5, h6 {
   height: 150px;
   overflow: hidden;
   position: absolute;
-  z-index: 1;
+  z-index: 10;
 }
 
 .ribbon-top-right {
@@ -617,10 +617,30 @@ h1, h2, h3, h4, h5, h6 {
   right: -10px;
 }
 
-.ribbon-top-right::before,
-.ribbon-top-right::after {
-  border-top-color: transparent;
-  border-right-color: transparent;
+.ribbon-top-right span {
+  position: absolute;
+  display: block;
+  width: 225px;
+  padding: 8px 0;
+  background-color: #722F37; /* Color rojo vino */
+  box-shadow: 0 5px 10px rgba(0,0,0,.1);
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+  text-shadow: 0 1px 1px rgba(0,0,0,.2);
+  text-transform: uppercase;
+  text-align: center;
+  right: -25px;
+  top: 30px;
+  transform: rotate(45deg);
+}
+
+.ribbon::before, .ribbon::after {
+  position: absolute;
+  z-index: -1;
+  content: '';
+  display: block;
+  border: 5px solid #4a1f24; /* Borde más oscuro para dar profundidad */
 }
 
 .ribbon-top-right::before {
@@ -631,21 +651,6 @@ h1, h2, h3, h4, h5, h6 {
 .ribbon-top-right::after {
   bottom: 0;
   right: 0;
-}
-
-.ribbon-top-right span {
-  position: absolute;
-  top: 30px;
-  right: -25px;
-  transform: rotate(45deg);
-  width: 150px;
-  padding: 7px 0;
-  background-color: var(--wine-red);
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-  color: white;
-  text-align: center;
-  font-weight: 600;
-  font-size: 14px;
 }
 
 .cabin-card {

@@ -34,6 +34,9 @@
   <!-- Custom CSS -->
   <link rel="stylesheet" href="assets/css/style.css">
   
+  <!-- Estilos para multiidioma -->
+  <link rel="stylesheet" href="assets/css/i18n.css">
+  
   <style>
     /* Estilos específicos para esta página */
     .hero-section {
@@ -101,7 +104,7 @@
   <nav class="navbar navbar-expand-lg navbar-light fixed-top bg-glass">
     <div class="container">
       <a class="navbar-brand" href="index.html">
-        <img src="assets/img/logo.png" alt="Viña & Cabaña Logo" height="40" width="auto">
+        <img src="assets/img/logo.png" alt="Viña & Cabaña Logo" height="40">
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -109,22 +112,34 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item">
-            <a class="nav-link active" href="index.html" aria-current="page">Inicio</a>
+            <a class="nav-link active" href="index.html" data-i18n="nav_home">Inicio</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="about.html">Nosotros</a>
+            <a class="nav-link" href="about.html" data-i18n="nav_about">Nosotros</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="experiencias.html">Experiencias</a>
+            <a class="nav-link" href="experiencias.html" data-i18n="nav_experiences">Experiencias</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="reservas.html">Reservas</a>
+            <a class="nav-link" href="reservas.html" data-i18n="nav_bookings">Reservas</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="testimonios.html">Testimonios</a>
+            <a class="nav-link" href="testimonios.html" data-i18n="nav_testimonials">Testimonios</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="contacto.html">Contacto</a>
+            <a class="nav-link" href="contacto.html" data-i18n="nav_contact">Contacto</a>
+          </li>
+          <li class="nav-item language-selector dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="languageDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="fas fa-globe-americas"></i> <span data-i18n="language">Idioma</span>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="languageDropdown" id="languageSelector">
+              <li><button class="dropdown-item" data-language="es"><img src="assets/img/flags/españa.webp" alt="Español" width="20"> Español</button></li>
+              <li><button class="dropdown-item" data-language="en"><img src="assets/img/flags/ingles.webp" alt="English" width="20"> English</button></li>
+              <li><button class="dropdown-item" data-language="fr"><img src="assets/img/flags/francia.png" alt="Français" width="20"> Français</button></li>
+              <li><button class="dropdown-item" data-language="it"><img src="assets/img/flags/italia.webp" alt="Italiano" width="20"> Italiano</button></li>
+              <li><button class="dropdown-item" data-language="de"><img src="assets/img/flags/alemania.png" alt="Deutsch" width="20"> Deutsch</button></li>
+            </ul>
           </li>
         </ul>
       </div>
@@ -134,35 +149,35 @@
   <!-- Hero Section with Parallax -->
   <header class="hero-section">
     <div class="hero-content" data-sr-id="1">
-      <h1>Vive una experiencia única entre viñedos</h1>
+      <h1 data-i18n="hero_title">Vive una experiencia única entre viñedos</h1>
       <div class="hero-description bg-glass p-4 mb-4 rounded shadow">
         <div class="row">
           <div class="col-md-4 border-end border-light py-2">
             <div class="text-center mb-2">
               <i class="fas fa-leaf text-primary fa-2x mb-2"></i>
-              <h5 class="text-wine-red">Alojamiento Ecológico</h5>
+              <h5 class="text-wine-red" data-i18n="hero_eco_title">Alojamiento Ecológico</h5>
             </div>
-            <p class="small">Cabañas de lujo sostenibles en plena Ribera del Duero</p>
+            <p class="small" data-i18n="hero_eco_desc">Cabañas de lujo sostenibles en plena Ribera del Duero</p>
           </div>
           <div class="col-md-4 border-end border-light py-2">
             <div class="text-center mb-2">
               <i class="fas fa-wine-glass-alt text-primary fa-2x mb-2"></i>
-              <h5 class="text-wine-red">Enoturismo Premium</h5>
+              <h5 class="text-wine-red" data-i18n="hero_wine_title">Enoturismo Premium</h5>
             </div>
-            <p class="small">Experiencias únicas con los mejores vinos de la región</p>
+            <p class="small" data-i18n="hero_wine_desc">Experiencias únicas con los mejores vinos de la región</p>
           </div>
           <div class="col-md-4 py-2">
             <div class="text-center mb-2">
               <i class="fas fa-utensils text-primary fa-2x mb-2"></i>
-              <h5 class="text-wine-red">Gastronomía Local</h5>
+              <h5 class="text-wine-red" data-i18n="hero_food_title">Gastronomía Local</h5>
             </div>
-            <p class="small">Sabores auténticos en un entorno de tranquilidad absoluta</p>
+            <p class="small" data-i18n="hero_food_desc">Sabores auténticos en un entorno de tranquilidad absoluta</p>
           </div>
         </div>
       </div>
       <div class="hero-buttons">
-        <a href="experiencias.html" class="btn btn-primary btn-lg">Descubre nuestras experiencias</a>
-        <a href="reservas.html" class="btn btn-olive btn-lg">Reserva tu cabaña</a>
+        <a href="experiencias.html" class="btn btn-primary btn-lg" data-i18n="hero_btn_experiences">Descubre nuestras experiencias</a>
+        <a href="reservas.html" class="btn btn-olive btn-lg" data-i18n="hero_btn_booking">Reserva tu cabaña</a>
       </div>
     </div>
   </header>
@@ -172,12 +187,12 @@
     <div class="container">
       <div class="row align-items-center">
         <div class="col-md-6" data-sr-id="2">
-          <h2 class="section-title">Sobre Viña & Cabaña</h2>
-          <p class="lead">Experiencias premium de enoturismo y alojamiento ecológico de lujo entre viñedos en la Ribera del Duero.</p>
-          <p>En el corazón de la Ribera del Duero, Viña & Cabaña ofrece una experiencia única que combina la pasión por el vino, el confort de nuestras cabañas ecológicas de lujo y la conexión con la naturaleza.</p>
-          <p>Nuestras cabañas están construidas con materiales sostenibles y diseñadas para integrarse perfectamente en el paisaje de viñedos, ofreciendo privacidad, confort y vistas espectaculares.</p>
+          <h2 class="section-title" data-i18n="about_title">Sobre Viña & Cabaña</h2>
+          <p class="lead" data-i18n="about_lead">Experiencias premium de enoturismo y alojamiento ecológico de lujo entre viñedos en la Ribera del Duero.</p>
+          <p data-i18n="about_p1">En el corazón de la Ribera del Duero, Viña & Cabaña ofrece una experiencia única que combina la pasión por el vino, el confort de nuestras cabañas ecológicas de lujo y la conexión con la naturaleza.</p>
+          <p data-i18n="about_p2">Nuestras cabañas están construidas con materiales sostenibles y diseñadas para integrarse perfectamente en el paisaje de viñedos, ofreciendo privacidad, confort y vistas espectaculares.</p>
           <div class="mt-4">
-            <a href="about.html" class="btn btn-outline-primary">Conoce nuestra historia</a>
+            <a href="about.html" class="btn btn-outline-primary" data-i18n="about_btn">Conoce nuestra historia</a>
           </div>
         </div>
         <div class="col-md-6" data-sr-id="3">
@@ -193,7 +208,7 @@
   <!-- Gallery Section -->
   <section id="gallery" class="bg-light">
     <div class="container">
-      <h2 class="section-title text-center" data-sr-id="4">Nuestra Galería</h2>
+      <h2 class="section-title text-center" data-sr-id="4" data-i18n="gallery_title">Nuestra Galería</h2>
       
       <!-- Splide Gallery -->
       <div class="splide" role="group" aria-label="Galería de imágenes" data-sr-id="5">
@@ -201,29 +216,29 @@
           <ul class="splide__list">
             <li class="splide__slide">
               <!-- Imagen de viñedos al amanecer -->
-              <img src="assets/img/parejavino.jpg" alt="Viñedos al amanecer" class="img-fluid rounded shadow" loading="lazy">
+              <img src="assets/img/parejavino.jpg" alt="Viñedos al amanecer" class="img-fluid rounded shadow" loading="lazy" data-i18n-alt="gallery_alt1">
             </li>
             <li class="splide__slide">
               <!-- Imagen de interior de cabaña de lujo -->
-              <img src="assets/img/cabañalujo.jpg" alt="Interior de cabaña de lujo" class="img-fluid rounded shadow" loading="lazy">
+              <img src="assets/img/cabañalujo.jpg" alt="Interior de cabaña de lujo" class="img-fluid rounded shadow" loading="lazy" data-i18n-alt="gallery_alt2">
             </li>
             <li class="splide__slide">
               <!-- Imagen de cena romántica con vino -->
-              <img src="assets/img/cenaromantica.png" alt="Cena romántica con vino" class="img-fluid rounded shadow" loading="lazy">
+              <img src="assets/img/cenaromantica.png" alt="Cena romántica con vino" class="img-fluid rounded shadow" loading="lazy" data-i18n-alt="gallery_alt3">
             </li>
             <li class="splide__slide">
               <!-- Imagen de pareja disfrutando un vino al atardecer -->
-              <img src="assets/img/viñedos.webp" alt="Pareja disfrutando un vino al atardecer" class="img-fluid rounded shadow" loading="lazy">
+              <img src="assets/img/viñedos.webp" alt="Pareja disfrutando un vino al atardecer" class="img-fluid rounded shadow" loading="lazy" data-i18n-alt="gallery_alt4">
             </li>
           </ul>
         </div>
         <div class="splide__arrows">
           <button class="splide__arrow splide__arrow--prev">
-            <span class="sr-only">Anterior</span>
+            <span class="sr-only" data-i18n="gallery_prev">Anterior</span>
             <i class="fas fa-chevron-left"></i>
           </button>
           <button class="splide__arrow splide__arrow--next">
-            <span class="sr-only">Siguiente</span>
+            <span class="sr-only" data-i18n="gallery_next">Siguiente</span>
             <i class="fas fa-chevron-right"></i>
           </button>
         </div>
@@ -235,9 +250,9 @@
   <section id="cta" class="bg-accent text-white text-center">
     <div class="container">
       <div class="cta-content" data-sr-id="6">
-        <h2>Reserva tu experiencia única ahora</h2>
-        <p class="lead mb-4">Escápate a la naturaleza y disfruta del mejor vino en un entorno incomparable</p>
-        <a href="reservas.html" class="btn btn-light btn-lg">Reservar ahora</a>
+        <h2 data-i18n="cta_title">Reserva tu experiencia única ahora</h2>
+        <p class="lead mb-4" data-i18n="cta_desc">Escápate a la naturaleza y disfruta del mejor vino en un entorno incomparable</p>
+        <a href="reservas.html" class="btn btn-light btn-lg" data-i18n="cta_btn">Reservar ahora</a>
       </div>
     </div>
   </section>
@@ -248,20 +263,20 @@
       <div class="row">
         <div class="col-lg-4 mb-4 mb-lg-0">
           <h5>Viña & Cabaña</h5>
-          <p>Experiencias premium de enoturismo y alojamiento ecológico de lujo entre viñedos.</p>
+          <p data-i18n="footer_desc">Experiencias premium de enoturismo y alojamiento ecológico de lujo entre viñedos.</p>
         </div>
         <div class="col-lg-4 mb-4 mb-lg-0">
-          <h5>Enlaces rápidos</h5>
+          <h5 data-i18n="footer_quick_links">Enlaces rápidos</h5>
           <ul class="list-unstyled footer-links">
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="experiencias.html">Experiencias</a></li>
-            <li><a href="reservas.html">Reservas</a></li>
-            <li><a href="contacto.html">Contacto</a></li>
-            <li><a href="legal.html">Aviso legal</a></li>
+            <li><a href="index.html" data-i18n="nav_home">Inicio</a></li>
+            <li><a href="experiencias.html" data-i18n="nav_experiences">Experiencias</a></li>
+            <li><a href="reservas.html" data-i18n="nav_bookings">Reservas</a></li>
+            <li><a href="contacto.html" data-i18n="nav_contact">Contacto</a></li>
+            <li><a href="legal.html" data-i18n="footer_legal">Aviso legal</a></li>
           </ul>
         </div>
         <div class="col-lg-4">
-          <h5>Contacto</h5>
+          <h5 data-i18n="footer_contact">Contacto</h5>
           <address>
             <p><i class="fas fa-map-marker-alt me-2"></i> Bodegas Viña Mayor, Quintanilla de Onésimo (Valladolid)</p>
             <p><i class="fas fa-phone me-2"></i> <a href="tel:+34123456789" class="text-white">+34 123 456 789</a></p>
@@ -276,7 +291,7 @@
       </div>
       <div class="row mt-4">
         <div class="col-12 text-center">
-          <p class="mb-0">Vive con nosotros – Viña & Cabaña &copy; <span id="year"></span></p>
+          <p class="mb-0" data-i18n="footer_copyright">Vive con nosotros – Viña & Cabaña &copy; <span id="year"></span></p>
         </div>
       </div>
     </div>
@@ -284,10 +299,10 @@
 
   <!-- Cookie Banner -->
   <div class="cookie-banner" id="cookieBanner">
-    <p>Utilizamos cookies propias y de terceros para mejorar nuestros servicios y mostrarle publicidad relacionada con sus preferencias mediante el análisis de sus hábitos de navegación. Si continúa navegando, consideramos que acepta su uso. Puede cambiar la configuración u obtener más información en nuestra <a href="legal.html">Política de Cookies</a>.</p>
+    <p data-i18n="cookie_text">Utilizamos cookies propias y de terceros para mejorar nuestros servicios y mostrarle publicidad relacionada con sus preferencias mediante el análisis de sus hábitos de navegación. Si continúa navegando, consideramos que acepta su uso. Puede cambiar la configuración u obtener más información en nuestra</p> <a href="legal.html" data-i18n="cookie_policy">Política de Cookies</a>.
     <div class="cookie-actions">
-      <button class="btn btn-reject" id="rejectCookies">Rechazar</button>
-      <button class="btn btn-accept" id="acceptCookies">Aceptar</button>
+      <button class="btn btn-reject" id="rejectCookies" data-i18n="cookie_reject">Rechazar</button>
+      <button class="btn btn-accept" id="acceptCookies" data-i18n="cookie_accept">Aceptar</button>
     </div>
   </div>
 
@@ -304,6 +319,10 @@
   
   <!-- Parallax.js mejorado -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax.js/1.5.0/parallax.min.js" defer></script>
+  
+  <!-- Scripts de traducción -->
+  <script src="assets/js/translations.js"></script>
+  <script src="assets/js/i18n.js"></script>
   
   <!-- Custom JavaScript -->
   <script src="assets/js/script.js" defer></script>
@@ -400,6 +419,17 @@
         
         // Aquí podrías desactivar scripts de análisis, etc.
         console.log('Cookies rechazadas');
+      });
+      
+      // Configurar el atributo alt de las imágenes según el idioma
+      document.addEventListener('languageChanged', function(e) {
+        const lang = e.detail.language;
+        document.querySelectorAll('[data-i18n-alt]').forEach(element => {
+          const key = element.getAttribute('data-i18n-alt');
+          if (translations[lang] && translations[lang][key]) {
+            element.setAttribute('alt', translations[lang][key]);
+          }
+        });
       });
     });
   </script>

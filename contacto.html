@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contacta con Nosotros - Viña & Cabaña</title>
   
- 
   <!-- Bootstrap 5 CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   
@@ -17,12 +16,6 @@
   
   <!-- AOS Animate On Scroll -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  
-  <!-- Splide.js para carruseles optimizados -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
-  
-  <!-- Parallax.js -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax.js/1.5.0/parallax.min.js"></script>
   
   <!-- Custom CSS -->
   <link rel="stylesheet" href="assets/css/style.css">
@@ -40,7 +33,6 @@
       border-radius: 10px;
       box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
       padding: 2rem;
-      height: 100%;
     }
     
     .contact-info-item {
@@ -50,19 +42,39 @@
     }
     
     .contact-icon {
-      width: 50px;
+      min-width: 50px;
       height: 50px;
+      background-color: var(--light-green);
+      color: var(--wine-red);
+      border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
-      background-color: var(--wine-red);
-      border-radius: 50%;
+      font-size: 1.2rem;
       margin-right: 1rem;
-      flex-shrink: 0;
     }
     
-    .form-label {
-      font-weight: 500;
+    .contact-info-item h5 {
+      margin-bottom: 0.5rem;
+      color: var(--wine-red);
+    }
+    
+    .social-icons a {
+      display: inline-block;
+      width: 40px;
+      height: 40px;
+      background-color: var(--wine-red);
+      color: white;
+      border-radius: 50%;
+      text-align: center;
+      line-height: 40px;
+      margin-right: 10px;
+      transition: all 0.3s ease;
+    }
+    
+    .social-icons a:hover {
+      background-color: var(--olive-green);
+      transform: translateY(-5px);
     }
     
     .required-field::after {
@@ -100,22 +112,34 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item">
-            <a class="nav-link" href="index.html">Inicio</a>
+            <a class="nav-link" href="index.html" data-i18n="nav_home">Inicio</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="about.html">Nosotros</a>
+            <a class="nav-link" href="about.html" data-i18n="nav_about">Nosotros</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="experiencias.html">Experiencias</a>
+            <a class="nav-link" href="experiencias.html" data-i18n="nav_experiences">Experiencias</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="reservas.html">Reservas</a>
+            <a class="nav-link" href="reservas.html" data-i18n="nav_bookings">Reservas</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="testimonios.html">Testimonios</a>
+            <a class="nav-link" href="testimonios.html" data-i18n="nav_testimonials">Testimonios</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" href="contacto.html">Contacto</a>
+            <a class="nav-link active" href="contacto.html" data-i18n="nav_contact">Contacto</a>
+          </li>
+          <li class="nav-item language-selector dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="languageDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="fas fa-globe-americas"></i> <span data-i18n="language">Idioma</span>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="languageDropdown" id="languageSelector">
+              <li><button class="dropdown-item" data-language="es"><img src="assets/img/flags/españa.webp" alt="Español" width="20"> Español</button></li>
+              <li><button class="dropdown-item" data-language="en"><img src="assets/img/flags/ingles.webp" alt="English" width="20"> English</button></li>
+              <li><button class="dropdown-item" data-language="fr"><img src="assets/img/flags/francia.png" alt="Français" width="20"> Français</button></li>
+              <li><button class="dropdown-item" data-language="it"><img src="assets/img/flags/italia.webp" alt="Italiano" width="20"> Italiano</button></li>
+              <li><button class="dropdown-item" data-language="de"><img src="assets/img/flags/alemania.png" alt="Deutsch" width="20"> Deutsch</button></li>
+            </ul>
           </li>
         </ul>
       </div>
@@ -129,12 +153,12 @@
         <!-- Contact Form -->
         <div class="col-lg-7" data-aos="fade-right">
           <div class="contact-form">
-            <h2 class="section-title mb-4">Envíanos un mensaje</h2>
-            <p class="mb-4">¿Tienes alguna pregunta o comentario? ¡Escríbenos! Nuestro equipo estará encantado de atenderte.</p>
+            <h2 class="section-title mb-4" data-i18n="contact_title">Envíanos un mensaje</h2>
+            <p class="mb-4" data-i18n="contact_subtitle">¿Tienes alguna pregunta o comentario? ¡Escríbenos! Nuestro equipo estará encantado de atenderte.</p>
             <form>
               <div class="row mb-3">
                 <div class="col-md-6 mb-3 mb-md-0">
-                  <label for="firstName" class="form-label required-field">Nombre</label>
+                  <label for="firstName" class="form-label required-field" data-i18n="contact_name">Nombre</label>
                   <input type="text" class="form-control" id="firstName" required>
                 </div>
                 <div class="col-md-6">
@@ -145,7 +169,7 @@
               
               <div class="row mb-3">
                 <div class="col-md-6 mb-3 mb-md-0">
-                  <label for="email" class="form-label required-field">Email</label>
+                  <label for="email" class="form-label required-field" data-i18n="contact_email">Email</label>
                   <input type="email" class="form-control" id="email" required>
                 </div>
                 <div class="col-md-6">
@@ -160,18 +184,18 @@
               </div>
               
               <div class="mb-3">
-                <label for="message" class="form-label required-field">Mensaje</label>
+                <label for="message" class="form-label required-field" data-i18n="contact_message">Mensaje</label>
                 <textarea class="form-control" id="message" rows="5" required></textarea>
               </div>
               
               <div class="mb-3 form-check">
                 <input type="checkbox" class="form-check-input" id="privacyPolicy" required>
                 <label class="form-check-label" for="privacyPolicy">
-                  He leído y acepto la <a href="legal.html">política de privacidad</a>
+                  <span data-i18n="form_terms_accept">He leído y acepto la</span> <a href="legal.html" data-i18n="form_privacy_policy">política de privacidad</a>
                 </label>
               </div>
               
-              <button type="submit" class="btn btn-primary">Enviar mensaje</button>
+              <button type="submit" class="btn btn-primary" data-i18n="contact_send_btn">Enviar mensaje</button>
             </form>
           </div>
         </div>
@@ -179,15 +203,15 @@
         <!-- Contact Information -->
         <div class="col-lg-5" data-aos="fade-left">
           <div class="contact-info">
-            <h2 class="section-title mb-4">Información de contacto</h2>
+            <h2 class="section-title mb-4" data-i18n="contact_findus">Información de contacto</h2>
             
             <div class="contact-info-item">
               <div class="contact-icon">
                 <i class="fas fa-map-marker-alt"></i>
               </div>
               <div>
-                <h5>Dirección</h5>
-                <p>Bodegas Viña Mayor<br>Quintanilla de Onésimo<br>Valladolid, España</p>
+                <h5 data-i18n="contact_address_title">Dirección</h5>
+                <p data-i18n="contact_full_address">Bodegas Viña Mayor<br>Quintanilla de Onésimo<br>Valladolid, España</p>
               </div>
             </div>
             
@@ -196,7 +220,7 @@
                 <i class="fas fa-phone"></i>
               </div>
               <div>
-                <h5>Teléfono</h5>
+                <h5 data-i18n="contact_phone_title">Teléfono</h5>
                 <p>+34 123 456 789</p>
               </div>
             </div>
@@ -206,13 +230,13 @@
                 <i class="fas fa-envelope"></i>
               </div>
               <div>
-                <h5>Email</h5>
+                <h5 data-i18n="contact_email_title">Email</h5>
                 <p>info@viñaycabana.com<br>reservas@viña&cabaña.com</p>
               </div>
             </div>
             
             <div class="mt-4">
-              <h5 class="mb-3"><i class="far fa-clock me-2 text-primary"></i> Horario de atención</h5>
+              <h5 class="mb-3" data-i18n="contact_hours_title"><i class="far fa-clock me-2 text-primary"></i> Horario de atención</h5>
               <ul class="list-unstyled">
                 <li class="mb-2">
                   <span class="fw-bold">Lunes a domingo:</span>
@@ -224,24 +248,8 @@
             <div class="mt-4">
               <h5>Síguenos en redes sociales</h5>
               <div class="social-icons mt-3">
-                <a href="https://www.facebook.com/share/18VQR5HABd/?mibextid=wwXIfr" class="social-icon-link">
-                  <i class="fab fa-facebook-f"></i>
-                </a>
-                <a href="https://www.instagram.com/vina_y_cabana_experience?igsh=MW14Z2MyeTg2djRwOQ==" class="social-icon-link">
-                  <i class="fab fa-instagram"></i>
-                </a>
-                <a href="#" class="social-icon-link">
-                  <i class="fab fa-twitter"></i>
-                </a>
-                <a href="#" class="social-icon-link">
-                  <i class="fab fa-youtube"></i>
-                </a>
-                <a href="#" class="social-icon-link">
-                  <i class="fab fa-pinterest"></i>
-                </a>
-                <a href="#" class="social-icon-link">
-                  <i class="fab fa-tiktok"></i>
-                </a>
+                <a href="https://www.facebook.com/share/18VQR5HABd/?mibextid=wwXIfr" class="me-2"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/vina_y_cabana_experience?igsh=MW14Z2MyeTg2djRwOQ==" class="me-2"><i class="fab fa-instagram"></i></a>
               </div>
             </div>
           </div>
@@ -253,9 +261,9 @@
   <!-- Map Section -->
   <section class="py-5 bg-light">
     <div class="container">
-      <h2 class="section-title text-center mb-5" data-aos="fade-up">Cómo llegar</h2>
-      <div class="map-container" data-aos="zoom-in">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d372.8098993514973!2d-4.326938230904983!3d41.62377250626768!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd46e24d84556a9d%3A0xaa114197b43d6ac7!2sBodegas%20Vi%C3%B1a%20Mayor!5e0!3m2!1ses!2ses!4v1746960637637!5m2!1ses!2ses" width="100%" height="450" style="border:0; border-radius: 10px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <h2 class="section-title text-center mb-5" data-aos="fade-up" data-i18n="contact_map_title">Cómo llegar</h2>
+      <div class="rounded shadow-sm" data-aos="zoom-in">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1491.240162876939!2d-4.327200872843312!3d41.623748055796966!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd46e24d84556a9d%3A0xaa114197b43d6ac7!2sBodegas%20Vi%C3%B1a%20Mayor!5e0!3m2!1ses!2ses!4v1746965025790!5m2!1ses!2ses" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
     </div>
   </section>
@@ -266,37 +274,35 @@
       <div class="row">
         <div class="col-lg-4 mb-4 mb-lg-0">
           <h5>Viña & Cabaña</h5>
-          <p>Experiencias premium de enoturismo y alojamiento ecológico de lujo entre viñedos.</p>
+          <p data-i18n="footer_desc">Experiencias premium de enoturismo y alojamiento ecológico de lujo entre viñedos.</p>
         </div>
         <div class="col-lg-4 mb-4 mb-lg-0">
-          <h5>Enlaces rápidos</h5>
+          <h5 data-i18n="footer_quick_links">Enlaces rápidos</h5>
           <ul class="list-unstyled footer-links">
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="experiencias.html">Experiencias</a></li>
-            <li><a href="reservas.html">Reservas</a></li>
-            <li><a href="contacto.html">Contacto</a></li>
-            <li><a href="legal.html">Aviso legal</a></li>
+            <li><a href="index.html" data-i18n="nav_home">Inicio</a></li>
+            <li><a href="experiencias.html" data-i18n="nav_experiences">Experiencias</a></li>
+            <li><a href="reservas.html" data-i18n="nav_bookings">Reservas</a></li>
+            <li><a href="contacto.html" data-i18n="nav_contact">Contacto</a></li>
+            <li><a href="legal.html" data-i18n="footer_legal">Aviso legal</a></li>
           </ul>
         </div>
         <div class="col-lg-4">
-          <h5>Contacto</h5>
+          <h5 data-i18n="footer_contact">Contacto</h5>
           <address>
             <p><i class="fas fa-map-marker-alt me-2"></i> Bodegas Viña Mayor, Quintanilla de Onésimo (Valladolid)</p>
-            <p><i class="fas fa-phone me-2"></i> +34 123 456 789</p>
-            <p><i class="fas fa-envelope me-2"></i> info@viñaycabana.com</p>
-            <p><i class="fas fa-envelope me-2"></i> reservas@viña&cabaña.com</p>
+            <p><i class="fas fa-phone me-2"></i> <a href="tel:+34123456789" class="text-white">+34 123 456 789</a></p>
+            <p><i class="fas fa-envelope me-2"></i> <a href="mailto:info@viñaycabana.com" class="text-white">info@viñaycabana.com</a></p>
+            <p><i class="fas fa-envelope me-2"></i> <a href="mailto:reservas@viña&cabaña.com" class="text-white">reservas@viña&cabaña.com</a></p>
           </address>
           <div class="social-icons">
-            <a href="https://www.facebook.com/share/18VQR5HABd/?mibextid=wwXIfr" class="social-icon-link"><i class="fab fa-facebook-f"></i></a>
-            <a href="https://www.instagram.com/vina_y_cabana_experience?igsh=MW14Z2MyeTg2djRwOQ==" class="social-icon-link"><i class="fab fa-instagram"></i></a>
-            <a href="#" class="social-icon-link"><i class="fab fa-twitter"></i></a>
-            <a href="#" class="social-icon-link"><i class="fab fa-youtube"></i></a>
+            <a href="https://www.facebook.com/share/18VQR5HABd/?mibextid=wwXIfr" aria-label="Facebook" target="_blank" rel="noopener"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/vina_y_cabana_experience?igsh=MW14Z2MyeTg2djRwOQ==" aria-label="Instagram" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a>
           </div>
         </div>
       </div>
       <div class="row mt-4">
         <div class="col-12 text-center">
-          <p class="mb-0">Vive con nosotros – Viña & Cabaña &copy; <span id="year"></span></p>
+          <p class="mb-0" data-i18n="footer_copyright">Vive con nosotros – Viña & Cabaña &copy; <span id="year"></span></p>
         </div>
       </div>
     </div>
@@ -311,17 +317,18 @@
   <!-- Parallax.js -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax.js/1.5.0/parallax.min.js"></script>
   
+  <!-- Scripts de traducción -->
+  <script src="assets/js/translations.js"></script>
+  <script src="assets/js/contact-translations.js"></script>
+  <script src="assets/js/i18n.js"></script>
+  
   <!-- Custom JavaScript -->
   <script src="assets/js/script.js"></script>
   
   <script>
-    // Asegurarse de que los iconos sociales se muestran correctamente
     document.addEventListener('DOMContentLoaded', function() {
-      // Inicializar AOS
-      AOS.init();
-      
       // Establecer el año actual en el footer
-      document.getElementById('year').textContent = new Date().getFullYear();
+      document.getElementById('year').innerText = new Date().getFullYear();
     });
   </script>
 </body>

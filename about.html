@@ -23,6 +23,9 @@
   <!-- Custom CSS -->
   <link rel="stylesheet" href="assets/css/style.css">
   
+  <!-- Estilos para multiidioma -->
+  <link rel="stylesheet" href="assets/css/i18n.css">
+  
   <style>
     .card-img-top {
       height: 300px;
@@ -77,37 +80,47 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item">
-            <a class="nav-link" href="index.html">Inicio</a>
+            <a class="nav-link" href="index.html" data-i18n="nav_home">Inicio</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" href="about.html">Nosotros</a>
+            <a class="nav-link active" href="about.html" data-i18n="nav_about">Nosotros</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="experiencias.html">Experiencias</a>
+            <a class="nav-link" href="experiencias.html" data-i18n="nav_experiences">Experiencias</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="reservas.html">Reservas</a>
+            <a class="nav-link" href="reservas.html" data-i18n="nav_bookings">Reservas</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="testimonios.html">Testimonios</a>
+            <a class="nav-link" href="testimonios.html" data-i18n="nav_testimonials">Testimonios</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="contacto.html">Contacto</a>
+            <a class="nav-link" href="contacto.html" data-i18n="nav_contact">Contacto</a>
+          </li>
+          <li class="nav-item language-selector dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="languageDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="fas fa-globe-americas"></i> <span data-i18n="language">Idioma</span>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="languageDropdown" id="languageSelector">
+              <li><button class="dropdown-item" data-language="es"><img src="assets/img/flags/españa.webp" alt="Español" width="20"> Español</button></li>
+              <li><button class="dropdown-item" data-language="en"><img src="assets/img/flags/ingles.webp" alt="English" width="20"> English</button></li>
+              <li><button class="dropdown-item" data-language="fr"><img src="assets/img/flags/francia.png" alt="Français" width="20"> Français</button></li>
+              <li><button class="dropdown-item" data-language="it"><img src="assets/img/flags/italia.webp" alt="Italiano" width="20"> Italiano</button></li>
+              <li><button class="dropdown-item" data-language="de"><img src="assets/img/flags/alemania.png" alt="Deutsch" width="20"> Deutsch</button></li>
+            </ul>
           </li>
         </ul>
       </div>
     </div>
   </nav>
 
-
-
   <!-- Team Section -->
   <section class="py-5 mt-7">
     <div class="container">
-      <h2 class="section-title text-center mb-5" data-aos="fade-up">Fundadoras y Equipo</h2>
+      <h2 class="section-title text-center mb-5" data-aos="fade-up" data-i18n="about_team_title">Fundadoras y Equipo</h2>
       <div class="row justify-content-center mb-5">
         <div class="col-lg-8 text-center" data-aos="fade-up">
-          <p class="lead">Un equipo multidisciplinar con una visión compartida: crear experiencias únicas que conecten con la naturaleza y el mundo del vino.</p>
+          <p class="lead" data-i18n="about_team_subtitle">Un equipo multidisciplinar con una visión compartida: crear experiencias únicas que conecten con la naturaleza y el mundo del vino.</p>
         </div>
       </div>
       <div class="row">
@@ -115,9 +128,9 @@
           <div class="card team-card h-100">
             <img src="assets/img/fundadora1.jpg" class="card-img-top" alt="Flavia Piqueras Dernier">
             <div class="card-body text-center">
-              <h5 class="card-title">Flavia Piqueras Dernier</h5>
-              <p class="card-text text-muted">Directora Financiera</p>
-              <p class="card-text">Vela por la sostenibilidad económica del proyecto para que podamos seguir ofreciéndote los mejores servicios.</p>
+              <h5 class="card-title" data-i18n="about_founder1_name">Flavia Piqueras Dernier</h5>
+              <p class="card-text text-muted" data-i18n="about_founder1_role">Directora Financiera</p>
+              <p class="card-text" data-i18n="about_founder1_desc">Vela por la sostenibilidad económica del proyecto para que podamos seguir ofreciéndote los mejores servicios.</p>
             </div>
           </div>
         </div>
@@ -125,9 +138,9 @@
           <div class="card team-card h-100">
             <img src="assets/img/fundadora5.jpg" class="card-img-top" alt="Almudena Baldazo Sanz">
             <div class="card-body text-center">
-              <h5 class="card-title">Almudena Baldazo Sanz</h5>
-              <p class="card-text text-muted">Directora General y de Operaciones</p>
-              <p class="card-text">Garantiza que cada detalle de tu estancia sea perfecto, desde el mantenimiento de las cabañas hasta la coordinación de actividades.</p>
+              <h5 class="card-title" data-i18n="about_founder2_name">Almudena Baldazo Sanz</h5>
+              <p class="card-text text-muted" data-i18n="about_founder2_role">Directora General y de Operaciones</p>
+              <p class="card-text" data-i18n="about_founder2_desc">Garantiza que cada detalle de tu estancia sea perfecto, desde el mantenimiento de las cabañas hasta la coordinación de actividades.</p>
             </div>
           </div>
         </div>
@@ -135,9 +148,9 @@
           <div class="card team-card h-100">
             <img src="assets/img/fundadora3.jpg" class="card-img-top" alt="Valentina Granes Contreras">
             <div class="card-body text-center">
-              <h5 class="card-title">Valentina Granes Contreras</h5>
-              <p class="card-text text-muted">Directora de Marketing y Ventas</p>
-              <p class="card-text">Diseña estrategias creativas para darte a conocer nuestras experiencias únicas y gestiona las reservas con calidez profesional.</p>
+              <h5 class="card-title" data-i18n="about_founder3_name">Valentina Granes Contreras</h5>
+              <p class="card-text text-muted" data-i18n="about_founder3_role">Directora de Marketing y Ventas</p>
+              <p class="card-text" data-i18n="about_founder3_desc">Diseña estrategias creativas para darte a conocer nuestras experiencias únicas y gestiona las reservas con calidez profesional.</p>
             </div>
           </div>
         </div>
@@ -147,9 +160,9 @@
           <div class="card team-card h-100">
             <img src="assets/img/fundadora4.jpg" class="card-img-top" alt="Iuliana Mariana Gheorghe Ciobanu">
             <div class="card-body text-center">
-              <h5 class="card-title">Iuliana Mariana Gheorghe Ciobanu</h5>
-              <p class="card-text text-muted">Directora de RRHH</p>
-              <p class="card-text">Selecciona y forma a nuestro equipo para garantizarte una atención excepcional durante tu estancia.</p>
+              <h5 class="card-title" data-i18n="about_founder4_name">Iuliana Mariana Gheorghe Ciobanu</h5>
+              <p class="card-text text-muted" data-i18n="about_founder4_role">Directora de RRHH</p>
+              <p class="card-text" data-i18n="about_founder4_desc">Selecciona y forma a nuestro equipo para garantizarte una atención excepcional durante tu estancia.</p>
             </div>
           </div>
         </div>
@@ -157,9 +170,9 @@
           <div class="card team-card h-100">
             <img src="assets/img/fundadora2.jpg" class="card-img-top" alt="Gianella Francisca Vargas Ruiz" style="object-position: center 35%;">
             <div class="card-body text-center">
-              <h5 class="card-title">Gianella Francisca Vargas Ruiz</h5>
-              <p class="card-text text-muted">Directora de Sistemas</p>
-              <p class="card-text">Implementa la tecnología que hace posible tu experiencia, desde la domótica en cabañas hasta nuestro sistema de reservas.</p>
+              <h5 class="card-title" data-i18n="about_founder5_name">Gianella Francisca Vargas Ruiz</h5>
+              <p class="card-text text-muted" data-i18n="about_founder5_role">Directora de Sistemas</p>
+              <p class="card-text" data-i18n="about_founder5_desc">Implementa la tecnología que hace posible tu experiencia, desde la domótica en cabañas hasta nuestro sistema de reservas.</p>
             </div>
           </div>
         </div>
@@ -168,9 +181,9 @@
       <!-- IT Team Section -->
       <div class="row mt-5">
         <div class="col-12 text-center">
-          <h3 class="mb-4" data-aos="fade-up">Equipo Informático</h3>
+          <h3 class="mb-4" data-aos="fade-up" data-i18n="about_it_title">Equipo Informático</h3>
           <div class="divider-wine mx-auto mb-4" style="width: 80px;"></div>
-          <p class="lead mb-5" data-aos="fade-up">Los responsables de dar vida digital a nuestra experiencia</p>
+          <p class="lead mb-5" data-aos="fade-up" data-i18n="about_it_subtitle">Los responsables de dar vida digital a nuestra experiencia</p>
         </div>
       </div>
       
@@ -179,15 +192,15 @@
           <div class="card team-card h-100">
             <img src="assets/img/informatico.png" class="card-img-top" alt="Tu Nombre">
             <div class="card-body text-center">
-              <h5 class="card-title">Daniel Florin Gheorghe Ciobanu</h5>
-              <p class="card-text text-muted">Desarrollador Web & Técnico SEO</p>
-              <p class="card-text">Responsable del diseño y desarrollo de nuestra presencia online, creando una experiencia digital que refleja la esencia de Viña & Cabaña.</p>
+              <h5 class="card-title" data-i18n="about_it_dev_name">Daniel Florin Gheorghe Ciobanu</h5>
+              <p class="card-text text-muted" data-i18n="about_it_dev_role">Desarrollador Web & Técnico SEO</p>
+              <p class="card-text" data-i18n="about_it_dev_desc">Responsable del diseño y desarrollo de nuestra presencia online, creando una experiencia digital que refleja la esencia de Viña & Cabaña.</p>
               <div class="tech-skills mt-3">
-                <span class="badge bg-light text-dark me-1 mb-1">HTML5</span>
-                <span class="badge bg-light text-dark me-1 mb-1">CSS3</span>
-                <span class="badge bg-light text-dark me-1 mb-1">JavaScript</span>
-                <span class="badge bg-light text-dark me-1 mb-1">Bootstrap</span>
-                <span class="badge bg-light text-dark me-1 mb-1">Diseño UX</span>
+                <span class="badge bg-light text-dark me-1 mb-1" data-i18n="about_tech_html">HTML5</span>
+                <span class="badge bg-light text-dark me-1 mb-1" data-i18n="about_tech_css">CSS3</span>
+                <span class="badge bg-light text-dark me-1 mb-1" data-i18n="about_tech_js">JavaScript</span>
+                <span class="badge bg-light text-dark me-1 mb-1" data-i18n="about_tech_bootstrap">Bootstrap</span>
+                <span class="badge bg-light text-dark me-1 mb-1" data-i18n="about_tech_ux">Diseño UX</span>
               </div>
             </div>
             <div class="card-footer bg-transparent border-0 text-center">
@@ -201,17 +214,7 @@
       
       <div class="row mt-5">
         <div class="col-12 text-center">
-          <p>Además de nuestras fundadoras, contamos con un equipo completo que incluye personal de cocina, guías turísticos, chóferes, recepcionistas y personal de limpieza y mantenimiento, todos comprometidos con ofrecerte una experiencia única.</p>
-        </div>
-      </div>
-      <div class="row mt-4">
-        <div class="col-12" data-aos="zoom-in">
-          <div class="team-image-container rounded shadow overflow-hidden">
-            <img src="assets/img/nuestroEquipo.jpg" alt="Equipo completo de Viña & Cabaña" class="img-fluid">
-          </div>
-          <div class="text-center mt-3">
-            <small class="text-muted">Nuestro equipo frente a la entrada principal de Viña & Cabaña</small>
-          </div>
+          <img src="assets/img/nuestroEquipo.jpg" alt="Equipo completo" class="img-fluid rounded shadow" data-aos="zoom-in">
         </div>
       </div>
     </div>
@@ -222,28 +225,28 @@
     <div class="container">
       <div class="row justify-content-center">
         <div class="col-lg-8 text-center mb-5" data-aos="fade-up">
-          <h2 class="section-title">Nuestra pasión por el vino y la naturaleza</h2>
+          <h2 class="section-title" data-i18n="about_story_title">Nuestra pasión por el vino y la naturaleza</h2>
           <div class="divider-wine mx-auto my-4"></div>
         </div>
       </div>
       <div class="row align-items-center">
         <div class="col-lg-6" data-aos="fade-right">
           <div class="about-image ratio ratio-4x3 mb-4 mb-lg-0">
-            <img src="assets/img/nosotros-casa-en-el-campo.jpg" alt="Viña & Cabaña en Ribera del Duero" class="img-fluid rounded shadow">
+            <img src="assets/img/nosotros-casa-en-el-campo.jpg" alt="Viña & Cabaña en Ribera del Duero" class="img-fluid rounded shadow" data-i18n-alt="about_story_image_alt">
           </div>
         </div>
         <div class="col-lg-6" data-aos="fade-left">
           <div class="p-4 bg-white rounded shadow-sm">
-            <p class="lead mb-4">Viña & Cabaña nace de la unión de un equipo multidisciplinar apasionado por el enoturismo y la sostenibilidad. Ubicados en Quintanilla de Onésimo (Valladolid), junto a las Bodegas Viña Mayor, ofrecemos una experiencia inmersiva en el mundo del vino.</p>
+            <p class="lead mb-4" data-i18n="about_story_text">Viña & Cabaña nace de la unión de un equipo multidisciplinar apasionado por el enoturismo y la sostenibilidad. Ubicados en Quintanilla de Onésimo (Valladolid), junto a las Bodegas Viña Mayor, ofrecemos una experiencia inmersiva en el mundo del vino.</p>
             
             <div class="mission-vision-box p-3 mb-3 rounded" style="background-color: rgba(92, 109, 62, 0.1);">
-              <h5><i class="fas fa-bullseye me-2 text-success"></i> Misión</h5>
-              <p>Proporcionar experiencias memorables que combinen el lujo sostenible con la cultura del vino.</p>
+              <h5><i class="fas fa-bullseye me-2 text-success"></i> <span data-i18n="about_mission_title">Misión</span></h5>
+              <p data-i18n="about_mission_text">Proporcionar experiencias memorables que combinen el lujo sostenible con la cultura del vino.</p>
             </div>
             
             <div class="mission-vision-box p-3 rounded" style="background-color: rgba(114, 47, 55, 0.1);">
-              <h5><i class="fas fa-binoculars me-2 text-danger"></i> Visión</h5>
-              <p>Ser referente en enoturismo ecológico en la Ribera del Duero.</p>
+              <h5><i class="fas fa-binoculars me-2 text-danger"></i> <span data-i18n="about_vision_title">Visión</span></h5>
+              <p data-i18n="about_vision_text">Ser referente en enoturismo ecológico en la Ribera del Duero.</p>
             </div>
           </div>
         </div>
@@ -256,20 +259,20 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-6 order-lg-2" data-aos="fade-left">
-          <h2 class="section-title">Nuestra Filosofía</h2>
-          <h4 class="mb-4">Sostenibilidad</h4>
-          <p>Nuestras cabañas están construidas con materiales ecológicos, utilizamos energía solar y sistemas de recolección de agua de lluvia. Practicamos una viticultura sostenible y apoyamos a proveedores locales.</p>
+          <h2 class="section-title" data-i18n="about_philosophy_title">Nuestra Filosofía</h2>
+          <h4 class="mb-4" data-i18n="about_philosophy_sustainability">Sostenibilidad</h4>
+          <p data-i18n="about_philosophy_sustainability_text">Nuestras cabañas están construidas con materiales ecológicos, utilizamos energía solar y sistemas de recolección de agua de lluvia. Practicamos una viticultura sostenible y apoyamos a proveedores locales.</p>
           
-          <h4 class="mb-4 mt-5">Conexión con la tierra</h4>
-          <p>Creemos en ofrecer a nuestros huéspedes una experiencia inmersiva que les permita conectar con la tierra, entender la tradición vitivinícola y experimentar la vida entre viñedos.</p>
+          <h4 class="mb-4 mt-5" data-i18n="about_philosophy_connection">Conexión con la tierra</h4>
+          <p data-i18n="about_philosophy_connection_text">Creemos en ofrecer a nuestros huéspedes una experiencia inmersiva que les permita conectar con la tierra, entender la tradición vitivinícola y experimentar la vida entre viñedos.</p>
           
-          <h4 class="mb-4 mt-5">Experiencias auténticas</h4>
-          <p>Cada actividad, desde las catas hasta los paseos por el viñedo, está diseñada para ser auténtica, exclusiva y memorable. Trabajamos con expertos locales que comparten su conocimiento y pasión.</p>
+          <h4 class="mb-4 mt-5" data-i18n="about_philosophy_experiences">Experiencias auténticas</h4>
+          <p data-i18n="about_philosophy_experiences_text">Cada actividad, desde las catas hasta los paseos por el viñedo, está diseñada para ser auténtica, exclusiva y memorable. Trabajamos con expertos locales que comparten su conocimiento y pasión.</p>
         </div>
         <div class="col-lg-6 order-lg-1" data-aos="fade-right">
           <!-- Plano aéreo del entorno -->
           <div class="philosophy-image ratio ratio-1x1 mb-4">
-            <img src="assets/img/filosofia1.webp" alt="Plano aéreo del entorno" class="img-fluid rounded shadow">
+            <img src="assets/img/filosofia1.webp" alt="Plano aéreo del entorno" class="img-fluid rounded shadow" data-i18n-alt="about_philosophy_image_alt">
           </div>
         </div>
       </div>
@@ -277,58 +280,133 @@
   </section>
 
   <!-- Footer -->
-  <footer class="footer py-5">
+  <footer class="footer py-5 mt-5">
     <div class="container">
       <div class="row">
         <div class="col-lg-4 mb-4 mb-lg-0">
           <h5>Viña & Cabaña</h5>
-          <p>Experiencias premium de enoturismo y alojamiento ecológico de lujo entre viñedos.</p>
+          <p data-i18n="footer_desc">Experiencias premium de enoturismo y alojamiento ecológico de lujo entre viñedos.</p>
         </div>
         <div class="col-lg-4 mb-4 mb-lg-0">
-          <h5>Enlaces rápidos</h5>
+          <h5 data-i18n="footer_quick_links">Enlaces rápidos</h5>
           <ul class="list-unstyled footer-links">
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="experiencias.html">Experiencias</a></li>
-            <li><a href="reservas.html">Reservas</a></li>
-            <li><a href="contacto.html">Contacto</a></li>
-            <li><a href="legal.html">Aviso legal</a></li>
+            <li><a href="index.html" data-i18n="nav_home">Inicio</a></li>
+            <li><a href="experiencias.html" data-i18n="nav_experiences">Experiencias</a></li>
+            <li><a href="reservas.html" data-i18n="nav_bookings">Reservas</a></li>
+            <li><a href="contacto.html" data-i18n="nav_contact">Contacto</a></li>
+            <li><a href="legal.html" data-i18n="footer_legal">Aviso legal</a></li>
           </ul>
         </div>
         <div class="col-lg-4">
-          <h5>Contacto</h5>
+          <h5 data-i18n="footer_contact">Contacto</h5>
           <address>
             <p><i class="fas fa-map-marker-alt me-2"></i> Bodegas Viña Mayor, Quintanilla de Onésimo (Valladolid)</p>
-            <p><i class="fas fa-phone me-2"></i> +34 123 456 789</p>
-            <p><i class="fas fa-envelope me-2"></i> info@viñaycabana.com</p>
-            <p><i class="fas fa-envelope me-2"></i> reservas@viña&cabaña.com</p>
+            <p><i class="fas fa-phone me-2"></i> <a href="tel:+34123456789" class="text-white">+34 123 456 789</a></p>
+            <p><i class="fas fa-envelope me-2"></i> <a href="mailto:info@viñaycabana.com" class="text-white">info@viñaycabana.com</a></p>
+            <p><i class="fas fa-envelope me-2"></i> <a href="mailto:reservas@viña&cabaña.com" class="text-white">reservas@viña&cabaña.com</a></p>
           </address>
           <div class="social-icons">
-            <a href="https://www.facebook.com/share/18VQR5HABd/?mibextid=wwXIfr"><i class="fab fa-facebook-f"></i></a>
-            <a href="https://www.instagram.com/vina_y_cabana_experience?igsh=MW14Z2MyeTg2djRwOQ=="><i class="fab fa-instagram"></i></a>
+            <a href="https://www.facebook.com/share/18VQR5HABd/?mibextid=wwXIfr" aria-label="Facebook" target="_blank" rel="noopener"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/vina_y_cabana_experience?igsh=MW14Z2MyeTg2djRwOQ==" aria-label="Instagram" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a>
           </div>
         </div>
       </div>
       <div class="row mt-4">
         <div class="col-12 text-center">
-          <p class="mb-0">Vive con nosotros – Viña & Cabaña &copy; <span id="year"></span></p>
+          <p class="mb-0" data-i18n="footer_copyright">Vive con nosotros – Viña & Cabaña &copy; <span id="year"></span></p>
         </div>
       </div>
     </div>
   </footer>
 
+  <!-- Cookie Banner -->
+  <div class="cookie-banner" id="cookieBanner">
+    <p data-i18n="cookie_text">Utilizamos cookies propias y de terceros para mejorar nuestros servicios y mostrarle publicidad relacionada con sus preferencias mediante el análisis de sus hábitos de navegación. Si continúa navegando, consideramos que acepta su uso. Puede cambiar la configuración u obtener más información en nuestra</p> <a href="legal.html" data-i18n="cookie_policy">Política de Cookies</a>.
+    <div class="cookie-actions">
+      <button class="btn btn-reject" id="rejectCookies" data-i18n="cookie_reject">Rechazar</button>
+      <button class="btn btn-accept" id="acceptCookies" data-i18n="cookie_accept">Aceptar</button>
+    </div>
+  </div>
+
+  <!-- Botón volver arriba -->
+  <button id="backToTop" class="btn btn-primary rounded-circle position-fixed bottom-0 end-0 m-4 d-none" aria-label="Volver arriba">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
   <!-- Bootstrap Bundle with Popper -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   
-  <!-- AOS Library -->
+  <!-- AOS Animate On Scroll -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   
-  <!-- Swiper JS -->
+  <!-- Swiper Carousel -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
   
-  <!-- Parallax.js -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax.js/1.5.0/parallax.min.js"></script>
+  <!-- Scripts de traducción -->
+  <script src="assets/js/translations.js"></script>
+  <script src="assets/js/about-translations.js"></script>
+  <script src="assets/js/i18n.js"></script>
   
   <!-- Custom JavaScript -->
   <script src="assets/js/script.js"></script>
+  
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Inicializar AOS
+      AOS.init({
+        duration: 1000,
+        once: true
+      });
+      
+      // Establecer el año actual en el footer
+      document.getElementById('year').innerText = new Date().getFullYear();
+      
+      // Botón volver arriba
+      const backToTopBtn = document.getElementById('backToTop');
+      window.addEventListener('scroll', function() {
+        if (window.scrollY > 300) {
+          backToTopBtn.classList.remove('d-none');
+          backToTopBtn.classList.add('d-block');
+        } else {
+          backToTopBtn.classList.remove('d-block');
+          backToTopBtn.classList.add('d-none');
+        }
+      });
+      
+      backToTopBtn.addEventListener('click', function() {
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+        });
+      });
+      
+      // Gestión de cookies
+      const cookieBanner = document.getElementById('cookieBanner');
+      const acceptCookies = document.getElementById('acceptCookies');
+      const rejectCookies = document.getElementById('rejectCookies');
+      
+      // Comprobar si ya se ha mostrado el aviso de cookies
+      const cookiesAccepted = localStorage.getItem('cookiesAccepted');
+      
+      if (cookiesAccepted === null) {
+        // Mostrar el aviso de cookies después de un breve retraso
+        setTimeout(() => {
+          cookieBanner.classList.add('show');
+        }, 1500);
+      }
+      
+      // Función para aceptar cookies
+      acceptCookies.addEventListener('click', () => {
+        localStorage.setItem('cookiesAccepted', 'true');
+        cookieBanner.classList.remove('show');
+      });
+      
+      // Función para rechazar cookies
+      rejectCookies.addEventListener('click', () => {
+        localStorage.setItem('cookiesAccepted', 'false');
+        cookieBanner.classList.remove('show');
+      });
+    });
+  </script>
 </body>
 </html> 

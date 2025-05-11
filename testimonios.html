@@ -132,22 +132,34 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item">
-            <a class="nav-link" href="index.html">Inicio</a>
+            <a class="nav-link" href="index.html" data-i18n="nav_home">Inicio</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="about.html">Nosotros</a>
+            <a class="nav-link" href="about.html" data-i18n="nav_about">Nosotros</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="experiencias.html">Experiencias</a>
+            <a class="nav-link" href="experiencias.html" data-i18n="nav_experiences">Experiencias</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="reservas.html">Reservas</a>
+            <a class="nav-link" href="reservas.html" data-i18n="nav_bookings">Reservas</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" href="testimonios.html">Testimonios</a>
+            <a class="nav-link active" href="testimonios.html" data-i18n="nav_testimonials">Testimonios</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="contacto.html">Contacto</a>
+            <a class="nav-link" href="contacto.html" data-i18n="nav_contact">Contacto</a>
+          </li>
+          <li class="nav-item language-selector dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="languageDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="fas fa-globe-americas"></i> <span data-i18n="language">Idioma</span>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="languageDropdown" id="languageSelector">
+              <li><button class="dropdown-item" data-language="es"><img src="assets/img/flags/españa.webp" alt="Español" width="20"> Español</button></li>
+              <li><button class="dropdown-item" data-language="en"><img src="assets/img/flags/ingles.webp" alt="English" width="20"> English</button></li>
+              <li><button class="dropdown-item" data-language="fr"><img src="assets/img/flags/francia.png" alt="Français" width="20"> Français</button></li>
+              <li><button class="dropdown-item" data-language="it"><img src="assets/img/flags/italia.webp" alt="Italiano" width="20"> Italiano</button></li>
+              <li><button class="dropdown-item" data-language="de"><img src="assets/img/flags/alemania.png" alt="Deutsch" width="20"> Deutsch</button></li>
+            </ul>
           </li>
         </ul>
       </div>
@@ -158,7 +170,7 @@
   <!-- Testimonials Carousel Section -->
   <section class="testimonial-section">
     <div class="container">
-      <h2 class="section-title text-center mb-5 text-white" data-aos="fade-up">Experiencias de nuestros clientes</h2>
+      <h2 class="section-title text-center mb-5 text-white" data-aos="fade-up" data-i18n="testimonials_title">Experiencias de nuestros clientes</h2>
       
       <!-- Swiper Testimonials -->
       <div class="swiper swiper-testimonial" data-aos="fade-up">
@@ -247,13 +259,13 @@
   <!-- Reviews Section -->
   <section class="py-5">
     <div class="container">
-      <h2 class="section-title text-center mb-5" data-aos="fade-up">Lo que dicen sobre nosotros</h2>
+      <h2 class="section-title text-center mb-5" data-aos="fade-up" data-i18n="reviews_title">Lo que dicen sobre nosotros</h2>
       
       <div class="row">
         <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="100">
           <div class="review-card">
             <div class="review-source">
-              <i class="fab fa-tripadvisor"></i> Tripadvisor
+              <i class="fab fa-tripadvisor"></i> <span class="review-source-name" data-source="tripadvisor">Tripadvisor</span>
             </div>
             <div class="rating mb-3">
               <i class="fas fa-star"></i>
@@ -263,14 +275,14 @@
               <i class="fas fa-star"></i>
             </div>
             <p class="review-text">"Un lugar para desconectar y disfrutar. Las cabañas están perfectamente integradas en el paisaje, el personal es atento y las experiencias son únicas. Calidad precio excelente."</p>
-            <p class="text-end text-muted fst-italic">- JavierG84</p>
+            <p class="text-end text-muted fst-italic review-author">- JavierG84</p>
           </div>
         </div>
         
         <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="200">
           <div class="review-card">
             <div class="review-source">
-              <i class="fab fa-google"></i> Google Reviews
+              <i class="fab fa-google"></i> <span class="review-source-name" data-source="google">Google Reviews</span>
             </div>
             <div class="rating mb-3">
               <i class="fas fa-star"></i>
@@ -280,14 +292,14 @@
               <i class="fas fa-star"></i>
             </div>
             <p class="review-text">"Alojamiento espectacular, ecológico y sostenible. Las vistas son impresionantes, y las experiencias de cata de vinos y visita a las bodegas muy educativas y divertidas. Volveremos seguro."</p>
-            <p class="text-end text-muted fst-italic">- Lucía Fernández</p>
+            <p class="text-end text-muted fst-italic review-author">- Lucía Fernández</p>
           </div>
         </div>
         
         <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="300">
           <div class="review-card">
             <div class="review-source">
-              <i class="fab fa-booking"></i> Booking.com
+              <i class="fab fa-booking"></i> <span class="review-source-name" data-source="booking">Booking.com</span>
             </div>
             <div class="rating mb-3">
               <i class="fas fa-star"></i>
@@ -297,7 +309,7 @@
               <i class="fas fa-star-half-alt"></i>
             </div>
             <p class="review-text">"Cabaña perfectamente equipada, muy limpia y confortable. El entorno es precioso y la tranquilidad absoluta. El desayuno es excelente, con productos caseros. La atención del personal exquisita."</p>
-            <p class="text-end text-muted fst-italic">- Pedro S.</p>
+            <p class="text-end text-muted fst-italic review-author">- Pedro S.</p>
           </div>
         </div>
       </div>
@@ -306,7 +318,7 @@
         <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="400">
           <div class="review-card">
             <div class="review-source">
-              <i class="fas fa-newspaper"></i> El Viajero - El País
+              <i class="fas fa-newspaper"></i> <span class="review-source-name" data-source="newspaper">El Viajero - El País</span>
             </div>
             <div class="rating mb-3">
               <i class="fas fa-star"></i>
@@ -316,14 +328,14 @@
               <i class="fas fa-star"></i>
             </div>
             <p class="review-text">"Viña & Cabaña representa una nueva forma de entender el enoturismo. Un concepto sostenible, elegante y auténtico que combina a la perfección el respeto por la tierra con experiencias exclusivas."</p>
-            <p class="text-end text-muted fst-italic">- Crítica especializada</p>
+            <p class="text-end text-muted fst-italic review-author">- Crítica especializada</p>
           </div>
         </div>
         
         <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="500">
           <div class="review-card">
             <div class="review-source">
-              <i class="fab fa-tripadvisor"></i> Tripadvisor
+              <i class="fas fa-utensils"></i> <span class="review-source-name" data-source="tripadvisor">Tripadvisor</span>
             </div>
             <div class="rating mb-3">
               <i class="fas fa-star"></i>
@@ -333,14 +345,14 @@
               <i class="fas fa-star"></i>
             </div>
             <p class="review-text">"Las cenas con maridaje son espectaculares, con platos elaborados con productos de la zona y vinos excelentes. El chef explica cada plato y el sumiller cada vino. Una experiencia gastronómica completa."</p>
-            <p class="text-end text-muted fst-italic">- MariaViajera</p>
+            <p class="text-end text-muted fst-italic review-author">- MariaViajera</p>
           </div>
         </div>
         
         <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="600">
           <div class="review-card">
             <div class="review-source">
-              <i class="fab fa-instagram"></i> Instagram
+              <i class="fab fa-instagram"></i> <span class="review-source-name" data-source="instagram">Instagram</span>
             </div>
             <div class="rating mb-3">
               <i class="fas fa-star"></i>
@@ -350,64 +362,77 @@
               <i class="fas fa-star"></i>
             </div>
             <p class="review-text">"El lugar más instagrameable de la Ribera del Duero. Las cabañas son preciosas, súper cómodas y con vistas increíbles. Las fotos del atardecer desde la terraza son espectaculares. #VinoCabañaSunset"</p>
-            <p class="text-end text-muted fst-italic">- @viajeros_por_españa</p>
+            <p class="text-end text-muted fst-italic review-author">- @viajeros_por_españa</p>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Call to Action -->
+  <!-- CTA Section -->
   <section class="py-5 bg-accent text-white text-center">
     <div class="container">
-      <h2 data-aos="fade-up">¿Te gustaría vivir tu propia experiencia?</h2>
-      <p class="lead mb-4" data-aos="fade-up" data-aos-delay="100">Reserva ahora y únete a nuestros clientes satisfechos</p>
-      <div data-aos="fade-up" data-aos-delay="200">
-        <a href="reservas.html" class="btn btn-light btn-lg me-3">Reservar alojamiento</a>
-        <a href="experiencias.html" class="btn btn-outline-light btn-lg">Ver experiencias</a>
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <h2 class="mb-4" data-i18n="cta_title">¿Te gustaría vivir tu propia experiencia?</h2>
+          <p class="lead mb-5" data-i18n="cta_subtitle">Reserva ahora y únete a nuestros clientes satisfechos</p>
+          <div class="d-flex justify-content-center gap-3 flex-wrap">
+            <a href="reservas.html" class="btn btn-light btn-lg" data-i18n="cta_book_now">Reservar alojamiento</a>
+            <a href="experiencias.html" class="btn btn-outline-light btn-lg" data-i18n="cta_view_experiences">Ver experiencias</a>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- Footer -->
-  <footer class="footer py-5">
+  <footer class="footer py-5 mt-5">
     <div class="container">
       <div class="row">
         <div class="col-lg-4 mb-4 mb-lg-0">
           <h5>Viña & Cabaña</h5>
-          <p>Experiencias premium de enoturismo y alojamiento ecológico de lujo entre viñedos.</p>
+          <p data-i18n="footer_desc">Experiencias premium de enoturismo y alojamiento ecológico de lujo entre viñedos.</p>
         </div>
         <div class="col-lg-4 mb-4 mb-lg-0">
-          <h5>Enlaces rápidos</h5>
+          <h5 data-i18n="footer_quick_links">Enlaces rápidos</h5>
           <ul class="list-unstyled footer-links">
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="experiencias.html">Experiencias</a></li>
-            <li><a href="reservas.html">Reservas</a></li>
-            <li><a href="contacto.html">Contacto</a></li>
-            <li><a href="legal.html">Aviso legal</a></li>
+            <li><a href="index.html" data-i18n="nav_home">Inicio</a></li>
+            <li><a href="experiencias.html" data-i18n="nav_experiences">Experiencias</a></li>
+            <li><a href="reservas.html" data-i18n="nav_bookings">Reservas</a></li>
+            <li><a href="contacto.html" data-i18n="nav_contact">Contacto</a></li>
+            <li><a href="legal.html" data-i18n="footer_legal">Aviso legal</a></li>
           </ul>
         </div>
         <div class="col-lg-4">
-          <h5>Contacto</h5>
+          <h5 data-i18n="footer_contact">Contacto</h5>
           <address>
             <p><i class="fas fa-map-marker-alt me-2"></i> Bodegas Viña Mayor, Quintanilla de Onésimo (Valladolid)</p>
-            <p><i class="fas fa-phone me-2"></i> +34 123 456 789</p>
-            <p><i class="fas fa-envelope me-2"></i> info@viñaycabana.com</p>
-            <p><i class="fas fa-envelope me-2"></i> reservas@viña&cabaña.com</p>
+            <p><i class="fas fa-phone me-2"></i> <a href="tel:+34123456789" class="text-white">+34 123 456 789</a></p>
+            <p><i class="fas fa-envelope me-2"></i> <a href="mailto:info@viñaycabana.com" class="text-white">info@viñaycabana.com</a></p>
+            <p><i class="fas fa-envelope me-2"></i> <a href="mailto:reservas@viña&cabaña.com" class="text-white">reservas@viña&cabaña.com</a></p>
           </address>
           <div class="social-icons">
-            <a href="https://www.facebook.com/share/18VQR5HABd/?mibextid=wwXIfr"><i class="fab fa-facebook-f"></i></a>
-            <a href="https://www.instagram.com/vina_y_cabana_experience?igsh=MW14Z2MyeTg2djRwOQ=="><i class="fab fa-instagram"></i></a>
+            <a href="https://www.facebook.com/share/18VQR5HABd/?mibextid=wwXIfr" aria-label="Facebook" target="_blank" rel="noopener"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/vina_y_cabana_experience?igsh=MW14Z2MyeTg2djRwOQ==" aria-label="Instagram" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a>
           </div>
         </div>
       </div>
       <div class="row mt-4">
         <div class="col-12 text-center">
-          <p class="mb-0">Vive con nosotros – Viña & Cabaña &copy; <span id="year"></span></p>
+          <p class="mb-0" data-i18n="footer_copyright">Vive con nosotros – Viña & Cabaña &copy; <span id="year"></span></p>
         </div>
       </div>
     </div>
   </footer>
+
+  <!-- Cookies Banner -->
+  <div class="cookie-banner" id="cookieBanner">
+    <p data-i18n="cookie_text">Utilizamos cookies propias y de terceros para mejorar nuestros servicios y mostrarle publicidad relacionada con sus preferencias mediante el análisis de sus hábitos de navegación. Si continúa navegando, consideramos que acepta su uso. Puede cambiar la configuración u obtener más información en nuestra</p> <a href="legal.html" data-i18n="cookie_policy">Política de Cookies</a>.
+    <div class="cookie-actions">
+      <button class="btn btn-reject" id="rejectCookies" data-i18n="cookie_reject">Rechazar</button>
+      <button class="btn btn-accept" id="acceptCookies" data-i18n="cookie_accept">Aceptar</button>
+    </div>
+  </div>
 
   <!-- Bootstrap Bundle with Popper -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
@@ -423,6 +448,11 @@
   
   <!-- Custom JavaScript -->
   <script src="assets/js/script.js"></script>
+  
+  <!-- Scripts de traducción -->
+  <script src="assets/js/translations.js"></script>
+  <script src="assets/js/testimonios-translations.js"></script>
+  <script src="assets/js/i18n.js"></script>
   
   <script>
     document.addEventListener('DOMContentLoaded', function() {

@@ -70,40 +70,55 @@
 </head>
 <body>
   <!-- Navigation -->
-  <nav class="navbar navbar-expand-lg navbar-light fixed-top bg-glass">
-    <div class="container">
-      <a class="navbar-brand" href="index.html">
-        <img src="assets/img/logo.png" alt="Viña & Cabaña Logo" height="40">
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="index.html">Inicio</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="about.html">Nosotros</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="experiencias.html">Experiencias</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="reservas.html">Reservas</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="testimonios.html">Testimonios</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="contacto.html">Contacto</a>
-          </li>
-        </ul>
+  <header class="navbar-container">
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">
+          <img src="assets/img/logo.png" alt="Viña & Cabaña" class="logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html" data-i18n="nav_home">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html" data-i18n="nav_about">Nosotros</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="experiencias.html" data-i18n="nav_experiences">Experiencias</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="testimonios.html" data-i18n="nav_testimonials">Testimonios</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="reservas.html" data-i18n="nav_bookings">Reservas</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contacto.html" data-i18n="nav_contact">Contacto</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="legal.html" data-i18n="footer_legal">Aviso Legal</a>
+            </li>
+            <li class="nav-item language-selector dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="languageDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="fas fa-globe-americas"></i> <span data-i18n="language">Idioma</span>
+              </a>
+              <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="languageDropdown" id="languageSelector">
+                <li><button class="dropdown-item" data-language="es"><img src="assets/img/flags/españa.webp" alt="Español" width="20"> Español</button></li>
+                <li><button class="dropdown-item" data-language="en"><img src="assets/img/flags/ingles.webp" alt="English" width="20"> English</button></li>
+                <li><button class="dropdown-item" data-language="fr"><img src="assets/img/flags/francia.png" alt="Français" width="20"> Français</button></li>
+                <li><button class="dropdown-item" data-language="it"><img src="assets/img/flags/italia.webp" alt="Italiano" width="20"> Italiano</button></li>
+                <li><button class="dropdown-item" data-language="de"><img src="assets/img/flags/alemania.png" alt="Deutsch" width="20"> Deutsch</button></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
       </div>
-    </div>
-  </nav>
-
-
+    </nav>
+  </header>
 
   <!-- Legal Content -->
   <section class="py-5 mt-5">
@@ -111,12 +126,12 @@
       <div class="row">
         <div class="col-lg-3 mb-4 mb-lg-0">
           <div class="legal-nav" data-aos="fade-right">
-            <h5 class="mb-4">Índice</h5>
-            <a class="legal-nav-link active" href="#aviso-legal">Aviso Legal</a>
-            <a class="legal-nav-link" href="#privacidad">Política de Privacidad</a>
-            <a class="legal-nav-link" href="#cookies">Política de Cookies</a>
-            <a class="legal-nav-link" href="#terminos">Términos y Condiciones</a>
-            <a class="legal-nav-link" href="#cancelacion">Política de Cancelación</a>
+            <h5 class="mb-4" data-i18n="legal_index">Índice</h5>
+            <a class="legal-nav-link active" href="#aviso-legal" data-i18n="legal_notice">Aviso Legal</a>
+            <a class="legal-nav-link" href="#privacidad" data-i18n="legal_privacy">Política de Privacidad</a>
+            <a class="legal-nav-link" href="#cookies" data-i18n="legal_cookies">Política de Cookies</a>
+            <a class="legal-nav-link" href="#terminos" data-i18n="legal_terms">Términos y Condiciones</a>
+            <a class="legal-nav-link" href="#cancelacion" data-i18n="legal_cancellation">Política de Cancelación</a>
           </div>
         </div>
         
@@ -124,120 +139,120 @@
           <div class="legal-content" data-aos="fade-left">
             <!-- Aviso Legal -->
             <section id="aviso-legal" class="legal-section">
-              <h3>Aviso Legal</h3>
+              <h3 data-i18n="legal_title">Aviso Legal</h3>
               
-              <p>En cumplimiento de la Ley 34/2002, de 11 de julio, de Servicios de la Sociedad de la Información y del Comercio Electrónico, Viña & Cabaña, con domicilio en Bodegas Viña Mayor, Quintanilla de Onésimo, 47350 Valladolid, España, informa:</p>
+              <p data-i18n="legal_subtitle">En cumplimiento de la Ley 34/2002, de 11 de julio, de Servicios de la Sociedad de la Información y del Comercio Electrónico, Viña & Cabaña, con domicilio en Bodegas Viña Mayor, Quintanilla de Onésimo, 47350 Valladolid, España, informa:</p>
               
-              <h4>Titular del Sitio Web</h4>
-              <p>Razón Social: Viña & Cabaña Experience, S.L.<br>
+              <h4 data-i18n="company_info_title">Titular del Sitio Web</h4>
+              <p data-i18n="company_name">Razón Social: Viña & Cabaña Experience, S.L.<br>
               NIF: B12345678<br>
               Domicilio: Bodegas Viña Mayor, Quintanilla de Onésimo, Valladolid, España<br>
               Email: info@viñaycabana.com<br>
               Teléfono: +34 123 456 789</p>
               
-              <h4>Propiedad Intelectual</h4>
-              <p>El código fuente, los diseños gráficos, las imágenes, las fotografías, los sonidos, las animaciones, el software, los textos, así como la información y contenidos que se recogen en este sitio web están protegidos por la legislación española sobre los derechos de propiedad intelectual e industrial a favor de Viña & Cabaña y no se permite la reproducción y/o publicación, total o parcial, del sitio web, ni su tratamiento informático, su distribución, difusión, modificación o transformación, sin el permiso previo y por escrito del mismo.</p>
+              <h4 data-i18n="intellectual_property">Propiedad Intelectual</h4>
+              <p data-i18n="intellectual_property_text">El código fuente, los diseños gráficos, las imágenes, las fotografías, los sonidos, las animaciones, el software, los textos, así como la información y contenidos que se recogen en este sitio web están protegidos por la legislación española sobre los derechos de propiedad intelectual e industrial a favor de Viña & Cabaña y no se permite la reproducción y/o publicación, total o parcial, del sitio web, ni su tratamiento informático, su distribución, difusión, modificación o transformación, sin el permiso previo y por escrito del mismo.</p>
             </section>
             
             <!-- Política de Privacidad -->
             <section id="privacidad" class="legal-section">
-              <h3>Política de Privacidad</h3>
+              <h3 data-i18n="terms_title">Política de Privacidad</h3>
               
-              <p>En cumplimiento del Reglamento (UE) 2016/679 del Parlamento Europeo y del Consejo, de 27 de abril de 2016, relativo a la protección de las personas físicas en lo que respecta al tratamiento de datos personales y a la libre circulación de estos datos (RGPD), Viña & Cabaña informa:</p>
+              <p data-i18n="terms_intro">En cumplimiento del Reglamento (UE) 2016/679 del Parlamento Europeo y del Consejo, de 27 de abril de 2016, relativo a la protección de las personas físicas en lo que respecta al tratamiento de datos personales y a la libre circulación de estos datos (RGPD), Viña & Cabaña informa:</p>
               
-              <h4>Finalidad de la Recogida de Datos</h4>
-              <p>Los datos personales que nos proporciona serán utilizados para:</p>
+              <h4 data-i18n="data_purpose_title">Finalidad de la Recogida de Datos</h4>
+              <p data-i18n="data_purpose_intro">Los datos personales que nos proporciona serán utilizados para:</p>
               <ul>
-                <li>Gestionar las reservas y servicios contratados</li>
-                <li>Atender a consultas y solicitudes</li>
-                <li>Enviar comunicaciones comerciales sobre nuestros servicios (solo si ha dado su consentimiento)</li>
-                <li>Mejorar su experiencia de usuario</li>
+                <li data-i18n="data_purpose_1">Gestionar las reservas y servicios contratados</li>
+                <li data-i18n="data_purpose_2">Atender a consultas y solicitudes</li>
+                <li data-i18n="data_purpose_3">Enviar comunicaciones comerciales sobre nuestros servicios (solo si ha dado su consentimiento)</li>
+                <li data-i18n="data_purpose_4">Mejorar su experiencia de usuario</li>
               </ul>
               
-              <h4>Base Jurídica del Tratamiento</h4>
-              <p>La base legal para el tratamiento de sus datos es:</p>
+              <h4 data-i18n="legal_basis_title">Base Jurídica del Tratamiento</h4>
+              <p data-i18n="legal_basis_intro">La base legal para el tratamiento de sus datos es:</p>
               <ul>
-                <li>La ejecución de un contrato cuando realiza una reserva</li>
-                <li>Su consentimiento expreso para el envío de comunicaciones comerciales</li>
-                <li>El interés legítimo para mejorar nuestros servicios</li>
+                <li data-i18n="legal_basis_1">La ejecución de un contrato cuando realiza una reserva</li>
+                <li data-i18n="legal_basis_2">Su consentimiento expreso para el envío de comunicaciones comerciales</li>
+                <li data-i18n="legal_basis_3">El interés legítimo para mejorar nuestros servicios</li>
               </ul>
               
-              <h4>Conservación de los Datos</h4>
-              <p>Sus datos serán conservados durante el tiempo necesario para cumplir con la finalidad para la que se recabaron y para determinar las posibles responsabilidades que se pudieran derivar de dicha finalidad y del tratamiento de los datos.</p>
+              <h4 data-i18n="data_retention_title">Conservación de los Datos</h4>
+              <p data-i18n="data_retention_text">Sus datos serán conservados durante el tiempo necesario para cumplir con la finalidad para la que se recabaron y para determinar las posibles responsabilidades que se pudieran derivar de dicha finalidad y del tratamiento de los datos.</p>
               
-              <h4>Derechos del Usuario</h4>
-              <p>Puede ejercer sus derechos de acceso, rectificación, supresión, limitación, oposición y portabilidad de sus datos enviando un email a privacidad@viñaycabana.com o por correo postal a nuestra dirección, adjuntando copia de su DNI.</p>
+              <h4 data-i18n="user_rights_title">Derechos del Usuario</h4>
+              <p data-i18n="user_rights_text">Puede ejercer sus derechos de acceso, rectificación, supresión, limitación, oposición y portabilidad de sus datos enviando un email a privacidad@viñaycabana.com o por correo postal a nuestra dirección, adjuntando copia de su DNI.</p>
             </section>
             
             <!-- Política de Cookies -->
             <section id="cookies" class="legal-section">
-              <h3>Política de Cookies</h3>
+              <h3 data-i18n="cookie_policy_title">Política de Cookies</h3>
               
-              <p>Este sitio web utiliza cookies propias y de terceros para mejorar la experiencia de navegación del usuario, recopilar información estadística sobre su navegación y mostrarle publicidad relacionada con sus preferencias.</p>
+              <p data-i18n="cookie_policy_intro">Este sitio web utiliza cookies propias y de terceros para mejorar la experiencia de navegación del usuario, recopilar información estadística sobre su navegación y mostrarle publicidad relacionada con sus preferencias.</p>
               
-              <h4>¿Qué son las Cookies?</h4>
-              <p>Las cookies son pequeños archivos de texto que se almacenan en el navegador del usuario para recoger información sobre su visita. Estas cookies se descargan al equipo del usuario y se almacenan en la memoria de su dispositivo, ayudando a nuestro sitio web a recordar información sobre su visita.</p>
+              <h4 data-i18n="cookie_what_are">¿Qué son las Cookies?</h4>
+              <p data-i18n="cookie_what_are_text">Las cookies son pequeños archivos de texto que se almacenan en el navegador del usuario para recoger información sobre su visita. Estas cookies se descargan al equipo del usuario y se almacenan en la memoria de su dispositivo, ayudando a nuestro sitio web a recordar información sobre su visita.</p>
               
-              <h4>Tipos de Cookies que Utilizamos</h4>
+              <h4 data-i18n="cookie_types">Tipos de Cookies que Utilizamos</h4>
               <ul>
-                <li><strong>Cookies técnicas:</strong> Permiten la navegación y la utilización de las diferentes opciones o servicios que se ofrecen.</li>
-                <li><strong>Cookies de análisis:</strong> Permiten el seguimiento y análisis del comportamiento de los usuarios del sitio web.</li>
-                <li><strong>Cookies de personalización:</strong> Permiten al usuario acceder al servicio con características predefinidas.</li>
-                <li><strong>Cookies publicitarias:</strong> Permiten la gestión de los espacios publicitarios en base a criterios concretos.</li>
+                <li data-i18n="cookie_types_1"><strong>Cookies técnicas:</strong> Permiten la navegación y la utilización de las diferentes opciones o servicios que se ofrecen.</li>
+                <li data-i18n="cookie_types_2"><strong>Cookies de análisis:</strong> Permiten el seguimiento y análisis del comportamiento de los usuarios del sitio web.</li>
+                <li data-i18n="cookie_types_3"><strong>Cookies de personalización:</strong> Permiten al usuario acceder al servicio con características predefinidas.</li>
+                <li data-i18n="cookie_types_4"><strong>Cookies publicitarias:</strong> Permiten la gestión de los espacios publicitarios en base a criterios concretos.</li>
               </ul>
               
-              <h4>Cómo Modificar la Configuración de las Cookies</h4>
-              <p>Puede restringir, bloquear o eliminar las cookies de este sitio web en cualquier momento modificando la configuración de su navegador. Puede encontrar información sobre cómo hacerlo en el soporte de su navegador.</p>
+              <h4 data-i18n="cookie_modify">Cómo Modificar la Configuración de las Cookies</h4>
+              <p data-i18n="cookie_modify_text">Puede restringir, bloquear o eliminar las cookies de este sitio web en cualquier momento modificando la configuración de su navegador. Puede encontrar información sobre cómo hacerlo en el soporte de su navegador.</p>
             </section>
             
             <!-- Términos y Condiciones -->
             <section id="terminos" class="legal-section">
-              <h3>Términos y Condiciones</h3>
+              <h3 data-i18n="terms_conditions_title">Términos y Condiciones</h3>
               
-              <h4>Condiciones de Reserva</h4>
-              <p>Al realizar una reserva en Viña & Cabaña, acepta las siguientes condiciones:</p>
+              <h4 data-i18n="booking_conditions_title">Condiciones de Reserva</h4>
+              <p data-i18n="booking_conditions_intro">Al realizar una reserva en Viña & Cabaña, acepta las siguientes condiciones:</p>
               <ul>
-                <li>Se requiere un depósito del 30% del valor total para confirmar la reserva.</li>
-                <li>El resto del pago se realizará a la llegada.</li>
-                <li>El check-in es a partir de las 15:00h y el check-out antes de las 12:00h.</li>
-                <li>Se debe presentar un documento de identidad válido al momento del check-in.</li>
-                <li>Las mascotas son admitidas únicamente en las Cabañas Familiares con un suplemento de 20€/noche.</li>
+                <li data-i18n="booking_conditions_1">Se requiere un depósito del 30% del valor total para confirmar la reserva.</li>
+                <li data-i18n="booking_conditions_2">El resto del pago se realizará a la llegada.</li>
+                <li data-i18n="booking_conditions_3">El check-in es a partir de las 15:00h y el check-out antes de las 12:00h.</li>
+                <li data-i18n="booking_conditions_4">Se debe presentar un documento de identidad válido al momento del check-in.</li>
+                <li data-i18n="booking_conditions_5">Las mascotas son admitidas únicamente en las Cabañas Familiares con un suplemento de 20€/noche.</li>
               </ul>
               
-              <h4>Condiciones de Uso del Sitio Web</h4>
-              <p>El usuario se compromete a hacer un uso adecuado de los contenidos y servicios que Viña & Cabaña ofrece a través de este sitio web y a no emplearlos para:</p>
+              <h4 data-i18n="website_use_conditions_title">Condiciones de Uso del Sitio Web</h4>
+              <p data-i18n="website_use_conditions_intro">El usuario se compromete a hacer un uso adecuado de los contenidos y servicios que Viña & Cabaña ofrece a través de este sitio web y a no emplearlos para:</p>
               <ul>
-                <li>Incurrir en actividades ilícitas, ilegales o contrarias a la buena fe y al orden público.</li>
-                <li>Difundir contenidos o propaganda de carácter racista, xenófobo, pornográfico-ilegal, de apología del terrorismo o atentatorio contra los derechos humanos.</li>
-                <li>Provocar daños en los sistemas físicos y lógicos de Viña & Cabaña, de sus proveedores o de terceras personas.</li>
-                <li>Introducir o difundir en la red virus informáticos o cualesquiera otros sistemas físicos o lógicos que sean susceptibles de provocar daños en los sistemas de Viña & Cabaña o de terceros.</li>
+                <li data-i18n="website_use_conditions_1">Incurrir en actividades ilícitas, ilegales o contrarias a la buena fe y al orden público.</li>
+                <li data-i18n="website_use_conditions_2">Difundir contenidos o propaganda de carácter racista, xenófobo, pornográfico-ilegal, de apología del terrorismo o atentatorio contra los derechos humanos.</li>
+                <li data-i18n="website_use_conditions_3">Provocar daños en los sistemas físicos y lógicos de Viña & Cabaña, de sus proveedores o de terceras personas.</li>
+                <li data-i18n="website_use_conditions_4">Introducir o difundir en la red virus informáticos o cualesquiera otros sistemas físicos o lógicos que sean susceptibles de provocar daños en los sistemas de Viña & Cabaña o de terceros.</li>
               </ul>
             </section>
             
             <!-- Política de Cancelación -->
             <section id="cancelacion" class="legal-section">
-              <h3>Política de Cancelación</h3>
+              <h3 data-i18n="cancellation_policy_title">Política de Cancelación</h3>
               
-              <p>En Viña & Cabaña entendemos que los planes pueden cambiar, por lo que ofrecemos una política de cancelación flexible:</p>
+              <p data-i18n="cancellation_policy_intro">En Viña & Cabaña entendemos que los planes pueden cambiar, por lo que ofrecemos una política de cancelación flexible:</p>
               
-              <h4>Cancelación de Reservas de Alojamiento</h4>
+              <h4 data-i18n="accom_cancellation_title">Cancelación de Reservas de Alojamiento</h4>
               <ul>
-                <li><strong>Hasta 7 días antes de la llegada:</strong> Cancelación gratuita con reembolso completo del depósito.</li>
-                <li><strong>Entre 7 y 3 días antes de la llegada:</strong> Se cobrará el 30% del valor total de la reserva.</li>
-                <li><strong>Menos de 3 días antes de la llegada:</strong> Se cobrará el 50% del valor total de la reserva.</li>
-                <li><strong>No presentación (No show):</strong> Se cobrará el 100% del valor total de la reserva.</li>
+                <li data-i18n="accom_cancellation_1"><strong>Hasta 7 días antes de la llegada:</strong> Cancelación gratuita con reembolso completo del depósito.</li>
+                <li data-i18n="accom_cancellation_2"><strong>Entre 7 y 3 días antes de la llegada:</strong> Se cobrará el 30% del valor total de la reserva.</li>
+                <li data-i18n="accom_cancellation_3"><strong>Menos de 3 días antes de la llegada:</strong> Se cobrará el 50% del valor total de la reserva.</li>
+                <li data-i18n="accom_cancellation_4"><strong>No presentación (No show):</strong> Se cobrará el 100% del valor total de la reserva.</li>
               </ul>
               
-              <h4>Cancelación de Experiencias y Actividades</h4>
+              <h4 data-i18n="exp_cancellation_title">Cancelación de Experiencias y Actividades</h4>
               <ul>
-                <li><strong>Hasta 48 horas antes:</strong> Cancelación gratuita.</li>
-                <li><strong>Menos de 48 horas antes:</strong> No se realizará reembolso.</li>
+                <li data-i18n="exp_cancellation_1"><strong>Hasta 48 horas antes:</strong> Cancelación gratuita.</li>
+                <li data-i18n="exp_cancellation_2"><strong>Menos de 48 horas antes:</strong> No se realizará reembolso.</li>
               </ul>
               
-              <p>Para realizar una cancelación, debe comunicarse con nosotros por teléfono o email. Las modificaciones de reserva están sujetas a disponibilidad y pueden generar cambios en el precio.</p>
+              <p data-i18n="cancellation_procedure">Para realizar una cancelación, debe comunicarse con nosotros por teléfono o email. Las modificaciones de reserva están sujetas a disponibilidad y pueden generar cambios en el precio.</p>
               
-              <h4>Circunstancias Especiales</h4>
-              <p>En caso de circunstancias imprevistas o de fuerza mayor (problemas médicos, fallecimiento familiar, etc.), estudiaremos cada caso individualmente. Le pedimos que nos proporcione la documentación que acredite dichas circunstancias.</p>
+              <h4 data-i18n="special_circumstances_title">Circunstancias Especiales</h4>
+              <p data-i18n="special_circumstances_text">En caso de circunstancias imprevistas o de fuerza mayor (problemas médicos, fallecimiento familiar, etc.), estudiaremos cada caso individualmente. Le pedimos que nos proporcione la documentación que acredite dichas circunstancias.</p>
             </section>
           </div>
         </div>
@@ -296,6 +311,13 @@
   
   <!-- Custom JavaScript -->
   <script src="assets/js/script.js"></script>
+  
+  <!-- Scripts de traducción -->
+  <script src="assets/js/translations.js"></script>
+  <script src="assets/js/legal-translations.js"></script>
+  <script src="assets/js/legal-translations2.js"></script>
+  <script src="assets/js/legal-translations3.js"></script>
+  <script src="assets/js/i18n.js"></script>
   
   <!-- Smooth Scroll for Legal Nav -->
   <script>
