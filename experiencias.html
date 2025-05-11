@@ -73,6 +73,41 @@
       color: var(--wine-red);
       margin-bottom: 1rem;
     }
+    
+    /* Estilo mejorado para el hover del menú de navegación */
+    .navbar-nav .nav-link {
+      position: relative;
+      transition: color 0.3s ease;
+      padding-bottom: 0.5rem;
+    }
+    
+    .navbar-nav .nav-link:hover {
+      color: var(--wine-red);
+    }
+    
+    .navbar-nav .nav-link::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      bottom: 0;
+      left: 0;
+      background-color: var(--wine-red);
+      transition: width 0.3s ease;
+    }
+    
+    .navbar-nav .nav-link:hover::after {
+      width: 100%;
+    }
+    
+    .navbar-nav .nav-link.active {
+      color: var(--wine-red);
+    }
+    
+    .navbar-nav .nav-link.active::after {
+      width: 100%;
+      background-color: var(--wine-red);
+    }
   </style>
 </head>
 <body>
@@ -110,20 +145,18 @@
     </div>
   </nav>
 
-
-
   <!-- Intro Section -->
   <section class="py-5 mt-7">
     <div class="container">
       <div class="row justify-content-center">
         <div class="col-lg-8 text-center" data-aos="fade-up">
-          <h2 class="section-title">Vive la Ribera del Duero</h2>
+          <h2 class="section-title">Vive las Rutas</h2>
           <div class="divider-wine my-3 mx-auto"></div>
           <p class="lead">Sumérgete en un mundo de sensaciones únicas donde el vino, la naturaleza y el lujo sostenible se fusionan para crear momentos inolvidables.</p>
           <p class="mb-4">En Viña & Cabaña hemos diseñado cada experiencia pensando en conectarte con la esencia de la Ribera del Duero. Desde catas exclusivas hasta rutas entre viñedos, pasando por gastronomía local y visitas a bodegas históricas, todo está cuidadosamente seleccionado para ofrecerte vivencias auténticas y memorables.</p>
           <div class="mt-4 d-flex justify-content-center flex-wrap">
             <span class="badge bg-gold me-2 mb-2 p-2 text-dark"><i class="fas fa-warning me-1"></i> Catas Premium</span>
-            <span class="badge bg-olive-green me-2 mb-2 p-2 text-white"><i class="fas fa-hiking me-1"></i> Rutas Guiadas</span>
+            <span class="badge bg-olive-green me-2 mb-2 p-2 text-white"><i class="fas fa-hiking me-1"></i> Rutas</span>
             <span class="badge bg-accent me-2 mb-2 p-2 text-white"><i class="fas fa-warehouse me-1"></i> Visitas a Bodegas</span>
             <span class="badge bg-primary mb-2 p-2 text-white"><i class="fas fa-utensils me-1"></i> Gastronomía Local</span>
           </div>
@@ -332,18 +365,18 @@
               <div class="text-center mb-3">
                 <i class="fas fa-hiking experience-icon"></i>
               </div>
-              <h3 class="card-title text-center">Rutas de Senderismo Guiadas</h3>
-              <p class="price text-center">25€/persona</p>
-              <p class="card-text">Explora la belleza natural de la Ribera del Duero con nuestras rutas guiadas: Valle del Cuco, Senda del Duero y Riberas de Castronuño. Aprende sobre la flora, fauna y viticultura local mientras disfrutas del paisaje.</p>
+              <h3 class="card-title text-center">Rutas de Senderismo</h3>
+              <p class="price text-center">Gratuitas</p>
+              <p class="card-text">Descubre los paisajes más impresionantes de la Ribera del Duero siguiendo los carteles de los itinerarios. Explora rutas como Valle del Cuco, Senda del Duero y Riberas de Castronuño por tu cuenta.</p>
               
               <div class="features-list p-3 mb-4 bg-light rounded shadow-sm">
-                <h5 class="mb-3 border-bottom pb-2"><i class="fas fa-leaf me-2 text-wine-red"></i> Incluido en las rutas</h5>
+                <h5 class="mb-3 border-bottom pb-2"><i class="fas fa-leaf me-2 text-wine-red"></i> Información sobre las rutas</h5>
                 <ul class="list-group list-group-flush">
                   <li class="list-group-item bg-transparent d-flex align-items-center">
                     <i class="fas fa-clock me-3 text-wine-red"></i>
                     <div>
                       <strong>Duración: 3-4 horas</strong>
-                      <p class="small text-muted mb-0">Con paradas para descansar y disfrutar del paisaje</p>
+                      <p class="small text-muted mb-0">Dependiendo de la ruta seleccionada</p>
                     </div>
                   </li>
                   <li class="list-group-item bg-transparent d-flex align-items-center">
@@ -354,24 +387,24 @@
                     </div>
                   </li>
                   <li class="list-group-item bg-transparent d-flex align-items-center">
-                    <i class="fas fa-bread-slice me-3 text-wine-red"></i>
+                    <i class="fas fa-map me-3 text-wine-red"></i>
                     <div>
-                      <strong>Picnic incluido</strong>
-                      <p class="small text-muted mb-0">Productos locales y una copa de vino</p>
+                      <strong>Mapas disponibles</strong>
+                      <p class="small text-muted mb-0">En recepción te proporcionamos mapas detallados</p>
                     </div>
                   </li>
                   <li class="list-group-item bg-transparent d-flex align-items-center">
-                    <i class="fas fa-tint me-3 text-wine-red"></i>
+                    <i class="fas fa-info-circle me-3 text-wine-red"></i>
                     <div>
-                      <strong>Agua y refrescos</strong>
-                      <p class="small text-muted mb-0">Bebidas durante todo el recorrido</p>
+                      <strong>Autoguiadas</strong>
+                      <p class="small text-muted mb-0">Sigue los carteles de los itinerarios</p>
                     </div>
                   </li>
                 </ul>
               </div>
               
               <div class="text-center mt-auto">
-                <a href="reservas.html" class="btn btn-primary btn-lg rounded-pill px-4">Reservar experiencia</a>
+                <a href="contacto.html" class="btn btn-primary btn-lg rounded-pill px-4">Solicitar información</a>
               </div>
             </div>
           </div>
@@ -529,7 +562,12 @@
               <a href="reservas.html" class="btn btn-primary btn-lg rounded-pill px-4">Reservar Cata</a>
             </div>
             <div class="info-box p-3 bg-light rounded mt-4" data-aos="fade-up">
-              <p class="mb-0"><i class="fas fa-info-circle text-primary me-2"></i> <strong>Horario de catas:</strong> Disponibles todos los días de 9:00 a 22:00. Reserva con al menos 24h de antelación.</p>
+              <p class="mb-0"><i class="fas fa-info-circle text-primary me-2"></i> <strong>Horario de catas:</strong> Disponibles todos los días de 12:00 a 22:00. Reserva con al menos 24h de antelación.</p>
+            </div>
+            
+            <div class="alert alert-info mt-4" data-aos="fade-up">
+              <h5><i class="fas fa-exclamation-circle me-2"></i> Información importante sobre catas en Bodegas Viña Mayor</h5>
+              <p>Las catas en Bodegas Viña Mayor son gestionadas directamente por la bodega. Podemos ayudarte a gestionar tu reserva, pero debes solicitarlo con tiempo suficiente en nuestra recepción para que podamos consultar disponibilidad. No tenemos acceso directo a las reservas de la bodega, por lo que actuamos como intermediarios.</p>
             </div>
           </div>
         </div>
@@ -544,7 +582,7 @@
         <div class="col-12 text-center" data-aos="fade-up">
           <h2 class="section-title">Rutas de Senderismo</h2>
           <div class="divider-wine mb-4 mx-auto"></div>
-          <p class="lead mb-5">Descubre los paisajes más impresionantes de la Ribera del Duero con nuestras rutas guiadas</p>
+          <p class="lead mb-5">Descubre los paisajes más impresionantes de la Ribera del Duero siguiendo los carteles de los itinerarios</p>
         </div>
       </div>
 
@@ -631,15 +669,13 @@
             </div>
             
             <div class="hiking-info p-4 rounded bg-light-olive mt-4" data-aos="fade-up" data-aos-delay="700">
-              <h5><i class="fas fa-user-friends me-2 text-olive-green"></i> Nuestros guías</h5>
-              <p>Todas las rutas se realizan con guías locales expertos en senderismo y conocedores de la flora, fauna e historia local. Disponemos de guías con certificación oficial en turismo y medio ambiente.</p>
-              <div class="guide-images d-flex mt-3">
-                <img src="assets/img/guide-1.jpg" alt="Guía de senderismo" class="rounded-circle me-2" width="60" height="60">
-                <img src="assets/img/guide-2.jpg" alt="Guía turístico" class="rounded-circle me-2" width="60" height="60">
-                <img src="assets/img/guide-3.jpg" alt="Guía experto en naturaleza" class="rounded-circle" width="60" height="60">
+              <h5><i class="fas fa-info-circle me-2 text-olive-green"></i> Información importante</h5>
+              <p>Todas estas rutas son autoguiadas y gratuitas. Ofrecemos recomendaciones sobre los mejores recorridos de la zona y puedes seguir los carteles de los itinerarios. Solicita mapas e información detallada en nuestra recepción.</p>
+              <div class="alert alert-success mt-3">
+                <i class="fas fa-map-marked-alt me-2"></i> <strong>Rutas gratuitas:</strong> No se cobra por estas rutas ya que no incluyen guía.
               </div>
               <div class="text-center mt-4">
-                <a href="reservas.html" class="btn btn-primary rounded-pill px-4">Reservar Ruta</a>
+                <a href="contacto.html" class="btn btn-primary rounded-pill px-4">Solicitar información</a>
               </div>
             </div>
           </div>
@@ -702,7 +738,7 @@
         <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="400">
           <div class="card restaurant-card h-100 special-restaurant">
             <div class="ribbon">
-              <span>Estrella Michelin</span>
+              <span style="background-color: #722f37; color: white; padding: 5px 10px; border-radius: 3px;">Estrella Michelin</span>
             </div>
             <div class="card-body">
               <h5 class="card-title">Ambivium</h5>
@@ -790,6 +826,77 @@
           <h2 class="section-title">Turismo Local</h2>
           <div class="divider-wine mb-4 mx-auto"></div>
           <p class="lead">Ofrecemos 2 excursiones diarias para descubrir la riqueza cultural de la zona</p>
+        </div>
+      </div>
+
+      <!-- Visitas Guiadas Section -->
+      <div class="row mb-5">
+        <div class="col-12" data-aos="fade-up">
+          <div class="card border-0 shadow-sm">
+            <div class="card-body p-4">
+              <h3 class="card-title mb-4"><i class="fas fa-map-marked-alt me-2 text-wine-red"></i> Visitas Guiadas</h3>
+              <p>A diferencia de las rutas de senderismo autoguiadas, ofrecemos visitas guiadas a las poblaciones cercanas como Peñafiel y su castillo, acompañados por guías expertos en la historia y cultura local.</p>
+              
+              <div class="row mt-4">
+                <div class="col-md-6">
+                  <div class="guided-tour p-3 bg-light rounded mb-3">
+                    <h5><i class="fas fa-castle me-2 text-wine-red"></i> Visita a Peñafiel</h5>
+                    <p class="mb-2">Descubre el imponente Castillo de Peñafiel, el Museo Provincial del Vino y la histórica Plaza del Coso.</p>
+                    <div class="d-flex justify-content-between align-items-center">
+                      <span><i class="fas fa-clock me-1"></i> 3 horas</span>
+                      <span class="badge bg-wine-red">15€/persona</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="guided-tour p-3 bg-light rounded mb-3">
+                    <h5><i class="fas fa-landmark me-2 text-wine-red"></i> Visita a Valladolid</h5>
+                    <p class="mb-2">Recorre el casco histórico, la Plaza Mayor y visita el Museo Nacional de Escultura.</p>
+                    <div class="d-flex justify-content-between align-items-center">
+                      <span><i class="fas fa-clock me-1"></i> 4 horas</span>
+                      <span class="badge bg-wine-red">15€/persona</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="row mt-3">
+                <div class="col-md-6">
+                  <div class="guided-tour p-3 bg-light rounded mb-3">
+                    <h5><i class="fas fa-church me-2 text-wine-red"></i> Visita a Urueña</h5>
+                    <p class="mb-2">Conoce el "pueblo del libro" con sus librerías y murallas medievales.</p>
+                    <div class="d-flex justify-content-between align-items-center">
+                      <span><i class="fas fa-clock me-1"></i> 3 horas</span>
+                      <span class="badge bg-wine-red">15€/persona</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="guided-tour p-3 bg-light rounded mb-3">
+                    <h5><i class="fas fa-water me-2 text-wine-red"></i> Visita a Tudela de Duero</h5>
+                    <p class="mb-2">Descubre la Iglesia de Santa María y el Parque de la Isla junto al río Duero.</p>
+                    <div class="d-flex justify-content-between align-items-center">
+                      <span><i class="fas fa-clock me-1"></i> 2 horas</span>
+                      <span class="badge bg-wine-red">15€/persona</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="guide-info p-3 bg-light-olive rounded mt-4">
+                <h5><i class="fas fa-user-friends me-2 text-olive-green"></i> Nuestros guías</h5>
+                <p>Todas las visitas se realizan con guías locales expertos conocedores de la historia, arte y cultura local. Disponemos de guías con certificación oficial en turismo.</p>
+                <div class="guide-images d-flex mt-3">
+                  <img src="assets/img/guide-1.jpg" alt="Guía turístico" class="rounded-circle me-2" width="60" height="60">
+                  <img src="assets/img/guide-2.jpg" alt="Guía turístico" class="rounded-circle me-2" width="60" height="60">
+                  <img src="assets/img/guide-3.jpg" alt="Guía turístico" class="rounded-circle" width="60" height="60">
+                </div>
+                <div class="text-center mt-4">
+                  <a href="reservas.html" class="btn btn-primary rounded-pill px-4">Reservar visita</a>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 

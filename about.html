@@ -28,6 +28,40 @@
       height: 300px;
       object-fit: cover;
     }
+    
+    /* Fix for navbar hover effect */
+    .navbar-nav .nav-link {
+      position: relative;
+      transition: color 0.3s ease;
+    }
+    
+    .navbar-nav .nav-link:hover {
+      color: var(--wine-red);
+    }
+    
+    .navbar-nav .nav-link::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      bottom: 0;
+      left: 0;
+      background-color: var(--wine-red);
+      transition: width 0.3s ease;
+    }
+    
+    .navbar-nav .nav-link:hover::after {
+      width: 100%;
+    }
+    
+    .navbar-nav .nav-link.active {
+      color: var(--wine-red);
+    }
+    
+    .navbar-nav .nav-link.active::after {
+      width: 100%;
+      background-color: var(--wine-red);
+    }
   </style>
 </head>
 <body>
@@ -130,6 +164,41 @@
           </div>
         </div>
       </div>
+      
+      <!-- IT Team Section -->
+      <div class="row mt-5">
+        <div class="col-12 text-center">
+          <h3 class="mb-4" data-aos="fade-up">Equipo Informático</h3>
+          <div class="divider-wine mx-auto mb-4" style="width: 80px;"></div>
+          <p class="lead mb-5" data-aos="fade-up">Los responsables de dar vida digital a nuestra experiencia</p>
+        </div>
+      </div>
+      
+      <div class="row justify-content-center">
+        <div class="col-md-4 mb-4" data-aos="zoom-in" data-aos-delay="100">
+          <div class="card team-card h-100">
+            <img src="assets/img/informatico.png" class="card-img-top" alt="Tu Nombre">
+            <div class="card-body text-center">
+              <h5 class="card-title">Daniel Florin Gheorghe Ciobanu</h5>
+              <p class="card-text text-muted">Desarrollador Web & Técnico SEO</p>
+              <p class="card-text">Responsable del diseño y desarrollo de nuestra presencia online, creando una experiencia digital que refleja la esencia de Viña & Cabaña.</p>
+              <div class="tech-skills mt-3">
+                <span class="badge bg-light text-dark me-1 mb-1">HTML5</span>
+                <span class="badge bg-light text-dark me-1 mb-1">CSS3</span>
+                <span class="badge bg-light text-dark me-1 mb-1">JavaScript</span>
+                <span class="badge bg-light text-dark me-1 mb-1">Bootstrap</span>
+                <span class="badge bg-light text-dark me-1 mb-1">Diseño UX</span>
+              </div>
+            </div>
+            <div class="card-footer bg-transparent border-0 text-center">
+              <div class="social-links">
+                <a href="https://luffrey1.github.io/portfolio/" class="text-muted mx-2"><i class="fas fa-globe"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
       <div class="row mt-5">
         <div class="col-12 text-center">
           <p>Además de nuestras fundadoras, contamos con un equipo completo que incluye personal de cocina, guías turísticos, chóferes, recepcionistas y personal de limpieza y mantenimiento, todos comprometidos con ofrecerte una experiencia única.</p>

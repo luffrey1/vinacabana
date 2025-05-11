@@ -60,7 +60,11 @@
     
     .cabin-card .card-price {
       font-weight: 700;
-      color: var(--olive-green);
+      color: #fff;
+      background-color: var(--olive-green);
+      padding: 5px 10px;
+      border-radius: 4px;
+      display: inline-block;
       font-size: 1.2rem;
       margin-bottom: 1rem;
     }
@@ -78,6 +82,40 @@
       content: "*";
       color: red;
       margin-left: 4px;
+    }
+    
+    /* Fix for navbar hover effect */
+    .navbar-nav .nav-link {
+      position: relative;
+      transition: color 0.3s ease;
+    }
+    
+    .navbar-nav .nav-link:hover {
+      color: var(--wine-red);
+    }
+    
+    .navbar-nav .nav-link::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      bottom: 0;
+      left: 0;
+      background-color: var(--wine-red);
+      transition: width 0.3s ease;
+    }
+    
+    .navbar-nav .nav-link:hover::after {
+      width: 100%;
+    }
+    
+    .navbar-nav .nav-link.active {
+      color: var(--wine-red);
+    }
+    
+    .navbar-nav .nav-link.active::after {
+      width: 100%;
+      background-color: var(--wine-red);
     }
   </style>
 </head>
@@ -124,55 +162,178 @@
       <h2 class="section-title text-center mb-3" data-aos="fade-up">Nuestros Alojamientos</h2>
       <p class="text-center mb-5 lead" data-aos="fade-up">Cabañas ecológicas de lujo para una experiencia inolvidable entre viñedos</p>
       
-      <!-- Cabin Type Categories -->
-      <div class="row justify-content-center mb-5">
-        <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
-          <div class="card cabin-type text-center h-100">
+      <div class="row">
+        <!-- Cabin 1: Tempranillo (RIVER) -->
+        <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="cabin-card card">
+            <div class="ribbon ribbon-top-right"><span>RIVER</span></div>
+            <img src="assets/img/casariver.jpg" class="card-img-top" alt="Cabaña Tempranillo">
             <div class="card-body">
-              <div class="cabin-icon mb-3">
-                <i class="fas fa-home text-wine-red fa-3x"></i>
+              <h5 class="card-title">Cabaña Tempranillo</h5>
+              <p class="card-price">290€/noche</p>
+              <p class="card-text">Cabaña ecológica para 6 personas con terraza privada, vista al viñedo y todas las comodidades.</p>
+              <div class="cabin-features mb-3">
+                <span class="badge bg-wine-red me-2 mb-2">6 personas</span>
+                <span class="badge bg-wine-red me-2 mb-2">120 m²</span>
+                <span class="badge bg-wine-red me-2 mb-2">3 dormitorios</span>
               </div>
-              <h4 class="card-title">Cabañas EROS</h4>
-              <p class="card-text">1 dormitorio | 1 baño</p>
-              <p class="card-text"><strong>Ocupación:</strong> 2 personas</p>
-              <p class="card-text"><strong>Superficie:</strong> 48 m²</p>
-              <div class="cabin-image mt-3">
-                <img src="assets/img/casaeros.jpg" alt="Interior Cabaña EROS" class="rounded">
-              </div>
+              <ul class="list-unstyled mb-4">
+                <li><i class="fas fa-utensils me-2"></i> Cocina equipada</li>
+                <li><i class="fas fa-bath me-2"></i> Baño completo</li>
+                <li><i class="fas fa-wifi me-2"></i> Wi-Fi de alta velocidad</li>
+                <li><i class="fas fa-coffee me-2"></i> Desayuno incluido</li>
+              </ul>
+              <a href="#booking-form" class="btn btn-outline-primary w-100">Reservar ahora</a>
             </div>
           </div>
         </div>
         
-        <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
-          <div class="card cabin-type text-center h-100">
+        <!-- Cabin 2: Cabernet Sauvignon (EROS) -->
+        <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="200">
+          <div class="cabin-card card">
+            <div class="ribbon ribbon-top-right"><span>EROS</span></div>
+            <img src="assets/img/casaeros.jpg" class="card-img-top" alt="Cabaña Cabernet Sauvignon">
             <div class="card-body">
-              <div class="cabin-icon mb-3">
-                <i class="fas fa-home text-olive-green fa-3x"></i>
+              <h5 class="card-title">Cabaña Cabernet Sauvignon</h5>
+              <p class="card-price">240€/noche</p>
+              <p class="card-text">Romántica cabaña con jacuzzi exterior, chimenea y vistas panorámicas a los viñedos.</p>
+              <div class="cabin-features mb-3">
+                <span class="badge bg-wine-red me-2 mb-2">2 personas</span>
+                <span class="badge bg-wine-red me-2 mb-2">48 m²</span>
+                <span class="badge bg-wine-red me-2 mb-2">1 dormitorio</span>
               </div>
-              <h4 class="card-title">Cabañas GRECIA</h4>
-              <p class="card-text">2 dormitorios | 1 baño | 1 cocina</p>
-              <p class="card-text"><strong>Ocupación:</strong> 4 personas</p>
-              <p class="card-text"><strong>Superficie:</strong> 54 m²</p>
-              <div class="cabin-image mt-3">
-                <img src="assets/img/casagrecia.jpg" alt="Interior Cabaña GRECIA" class="rounded">
-              </div>
+              <ul class="list-unstyled mb-4">
+                <li><i class="fas fa-utensils me-2"></i> Cocina equipada</li>
+                <li><i class="fas fa-hot-tub me-2"></i> Jacuzzi privado</li>
+                <li><i class="fas fa-fire me-2"></i> Chimenea</li>
+                <li><i class="fas fa-glass-cheers me-2"></i> Botella de vino de bienvenida</li>
+              </ul>
+              <a href="#booking-form" class="btn btn-outline-primary w-100">Reservar ahora</a>
             </div>
           </div>
         </div>
         
-        <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
-          <div class="card cabin-type text-center h-100">
+        <!-- Cabin 3: Merlot (EROS) -->
+        <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="300">
+          <div class="cabin-card card">
+            <div class="ribbon ribbon-top-right"><span>EROS</span></div>
+            <img src="assets/img/eros.jpg" class="card-img-top" alt="Cabaña Merlot">
             <div class="card-body">
-              <div class="cabin-icon mb-3">
-                <i class="fas fa-home text-wine-red fa-3x"></i>
+              <h5 class="card-title">Cabaña Merlot</h5>
+              <p class="card-price">230€/noche</p>
+              <p class="card-text">Elegante cabaña tipo EROS con terraza privada, vistas al amanecer y detalles únicos.</p>
+              <div class="cabin-features mb-3">
+                <span class="badge bg-wine-red me-2 mb-2">2 personas</span>
+                <span class="badge bg-wine-red me-2 mb-2">48 m²</span>
+                <span class="badge bg-wine-red me-2 mb-2">1 dormitorio</span>
               </div>
-              <h4 class="card-title">Cabañas RIVER</h4>
-              <p class="card-text">3 dormitorios | 1 baño | 1 cocina</p>
-              <p class="card-text"><strong>Ocupación:</strong> 6 personas</p>
-              <p class="card-text"><strong>Superficie:</strong> 120 m²</p>
-              <div class="cabin-image mt-3">
-                <img src="assets/img/casariver.jpg" alt="Interior Cabaña RIVER" class="rounded">
+              <ul class="list-unstyled mb-4">
+                <li><i class="fas fa-utensils me-2"></i> Cocina equipada</li>
+                <li><i class="fas fa-bed me-2"></i> Cama king size</li>
+                <li><i class="fas fa-moon me-2"></i> Iluminación ambiental</li>
+                <li><i class="fas fa-heart me-2"></i> Perfecta para parejas</li>
+              </ul>
+              <a href="#booking-form" class="btn btn-outline-primary w-100">Reservar ahora</a>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Cabin 4: Malbec (EROS) -->
+        <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="400">
+          <div class="cabin-card card">
+            <div class="ribbon ribbon-top-right"><span>EROS</span></div>
+            <img src="assets/img/casaeros.jpg" class="card-img-top" alt="Cabaña Malbec">
+            <div class="card-body">
+              <h5 class="card-title">Cabaña Malbec</h5>
+              <p class="card-price">235€/noche</p>
+              <p class="card-text">Acogedora cabaña para dos personas con detalles de diseño y máximo confort.</p>
+              <div class="cabin-features mb-3">
+                <span class="badge bg-wine-red me-2 mb-2">2 personas</span>
+                <span class="badge bg-wine-red me-2 mb-2">48 m²</span>
+                <span class="badge bg-wine-red me-2 mb-2">1 dormitorio</span>
               </div>
+              <ul class="list-unstyled mb-4">
+                <li><i class="fas fa-utensils me-2"></i> Cocina equipada</li>
+                <li><i class="fas fa-bed me-2"></i> Cama extragrande</li>
+                <li><i class="fas fa-bath me-2"></i> Baño con ducha efecto lluvia</li>
+                <li><i class="fas fa-umbrella-beach me-2"></i> Terraza con tumbonas</li>
+              </ul>
+              <a href="#booking-form" class="btn btn-outline-primary w-100">Reservar ahora</a>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Cabin 5: Garnacha Tinta (GRECIA) -->
+        <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="500">
+          <div class="cabin-card card">
+            <div class="ribbon ribbon-top-right"><span>GRECIA</span></div>
+            <img src="assets/img/casagrecia.jpg" class="card-img-top" alt="Cabaña Garnacha Tinta">
+            <div class="card-body">
+              <h5 class="card-title">Cabaña Garnacha Tinta</h5>
+              <p class="card-price">260€/noche</p>
+              <p class="card-text">Espaciosa cabaña familiar con dos dormitorios y amplia zona común.</p>
+              <div class="cabin-features mb-3">
+                <span class="badge bg-wine-red me-2 mb-2">4 personas</span>
+                <span class="badge bg-wine-red me-2 mb-2">54 m²</span>
+                <span class="badge bg-wine-red me-2 mb-2">2 dormitorios</span>
+              </div>
+              <ul class="list-unstyled mb-4">
+                <li><i class="fas fa-utensils me-2"></i> Cocina equipada</li>
+                <li><i class="fas fa-door-closed me-2"></i> 2 dormitorios separados</li>
+                <li><i class="fas fa-couch me-2"></i> Sala de estar</li>
+                <li><i class="fas fa-paw me-2"></i> Pet-friendly</li>
+              </ul>
+              <a href="#booking-form" class="btn btn-outline-primary w-100">Reservar ahora</a>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Cabin 6: Albillo Mayor (GRECIA) -->
+        <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="600">
+          <div class="cabin-card card">
+            <div class="ribbon ribbon-top-right"><span>GRECIA</span></div>
+            <img src="assets/img/casagrecia.jpg" class="card-img-top" alt="Cabaña Albillo Mayor">
+            <div class="card-body">
+              <h5 class="card-title">Cabaña Albillo Mayor</h5>
+              <p class="card-price">255€/noche</p>
+              <p class="card-text">Luminosa cabaña tipo GRECIA con vista a los viñedos y decoración contemporánea.</p>
+              <div class="cabin-features mb-3">
+                <span class="badge bg-wine-red me-2 mb-2">4 personas</span>
+                <span class="badge bg-wine-red me-2 mb-2">54 m²</span>
+                <span class="badge bg-wine-red me-2 mb-2">2 dormitorios</span>
+              </div>
+              <ul class="list-unstyled mb-4">
+                <li><i class="fas fa-utensils me-2"></i> Cocina equipada</li>
+                <li><i class="fas fa-bath me-2"></i> Baño con bañera</li>
+                <li><i class="fas fa-tv me-2"></i> Smart TV en cada habitación</li>
+                <li><i class="fas fa-umbrella-beach me-2"></i> Porche con vistas</li>
+              </ul>
+              <a href="#booking-form" class="btn btn-outline-primary w-100">Reservar ahora</a>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Cabin 7: Mencía (RIVER) -->
+        <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="700">
+          <div class="cabin-card card">
+            <div class="ribbon ribbon-top-right"><span>RIVER</span></div>
+            <img src="assets/img/casarivergrande.jpg" class="card-img-top" alt="Cabaña Mencía">
+            <div class="card-body">
+              <h5 class="card-title">Cabaña Mencía</h5>
+              <p class="card-price">285€/noche</p>
+              <p class="card-text">Gran cabaña tipo RIVER ideal para grupos y familias con amplio espacio y todas las comodidades.</p>
+              <div class="cabin-features mb-3">
+                <span class="badge bg-wine-red me-2 mb-2">6 personas</span>
+                <span class="badge bg-wine-red me-2 mb-2">120 m²</span>
+                <span class="badge bg-wine-red me-2 mb-2">3 dormitorios</span>
+              </div>
+              <ul class="list-unstyled mb-4">
+                <li><i class="fas fa-utensils me-2"></i> Cocina equipada</li>
+                <li><i class="fas fa-couch me-2"></i> Amplio salón</li>
+                <li><i class="fas fa-users me-2"></i> Ideal para grupos</li>
+                <li><i class="fas fa-music me-2"></i> Sistema de sonido integrado</li>
+              </ul>
+              <a href="#booking-form" class="btn btn-outline-primary w-100">Reservar ahora</a>
             </div>
           </div>
         </div>
@@ -329,190 +490,11 @@
           <!-- Info Alert -->
           <div class="alert alert-info" role="alert" data-aos="fade-up">
             <i class="fas fa-info-circle me-2"></i>
-            <strong>Información sobre temporadas:</strong> La temporada alta comprende los meses de julio, agosto, Semana Santa y fechas especiales. 
-            El resto del año se considera temporada baja. Los precios pueden variar según disponibilidad y promociones especiales.
+            <strong>Información sobre temporadas:</strong> La temporada alta comprende los meses de Marzo, Abril, Mayo, Junio, Julio, Agosto y Septiembre (210 días). 
+            La temporada baja comprende los meses de Octubre, Noviembre, Diciembre, Enero y Febrero (155 días). Los precios pueden variar según disponibilidad y promociones especiales.
           </div>
         </div>
       </section>
-      
-      <h3 class="text-center mb-4" data-aos="fade-up">Descubre nuestras 7 cabañas</h3>
-      
-      <div class="row">
-        <!-- Cabin 1: Tempranillo (RIVER) -->
-        <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="100">
-          <div class="cabin-card card">
-            <div class="ribbon ribbon-top-right"><span>RIVER</span></div>
-            <img src="assets/img/casariver.jpg" class="card-img-top" alt="Cabaña Tempranillo">
-            <div class="card-body">
-              <h5 class="card-title">Cabaña Tempranillo</h5>
-              <p class="card-price">290€/noche</p>
-              <p class="card-text">Cabaña ecológica para 6 personas con terraza privada, vista al viñedo y todas las comodidades.</p>
-              <div class="cabin-features mb-3">
-                <span class="badge bg-wine-red me-2 mb-2">6 personas</span>
-                <span class="badge bg-wine-red me-2 mb-2">120 m²</span>
-                <span class="badge bg-wine-red me-2 mb-2">3 dormitorios</span>
-              </div>
-              <ul class="list-unstyled mb-4">
-                <li><i class="fas fa-utensils me-2"></i> Cocina equipada</li>
-                <li><i class="fas fa-bath me-2"></i> Baño completo</li>
-                <li><i class="fas fa-wifi me-2"></i> Wi-Fi de alta velocidad</li>
-                <li><i class="fas fa-coffee me-2"></i> Desayuno incluido</li>
-              </ul>
-              <a href="#booking-form" class="btn btn-outline-primary w-100">Reservar ahora</a>
-            </div>
-          </div>
-        </div>
-        
-        <!-- Cabin 2: Cabernet Sauvignon (EROS) -->
-        <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="200">
-          <div class="cabin-card card">
-            <div class="ribbon ribbon-top-right"><span>EROS</span></div>
-            <img src="assets/img/casaeros.jpg" class="card-img-top" alt="Cabaña Cabernet Sauvignon">
-            <div class="card-body">
-              <h5 class="card-title">Cabaña Cabernet Sauvignon</h5>
-              <p class="card-price">240€/noche</p>
-              <p class="card-text">Romántica cabaña con jacuzzi exterior, chimenea y vistas panorámicas a los viñedos.</p>
-              <div class="cabin-features mb-3">
-                <span class="badge bg-wine-red me-2 mb-2">2 personas</span>
-                <span class="badge bg-wine-red me-2 mb-2">48 m²</span>
-                <span class="badge bg-wine-red me-2 mb-2">1 dormitorio</span>
-              </div>
-              <ul class="list-unstyled mb-4">
-                <li><i class="fas fa-hot-tub me-2"></i> Jacuzzi privado</li>
-                <li><i class="fas fa-fire me-2"></i> Chimenea</li>
-                <li><i class="fas fa-bath me-2"></i> Baño de lujo</li>
-                <li><i class="fas fa-glass-cheers me-2"></i> Botella de vino de bienvenida</li>
-              </ul>
-              <a href="#booking-form" class="btn btn-outline-primary w-100">Reservar ahora</a>
-            </div>
-          </div>
-        </div>
-        
-        <!-- Cabin 3: Merlot (EROS) -->
-        <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="300">
-          <div class="cabin-card card">
-            <div class="ribbon ribbon-top-right"><span>EROS</span></div>
-            <img src="assets/img/eros.jpg" class="card-img-top" alt="Cabaña Merlot">
-            <div class="card-body">
-              <h5 class="card-title">Cabaña Merlot</h5>
-              <p class="card-price">230€/noche</p>
-              <p class="card-text">Elegante cabaña tipo EROS con terraza privada, vistas al amanecer y detalles únicos.</p>
-              <div class="cabin-features mb-3">
-                <span class="badge bg-wine-red me-2 mb-2">2 personas</span>
-                <span class="badge bg-wine-red me-2 mb-2">48 m²</span>
-                <span class="badge bg-wine-red me-2 mb-2">1 dormitorio</span>
-              </div>
-              <ul class="list-unstyled mb-4">
-                <li><i class="fas fa-bed me-2"></i> Cama king size</li>
-                <li><i class="fas fa-moon me-2"></i> Iluminación ambiental</li>
-                <li><i class="fas fa-tv me-2"></i> Smart TV</li>
-                <li><i class="fas fa-heart me-2"></i> Perfecta para parejas</li>
-              </ul>
-              <a href="#booking-form" class="btn btn-outline-primary w-100">Reservar ahora</a>
-            </div>
-          </div>
-        </div>
-        
-        <!-- Cabin 4: Malbec (EROS) -->
-        <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="400">
-          <div class="cabin-card card">
-            <div class="ribbon ribbon-top-right"><span>EROS</span></div>
-            <img src="assets/img/casaeros.jpg" class="card-img-top" alt="Cabaña Malbec">
-            <div class="card-body">
-              <h5 class="card-title">Cabaña Malbec</h5>
-              <p class="card-price">235€/noche</p>
-              <p class="card-text">Acogedora cabaña para dos personas con detalles de diseño y máximo confort.</p>
-              <div class="cabin-features mb-3">
-                <span class="badge bg-wine-red me-2 mb-2">2 personas</span>
-                <span class="badge bg-wine-red me-2 mb-2">48 m²</span>
-                <span class="badge bg-wine-red me-2 mb-2">1 dormitorio</span>
-              </div>
-              <ul class="list-unstyled mb-4">
-                <li><i class="fas fa-bed me-2"></i> Cama extragrande</li>
-                <li><i class="fas fa-bath me-2"></i> Baño con ducha efecto lluvia</li>
-                <li><i class="fas fa-couch me-2"></i> Zona de estar</li>
-                <li><i class="fas fa-umbrella-beach me-2"></i> Terraza con tumbonas</li>
-              </ul>
-              <a href="#booking-form" class="btn btn-outline-primary w-100">Reservar ahora</a>
-            </div>
-          </div>
-        </div>
-        
-        <!-- Cabin 5: Garnacha Tinta (GRECIA) -->
-        <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="500">
-          <div class="cabin-card card">
-            <div class="ribbon ribbon-top-right"><span>GRECIA</span></div>
-            <img src="assets/img/casagrecia.jpg" class="card-img-top" alt="Cabaña Garnacha Tinta">
-            <div class="card-body">
-              <h5 class="card-title">Cabaña Garnacha Tinta</h5>
-              <p class="card-price">260€/noche</p>
-              <p class="card-text">Espaciosa cabaña familiar con dos dormitorios y amplia zona común.</p>
-              <div class="cabin-features mb-3">
-                <span class="badge bg-olive-green me-2 mb-2">4 personas</span>
-                <span class="badge bg-olive-green me-2 mb-2">54 m²</span>
-                <span class="badge bg-olive-green me-2 mb-2">2 dormitorios</span>
-              </div>
-              <ul class="list-unstyled mb-4">
-                <li><i class="fas fa-utensils me-2"></i> Cocina equipada</li>
-                <li><i class="fas fa-door-closed me-2"></i> 2 dormitorios separados</li>
-                <li><i class="fas fa-couch me-2"></i> Sala de estar</li>
-                <li><i class="fas fa-paw me-2"></i> Pet-friendly</li>
-              </ul>
-              <a href="#booking-form" class="btn btn-outline-primary w-100">Reservar ahora</a>
-            </div>
-          </div>
-        </div>
-        
-        <!-- Cabin 6: Albillo Mayor (GRECIA) -->
-        <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="600">
-          <div class="cabin-card card">
-            <div class="ribbon ribbon-top-right"><span>GRECIA</span></div>
-            <img src="assets/img/casagrecia.jpg" class="card-img-top" alt="Cabaña Albillo Mayor">
-            <div class="card-body">
-              <h5 class="card-title">Cabaña Albillo Mayor</h5>
-              <p class="card-price">255€/noche</p>
-              <p class="card-text">Luminosa cabaña tipo GRECIA con vista a los viñedos y decoración contemporánea.</p>
-              <div class="cabin-features mb-3">
-                <span class="badge bg-olive-green me-2 mb-2">4 personas</span>
-                <span class="badge bg-olive-green me-2 mb-2">54 m²</span>
-                <span class="badge bg-olive-green me-2 mb-2">2 dormitorios</span>
-              </div>
-              <ul class="list-unstyled mb-4">
-                <li><i class="fas fa-utensils me-2"></i> Cocina completa</li>
-                <li><i class="fas fa-bath me-2"></i> Baño con bañera</li>
-                <li><i class="fas fa-tv me-2"></i> Smart TV en cada habitación</li>
-                <li><i class="fas fa-umbrella-beach me-2"></i> Porche con vistas</li>
-              </ul>
-              <a href="#booking-form" class="btn btn-outline-primary w-100">Reservar ahora</a>
-            </div>
-          </div>
-        </div>
-        
-        <!-- Cabin 7: Mencía (RIVER) -->
-        <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="700">
-          <div class="cabin-card card">
-            <div class="ribbon ribbon-top-right"><span>RIVER</span></div>
-            <img src="assets/img/casarivergrande.jpg" class="card-img-top" alt="Cabaña Mencía">
-            <div class="card-body">
-              <h5 class="card-title">Cabaña Mencía</h5>
-              <p class="card-price">285€/noche</p>
-              <p class="card-text">Gran cabaña tipo RIVER ideal para grupos y familias con amplio espacio y todas las comodidades.</p>
-              <div class="cabin-features mb-3">
-                <span class="badge bg-wine-red me-2 mb-2">6 personas</span>
-                <span class="badge bg-wine-red me-2 mb-2">120 m²</span>
-                <span class="badge bg-wine-red me-2 mb-2">3 dormitorios</span>
-              </div>
-              <ul class="list-unstyled mb-4">
-                <li><i class="fas fa-utensils me-2"></i> Cocina completa</li>
-                <li><i class="fas fa-couch me-2"></i> Amplio salón</li>
-                <li><i class="fas fa-users me-2"></i> Ideal para grupos</li>
-                <li><i class="fas fa-music me-2"></i> Sistema de sonido integrado</li>
-              </ul>
-              <a href="#booking-form" class="btn btn-outline-primary w-100">Reservar ahora</a>
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
   </section>
 
@@ -552,19 +534,14 @@
                       <option value="2">2 adultos</option>
                       <option value="3">3 adultos</option>
                       <option value="4">4 adultos</option>
+                      <option value="5">5 adultos</option>
+                      <option value="6">6 adultos</option>
                     </select>
                   </div>
                 </div>
                 <div class="col-md-6 mb-3">
-                  <label for="children" class="form-label">Niños (0-12 años)</label>
-                  <div class="input-group">
-                    <span class="input-group-text"><i class="fas fa-child"></i></span>
-                    <select class="form-select" id="children">
-                      <option value="0">0 niños</option>
-                      <option value="1">1 niño</option>
-                      <option value="2">2 niños</option>
-                    </select>
-                  </div>
+                  <label for="email" class="form-label required-field">Email</label>
+                  <input type="email" class="form-control" id="email" required>
                 </div>
               </div>
               
@@ -573,25 +550,25 @@
                 <div class="row">
                   <div class="col-md-4 mb-3">
                     <div class="form-check">
-                      <input class="form-check-input" type="radio" name="cabinType" id="eco" value="eco" required>
-                      <label class="form-check-label" for="eco">
-                        Tempranillo (180€/noche)
+                      <input class="form-check-input" type="radio" name="cabinType" id="tempranillo" value="tempranillo" required>
+                      <label class="form-check-label" for="tempranillo">
+                        Tempranillo (290€/noche)
                       </label>
                     </div>
                   </div>
                   <div class="col-md-4 mb-3">
                     <div class="form-check">
-                      <input class="form-check-input" type="radio" name="cabinType" id="suite" value="suite">
-                      <label class="form-check-label" for="suite">
+                      <input class="form-check-input" type="radio" name="cabinType" id="cabernet" value="cabernet">
+                      <label class="form-check-label" for="cabernet">
                         Cabernet Sauvignon (240€/noche)
                       </label>
                     </div>
                   </div>
                   <div class="col-md-4 mb-3">
                     <div class="form-check">
-                      <input class="form-check-input" type="radio" name="cabinType" id="family" value="family">
-                      <label class="form-check-label" for="family">
-                        Merlot (280€/noche)
+                      <input class="form-check-input" type="radio" name="cabinType" id="merlot" value="merlot">
+                      <label class="form-check-label" for="merlot">
+                        Merlot (230€/noche)
                       </label>
                     </div>
                   </div>
@@ -599,7 +576,7 @@
                     <div class="form-check">
                       <input class="form-check-input" type="radio" name="cabinType" id="malbec" value="malbec">
                       <label class="form-check-label" for="malbec">
-                        Malbec (210€/noche)
+                        Malbec (235€/noche)
                       </label>
                     </div>
                   </div>
@@ -607,7 +584,7 @@
                     <div class="form-check">
                       <input class="form-check-input" type="radio" name="cabinType" id="garnacha" value="garnacha">
                       <label class="form-check-label" for="garnacha">
-                        Garnacha Tinta (190€/noche)
+                        Garnacha Tinta (260€/noche)
                       </label>
                     </div>
                   </div>
@@ -615,15 +592,7 @@
                     <div class="form-check">
                       <input class="form-check-input" type="radio" name="cabinType" id="albillo" value="albillo">
                       <label class="form-check-label" for="albillo">
-                        Albillo Mayor (200€/noche)
-                      </label>
-                    </div>
-                  </div>
-                  <div class="col-md-4 mb-3">
-                    <div class="form-check">
-                      <input class="form-check-input" type="radio" name="cabinType" id="verdejo" value="verdejo">
-                      <label class="form-check-label" for="verdejo">
-                        Verdejo (195€/noche)
+                        Albillo Mayor (255€/noche)
                       </label>
                     </div>
                   </div>
@@ -631,7 +600,7 @@
                     <div class="form-check">
                       <input class="form-check-input" type="radio" name="cabinType" id="mencia" value="mencia">
                       <label class="form-check-label" for="mencia">
-                        Mencía (205€/noche)
+                        Mencía (285€/noche)
                       </label>
                     </div>
                   </div>
@@ -651,10 +620,6 @@
               </div>
               
               <div class="row mb-4">
-                <div class="col-md-6 mb-3">
-                  <label for="email" class="form-label required-field">Email</label>
-                  <input type="email" class="form-control" id="email" required>
-                </div>
                 <div class="col-md-6 mb-3">
                   <label for="phone" class="form-label required-field">Teléfono</label>
                   <input type="tel" class="form-control" id="phone" required>
@@ -712,7 +677,7 @@
               </h2>
               <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#bookingInfo">
                 <div class="accordion-body">
-                  <p>Cancelación gratuita hasta 7 días antes de la llegada. Las cancelaciones realizadas dentro de los 7 días previos tendrán un cargo del 30% del valor total de la reserva.</p>
+                  <p>Para confirmar la reserva se requiere un depósito del 30% del importe total. Si cancelas con más de 7 días de antelación a la fecha de llegada, se devolverá el depósito íntegramente. Para cancelaciones realizadas dentro de los 7 días previos a la llegada, no se devolverá el depósito del 30%.</p>
                 </div>
               </div>
             </div>
@@ -765,7 +730,7 @@
               </h2>
               <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#faqAccordion">
                 <div class="accordion-body">
-                  <p>Sí, contamos con un restaurante que sirve comidas y cenas con productos locales y vinos de la región. El desayuno está incluido en el precio de la habitación.</p>
+                  <p>No contamos con restaurante común. Sin embargo, ofrecemos servicio de comidas y cenas que se sirven directamente en tu cabaña. El desayuno está incluido en el precio de la habitación.</p>
                 </div>
               </div>
             </div>

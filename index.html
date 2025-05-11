@@ -282,6 +282,15 @@
     </div>
   </footer>
 
+  <!-- Cookie Banner -->
+  <div class="cookie-banner" id="cookieBanner">
+    <p>Utilizamos cookies propias y de terceros para mejorar nuestros servicios y mostrarle publicidad relacionada con sus preferencias mediante el análisis de sus hábitos de navegación. Si continúa navegando, consideramos que acepta su uso. Puede cambiar la configuración u obtener más información en nuestra <a href="legal.html">Política de Cookies</a>.</p>
+    <div class="cookie-actions">
+      <button class="btn btn-reject" id="rejectCookies">Rechazar</button>
+      <button class="btn btn-accept" id="acceptCookies">Aceptar</button>
+    </div>
+  </div>
+
   <!-- Botón volver arriba -->
   <button id="backToTop" class="btn btn-primary rounded-circle position-fixed bottom-0 end-0 m-4 d-none" aria-label="Volver arriba">
     <i class="fas fa-arrow-up"></i>
@@ -299,7 +308,6 @@
   <!-- Custom JavaScript -->
   <script src="assets/js/script.js" defer></script>
   
-  <!-- Inicialización del carrusel optimizado y animaciones -->
   <script>
     document.addEventListener('DOMContentLoaded', function() {
       // Inicializar ScrollReveal para animaciones al hacer scroll
@@ -359,6 +367,39 @@
           top: 0,
           behavior: 'smooth'
         });
+      });
+
+      // Gestión de cookies
+      const cookieBanner = document.getElementById('cookieBanner');
+      const acceptCookies = document.getElementById('acceptCookies');
+      const rejectCookies = document.getElementById('rejectCookies');
+      
+      // Comprobar si ya se ha mostrado el aviso de cookies
+      const cookiesAccepted = localStorage.getItem('cookiesAccepted');
+      
+      if (cookiesAccepted === null) {
+        // Mostrar el aviso de cookies después de un breve retraso
+        setTimeout(() => {
+          cookieBanner.classList.add('show');
+        }, 1500);
+      }
+      
+      // Función para aceptar cookies
+      acceptCookies.addEventListener('click', () => {
+        localStorage.setItem('cookiesAccepted', 'true');
+        cookieBanner.classList.remove('show');
+        
+        // Aquí podrías activar scripts de análisis, etc.
+        console.log('Cookies aceptadas');
+      });
+      
+      // Función para rechazar cookies
+      rejectCookies.addEventListener('click', () => {
+        localStorage.setItem('cookiesAccepted', 'false');
+        cookieBanner.classList.remove('show');
+        
+        // Aquí podrías desactivar scripts de análisis, etc.
+        console.log('Cookies rechazadas');
       });
     });
   </script>
