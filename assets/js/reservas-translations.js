@@ -90,7 +90,7 @@ const reservasTranslations = {
     
     // Cabañas
     'cabin1_title': 'Cabaña Tempranillo',
-    'cabin1_price': '290€/noche',
+    'cabin1_price': '240€/noche',
     'cabin1_description': 'Cabaña ecológica para 6 personas con terraza privada, vista al viñedo y todas las comodidades.',
     'cabin1_feature1': '6 personas',
     'cabin1_feature2': '120 m²',
@@ -98,7 +98,7 @@ const reservasTranslations = {
     'cabin1_alt': 'Cabaña Tempranillo',
     
     'cabin2_title': 'Cabaña Cabernet Sauvignon',
-    'cabin2_price': '240€/noche',
+    'cabin2_price': '120€/noche',
     'cabin2_description': 'Romántica cabaña con jacuzzi exterior, chimenea y vistas panorámicas a los viñedos.',
     'cabin2_feature1': '2 personas',
     'cabin2_feature2': '48 m²',
@@ -106,7 +106,7 @@ const reservasTranslations = {
     'cabin2_alt': 'Cabaña Cabernet Sauvignon',
     
     'cabin3_title': 'Cabaña Garnacha',
-    'cabin3_price': '200€/noche',
+    'cabin3_price': '120€/noche',
     'cabin3_description': 'Ideal para familias con niños y mascotas. Amplio espacio exterior y zona de barbacoa.',
     'cabin3_feature1': '4 personas',
     'cabin3_feature2': '90 m²',
@@ -115,7 +115,7 @@ const reservasTranslations = {
     
     // Otras cabañas
     'cabin4_title': 'Cabaña Malbec',
-    'cabin4_price': '235€/noche',
+    'cabin4_price': '120€/noche',
     'cabin4_description': 'Acogedora cabaña para dos personas con detalles de diseño y máximo confort.',
     'cabin4_feature1': '2 personas',
     'cabin4_feature2': '48 m²',
@@ -123,7 +123,7 @@ const reservasTranslations = {
     'cabin4_alt': 'Cabaña Malbec',
     
     'cabin5_title': 'Cabaña Garnacha Tinta',
-    'cabin5_price': '260€/noche',
+    'cabin5_price': '160€/noche',
     'cabin5_description': 'Espaciosa cabaña familiar con dos dormitorios y amplia zona común.',
     'cabin5_feature1': '4 personas',
     'cabin5_feature2': '54 m²',
@@ -131,7 +131,7 @@ const reservasTranslations = {
     'cabin5_alt': 'Cabaña Garnacha Tinta',
     
     'cabin6_title': 'Cabaña Albillo Mayor',
-    'cabin6_price': '255€/noche',
+    'cabin6_price': '160€/noche',
     'cabin6_description': 'Luminosa cabaña tipo GRECIA con vista a los viñedos y decoración contemporánea.',
     'cabin6_feature1': '4 personas',
     'cabin6_feature2': '54 m²',
@@ -139,7 +139,7 @@ const reservasTranslations = {
     'cabin6_alt': 'Cabaña Albillo Mayor',
     
     'cabin7_title': 'Cabaña Mencía',
-    'cabin7_price': '285€/noche',
+    'cabin7_price': '240€/noche',
     'cabin7_description': 'Gran cabaña tipo RIVER ideal para grupos y familias con amplio espacio y todas las comodidades.',
     'cabin7_feature1': '6 personas',
     'cabin7_feature2': '120 m²',
@@ -244,7 +244,7 @@ const reservasTranslations = {
     'from': 'Desde',
     'low_season_price': 'Temporada baja:',
     'high_season_price': 'Temporada alta:',
-    'weekend_supplement_short': 'Suplemento fin de semana:',
+    'weekend_supplement_short': 'Suplemento fin de semana: 20€',
     
     // Características de los packs
     'pack1_feature1': '2 noches en cabaña con desayuno incluido',
@@ -265,7 +265,7 @@ const reservasTranslations = {
     
     'book_pack': 'Reservar pack',
     
-    // Información de temporadas
+    // Informaciones sobre temporadas
     'seasons_info': 'Información sobre temporadas',
     'seasons_info_text': 'La temporada alta comprende los meses de Marzo, Abril, Mayo, Junio, Julio, Agosto y Septiembre (210 días). La temporada baja comprende los meses de Octubre, Noviembre, Diciembre, Enero y Febrero (155 días). Los precios pueden variar según disponibilidad y promociones especiales.',
     
@@ -377,7 +377,7 @@ const reservasTranslations = {
     
     // Cabañas
     'cabin1_title': 'Tempranillo Cabin',
-    'cabin1_price': '290€/night',
+    'cabin1_price': '240€/night',
     'cabin1_description': 'Eco-friendly cabin for 6 people with private terrace, vineyard views and all amenities.',
     'cabin1_feature1': '6 people',
     'cabin1_feature2': '120 m²',
@@ -385,7 +385,7 @@ const reservasTranslations = {
     'cabin1_alt': 'Tempranillo Cabin',
     
     'cabin2_title': 'Cabernet Sauvignon Cabin',
-    'cabin2_price': '240€/night',
+    'cabin2_price': '120€/night',
     'cabin2_description': 'Romantic cabin with outdoor jacuzzi, fireplace and panoramic views of the vineyards.',
     'cabin2_feature1': '2 people',
     'cabin2_feature2': '48 m²',
@@ -393,7 +393,7 @@ const reservasTranslations = {
     'cabin2_alt': 'Cabernet Sauvignon Cabin',
     
     'cabin3_title': 'Garnacha Cabin',
-    'cabin3_price': '200€/night',
+    'cabin3_price': '120€/night',
     'cabin3_description': 'Ideal for families with children and pets. Spacious outdoor area and barbecue zone.',
     'cabin3_feature1': '4 people',
     'cabin3_feature2': '90 m²',
@@ -402,7 +402,7 @@ const reservasTranslations = {
     
     // Other cabins
     'cabin4_title': 'Malbec Cabin',
-    'cabin4_price': '235€/night',
+    'cabin4_price': '120€/night',
     'cabin4_description': 'Cozy cabin for two people with design details and maximum comfort.',
     'cabin4_feature1': '2 people',
     'cabin4_feature2': '48 m²',
@@ -410,7 +410,7 @@ const reservasTranslations = {
     'cabin4_alt': 'Malbec Cabin',
     
     'cabin5_title': 'Garnacha Tinta Cabin',
-    'cabin5_price': '260€/night',
+    'cabin5_price': '160€/night',
     'cabin5_description': 'Spacious family cabin with two bedrooms and large common area.',
     'cabin5_feature1': '4 people',
     'cabin5_feature2': '54 m²',
@@ -418,7 +418,7 @@ const reservasTranslations = {
     'cabin5_alt': 'Garnacha Tinta Cabin',
     
     'cabin6_title': 'Albillo Mayor Cabin',
-    'cabin6_price': '255€/night',
+    'cabin6_price': '160€/night',
     'cabin6_description': 'Bright GRECIA-type cabin with vineyard views and contemporary decor.',
     'cabin6_feature1': '4 people',
     'cabin6_feature2': '54 m²',
@@ -426,7 +426,7 @@ const reservasTranslations = {
     'cabin6_alt': 'Albillo Mayor Cabin',
     
     'cabin7_title': 'Mencía Cabin',
-    'cabin7_price': '285€/night',
+    'cabin7_price': '240€/night',
     'cabin7_description': 'Large RIVER-type cabin ideal for groups and families with ample space and all amenities.',
     'cabin7_feature1': '6 people',
     'cabin7_feature2': '120 m²',
@@ -521,7 +521,7 @@ const reservasTranslations = {
     'from': 'From',
     'low_season_price': 'Low season:',
     'high_season_price': 'High season:',
-    'weekend_supplement_short': 'Weekend supplement:',
+    'weekend_supplement_short': 'Weekend supplement: 20€',
     
     // Package features
     'pack1_feature1': '2 nights in cabin with breakfast included',
@@ -654,7 +654,7 @@ const reservasTranslations = {
     
     // Cabañas
     'cabin1_title': 'Cabane Tempranillo',
-    'cabin1_price': '290€/nuit',
+    'cabin1_price': '240€/nuit',
     'cabin1_description': 'Cabane écologique pour 6 personnes avec terrasse privée, vue sur le vignoble et tout le confort.',
     'cabin1_feature1': '6 personnes',
     'cabin1_feature2': '120 m²',
@@ -662,7 +662,7 @@ const reservasTranslations = {
     'cabin1_alt': 'Cabane Tempranillo',
     
     'cabin2_title': 'Cabane Cabernet Sauvignon',
-    'cabin2_price': '240€/nuit',
+    'cabin2_price': '120€/nuit',
     'cabin2_description': 'Cabane romantique avec jacuzzi extérieur, cheminée et vues panoramiques sur les vignobles.',
     'cabin2_feature1': '2 personnes',
     'cabin2_feature2': '48 m²',
@@ -670,7 +670,7 @@ const reservasTranslations = {
     'cabin2_alt': 'Cabane Cabernet Sauvignon',
     
     'cabin3_title': 'Cabane Garnacha',
-    'cabin3_price': '200€/nuit',
+    'cabin3_price': '120€/nuit',
     'cabin3_description': 'Idéale pour les familles avec enfants et animaux. Grand espace extérieur et barbecue zone.',
     'cabin3_feature1': '4 personnes',
     'cabin3_feature2': '90 m²',
@@ -679,7 +679,7 @@ const reservasTranslations = {
     
     // Autres cabanes
     'cabin4_title': 'Cabane Malbec',
-    'cabin4_price': '235€/nuit',
+    'cabin4_price': '120€/nuit',
     'cabin4_description': 'Cabane confortable pour deux personnes avec détails de design et confort maximal.',
     'cabin4_feature1': '2 personnes',
     'cabin4_feature2': '48 m²',
@@ -687,7 +687,7 @@ const reservasTranslations = {
     'cabin4_alt': 'Cabane Malbec',
     
     'cabin5_title': 'Cabane Garnacha Tinta',
-    'cabin5_price': '260€/nuit',
+    'cabin5_price': '160€/nuit',
     'cabin5_description': 'Cabane familiale spacieuse avec deux chambres et grand espace commun.',
     'cabin5_feature1': '4 personnes',
     'cabin5_feature2': '54 m²',
@@ -695,7 +695,7 @@ const reservasTranslations = {
     'cabin5_alt': 'Cabane Garnacha Tinta',
     
     'cabin6_title': 'Cabane Albillo Mayor',
-    'cabin6_price': '255€/nuit',
+    'cabin6_price': '160€/nuit',
     'cabin6_description': 'Cabane lumineuse de type GRECIA avec vue sur les vignobles et décoration contemporaine.',
     'cabin6_feature1': '4 personnes',
     'cabin6_feature2': '54 m²',
@@ -703,8 +703,8 @@ const reservasTranslations = {
     'cabin6_alt': 'Cabane Albillo Mayor',
     
     'cabin7_title': 'Cabane Mencía',
-    'cabin7_price': '285€/nuit',
-    'cabin7_description': 'Grande cabane de type RIVER idéale pour les groupes et les familles avec un espace ample et tout le confort.',
+    'cabin7_price': '240€/nuit',
+    'cabin7_description': 'Grande cabine de type RIVER idéale pour les groupes et les familles avec un espace ample et tout le confort.',
     'cabin7_feature1': '6 personnes',
     'cabin7_feature2': '120 m²',
     'cabin7_feature3': '3 chambres',
@@ -808,7 +808,7 @@ const reservasTranslations = {
     'from': 'À partir de',
     'low_season_price': 'Basse saison :',
     'high_season_price': 'Haute saison :',
-    'weekend_supplement_short': 'Supplément week-end :',
+    'weekend_supplement_short': 'Supplément week-end : 20€',
     
     // Caractéristiques des forfaits
     'pack1_feature1': '2 nuits en cabane avec petit-déjeuner inclus',
@@ -819,7 +819,7 @@ const reservasTranslations = {
     'pack2_feature1': '3 nuits en cabane (2-4 personnes) avec petit-déjeuner inclus',
     'pack2_feature2': 'Cours privé de dégustation avec un sommelier',
     'pack2_feature3': 'Visite exclusive des vignobles',
-    'pack2_feature4': 'Explication du processus de vinification',
+    'pack2_feature4': 'Spiegazione del processo di vinificazione',
     
     'pack3_feature1': '3 nuits en cabane (4-6 personnes) avec petit-déjeuner inclus',
     'pack3_feature2': 'Visite guidée de la cave',
@@ -941,7 +941,7 @@ const reservasTranslations = {
     
     // Cabine
     'cabin1_title': 'Cabina Tempranillo',
-    'cabin1_price': '290€/notte',
+    'cabin1_price': '240€/notte',
     'cabin1_description': 'Cabina ecologica per 6 persone con terrazza privata, vista sui vigneti e tutti i comfort.',
     'cabin1_feature1': '6 persone',
     'cabin1_feature2': '120 m²',
@@ -949,7 +949,7 @@ const reservasTranslations = {
     'cabin1_alt': 'Cabina Tempranillo',
     
     'cabin2_title': 'Cabina Cabernet Sauvignon',
-    'cabin2_price': '240€/notte',
+    'cabin2_price': '120€/notte',
     'cabin2_description': 'Cabina romantica con jacuzzi esterno, camino e viste panoramiche sui vigneti.',
     'cabin2_feature1': '2 persone',
     'cabin2_feature2': '48 m²',
@@ -957,7 +957,7 @@ const reservasTranslations = {
     'cabin2_alt': 'Cabina Cabernet Sauvignon',
     
     'cabin3_title': 'Cabina Garnacha',
-    'cabin3_price': '200€/notte',
+    'cabin3_price': '120€/notte',
     'cabin3_description': 'Ideale per famiglie con bambini e animali domestici. Ampio spazio esterno e zona barbecue.',
     'cabin3_feature1': '4 persone',
     'cabin3_feature2': '90 m²',
@@ -966,7 +966,7 @@ const reservasTranslations = {
     
     // Altre cabine
     'cabin4_title': 'Cabina Malbec',
-    'cabin4_price': '235€/notte',
+    'cabin4_price': '120€/notte',
     'cabin4_description': 'Accogliente cabina per due persone con dettagli di design e massimo comfort.',
     'cabin4_feature1': '2 persone',
     'cabin4_feature2': '48 m²',
@@ -974,7 +974,7 @@ const reservasTranslations = {
     'cabin4_alt': 'Cabina Malbec',
     
     'cabin5_title': 'Cabina Garnacha Tinta',
-    'cabin5_price': '260€/notte',
+    'cabin5_price': '160€/notte',
     'cabin5_description': 'Spaziosa cabina familiare con due camere da letto e ampia zona comune.',
     'cabin5_feature1': '4 persone',
     'cabin5_feature2': '54 m²',
@@ -982,7 +982,7 @@ const reservasTranslations = {
     'cabin5_alt': 'Cabina Garnacha Tinta',
     
     'cabin6_title': 'Cabina Albillo Mayor',
-    'cabin6_price': '255€/notte',
+    'cabin6_price': '160€/notte',
     'cabin6_description': 'Luminosa cabina tipo GRECIA con vista sui vigneti e arredamento contemporaneo.',
     'cabin6_feature1': '4 persone',
     'cabin6_feature2': '54 m²',
@@ -990,7 +990,7 @@ const reservasTranslations = {
     'cabin6_alt': 'Cabina Albillo Mayor',
     
     'cabin7_title': 'Cabina Mencía',
-    'cabin7_price': '285€/notte',
+    'cabin7_price': '240€/notte',
     'cabin7_description': 'Grande cabina tipo RIVER ideale per gruppi e famiglie con ampio spazio e tutti i comfort.',
     'cabin7_feature1': '6 persone',
     'cabin7_feature2': '120 m²',
@@ -1095,7 +1095,7 @@ const reservasTranslations = {
     'from': 'Da',
     'low_season_price': 'Bassa stagione:',
     'high_season_price': 'Alta stagione:',
-    'weekend_supplement_short': 'Supplemento weekend:',
+    'weekend_supplement_short': 'Supplemento weekend: 20€',
     
     // Caratteristiche dei pacchetti
     'pack1_feature1': '2 notti in cabina con colazione inclusa',
@@ -1228,7 +1228,7 @@ const reservasTranslations = {
     
     // Hütten
     'cabin1_title': 'Tempranillo-Hütte',
-    'cabin1_price': '290€/Nacht',
+    'cabin1_price': '240€/Nacht',
     'cabin1_description': 'Ökologische Hütte für 6 Personen mit privater Terrasse, Blick auf den Weinberg und allen Annehmlichkeiten.',
     'cabin1_feature1': '6 Personen',
     'cabin1_feature2': '120 m²',
@@ -1236,7 +1236,7 @@ const reservasTranslations = {
     'cabin1_alt': 'Tempranillo-Hütte',
     
     'cabin2_title': 'Cabernet Sauvignon-Hütte',
-    'cabin2_price': '240€/Nacht',
+    'cabin2_price': '120€/Nacht',
     'cabin2_description': 'Romantische Hütte mit Außen-Whirlpool, Kamin und Panoramablick auf die Weinberge.',
     'cabin2_feature1': '2 Personen',
     'cabin2_feature2': '48 m²',
@@ -1244,7 +1244,7 @@ const reservasTranslations = {
     'cabin2_alt': 'Cabernet Sauvignon-Hütte',
     
     'cabin3_title': 'Garnacha-Hütte',
-    'cabin3_price': '200€/Nacht',
+    'cabin3_price': '120€/Nacht',
     'cabin3_description': 'Ideal für Familien mit Kindern und Haustieren. Großzügiger Außenbereich und Grillzone.',
     'cabin3_feature1': '4 Personen',
     'cabin3_feature2': '90 m²',
@@ -1253,7 +1253,7 @@ const reservasTranslations = {
     
     // Andere Hütten
     'cabin4_title': 'Malbec-Hütte',
-    'cabin4_price': '235€/Nacht',
+    'cabin4_price': '120€/Nacht',
     'cabin4_description': 'Gemütliche Hütte für zwei Personen mit Designdetails und maximalem Komfort.',
     'cabin4_feature1': '2 Personen',
     'cabin4_feature2': '48 m²',
@@ -1261,7 +1261,7 @@ const reservasTranslations = {
     'cabin4_alt': 'Malbec-Hütte',
     
     'cabin5_title': 'Garnacha Tinta-Hütte',
-    'cabin5_price': '260€/Nacht',
+    'cabin5_price': '160€/Nacht',
     'cabin5_description': 'Geräumige Familienhütte mit zwei Schlafzimmern und großem Gemeinschaftsbereich.',
     'cabin5_feature1': '4 Personen',
     'cabin5_feature2': '54 m²',
@@ -1269,7 +1269,7 @@ const reservasTranslations = {
     'cabin5_alt': 'Garnacha Tinta-Hütte',
     
     'cabin6_title': 'Albillo Mayor-Hütte',
-    'cabin6_price': '255€/Nacht',
+    'cabin6_price': '160€/Nacht',
     'cabin6_description': 'Helle GRECIA-Hütte mit Blick auf die Weinberge und zeitgenössischer Einrichtung.',
     'cabin6_feature1': '4 Personen',
     'cabin6_feature2': '54 m²',
@@ -1277,7 +1277,7 @@ const reservasTranslations = {
     'cabin6_alt': 'Albillo Mayor-Hütte',
     
     'cabin7_title': 'Mencía-Hütte',
-    'cabin7_price': '285€/Nacht',
+    'cabin7_price': '240€/Nacht',
     'cabin7_description': 'Große RIVER-Hütte ideal für Gruppen und Familien mit viel Platz und allem Komfort.',
     'cabin7_feature1': '6 Personen',
     'cabin7_feature2': '120 m²',
@@ -1382,7 +1382,7 @@ const reservasTranslations = {
     'from': 'Ab',
     'low_season_price': 'Nebensaison:',
     'high_season_price': 'Hauptsaison:',
-    'weekend_supplement_short': 'Wochenend-Zuschlag:',
+    'weekend_supplement_short': 'Wochenend-Zuschlag: 20€',
     
     // Paketmerkmale
     'pack1_feature1': '2 Nächte in der Hütte mit Frühstück',

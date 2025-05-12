@@ -35,13 +35,13 @@
     .cabin-card {
       border-radius: 10px;
       overflow: hidden;
-      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-      transition: transform 0.3s;
+      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.08);
+      transition: transform 0.25s ease;
       height: 100%;
     }
     
     .cabin-card:hover {
-      transform: translateY(-10px);
+      transform: translateY(-7px);
     }
     
     .cabin-card img {
@@ -67,6 +67,36 @@
       display: inline-block;
       font-size: 1.2rem;
       margin-bottom: 1rem;
+    }
+    
+    /* Estilos para los badges de temporada */
+    .bg-light-green {
+      background-color: rgba(121, 167, 107, 0.3);
+      border: 1px solid #79a76b;
+    }
+    
+    .bg-light-wine {
+      background-color: rgba(128, 0, 32, 0.15);
+      border: 1px solid #800020;
+    }
+    
+    .bg-light-weekend {
+      background-color: rgba(240, 173, 78, 0.2);
+      border: 1px solid #f0ad4e;
+    }
+    
+    .season-prices .badge {
+      font-size: 0.9rem;
+      padding: 8px 15px;
+      font-weight: 500;
+      transition: all 0.25s ease;
+      min-width: 180px;
+      box-shadow: 0 2px 3px rgba(0,0,0,0.08);
+    }
+    
+    .season-prices .badge:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 3px 5px rgba(0,0,0,0.12);
     }
     
     .form-label {
@@ -179,7 +209,17 @@
             <img src="assets/img/casariver.jpg" class="card-img-top" alt="Cabaña Tempranillo" data-i18n-alt="cabin1_alt">
             <div class="card-body">
               <h5 class="card-title" data-i18n="cabin1_title">Cabaña Tempranillo</h5>
-              <p class="card-price" data-i18n="cabin1_price">290€/noche</p>
+              <div class="season-prices mb-3">
+                <div class="d-flex justify-content-center mb-2">
+                  <span class="badge bg-light-green text-dark me-2"><i class="fas fa-sun me-1"></i> Temporada Alta: 280€</span>
+                </div>
+                <div class="d-flex justify-content-center mb-2">
+                  <span class="badge bg-light-wine text-dark"><i class="fas fa-moon me-1"></i> Temporada Baja: 240€</span>
+                </div>
+                <div class="d-flex justify-content-center">
+                  <span class="badge bg-light-weekend text-dark"><i class="fas fa-calendar-weekend me-1"></i> +20€ fin de semana</span>
+                </div>
+              </div>
               <p class="card-text" data-i18n="cabin1_description">Cabaña ecológica para 6 personas con terraza privada, vista al viñedo y todas las comodidades.</p>
               <div class="cabin-features mb-3">
                 <span class="badge bg-wine-red me-2 mb-2" data-i18n="cabin1_feature1">6 personas</span>
@@ -204,7 +244,17 @@
             <img src="assets/img/casaeros.jpg" class="card-img-top" alt="Cabaña Cabernet Sauvignon" data-i18n-alt="cabin2_alt">
             <div class="card-body">
               <h5 class="card-title" data-i18n="cabin2_title">Cabaña Cabernet Sauvignon</h5>
-              <p class="card-price" data-i18n="cabin2_price">240€/noche</p>
+              <div class="season-prices mb-3">
+                <div class="d-flex justify-content-center mb-2">
+                  <span class="badge bg-light-green text-dark me-2"><i class="fas fa-sun me-1"></i> Temporada Alta: 160€</span>
+                </div>
+                <div class="d-flex justify-content-center mb-2">
+                  <span class="badge bg-light-wine text-dark"><i class="fas fa-moon me-1"></i> Temporada Baja: 120€</span>
+                </div>
+                <div class="d-flex justify-content-center">
+                  <span class="badge bg-light-weekend text-dark"><i class="fas fa-calendar-weekend me-1"></i> +20€ fin de semana</span>
+                </div>
+              </div>
               <p class="card-text" data-i18n="cabin2_description">Romántica cabaña con jacuzzi exterior, chimenea y vistas panorámicas a los viñedos.</p>
               <div class="cabin-features mb-3">
                 <span class="badge bg-wine-red me-2 mb-2" data-i18n="cabin2_feature1">2 personas</span>
@@ -222,14 +272,24 @@
           </div>
         </div>
         
-        <!-- Cabin 3: Garnacha (VENTURA) -->
+        <!-- Cabin 3: eros (eros) -->
         <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="300">
           <div class="cabin-card card">
-            <div class="ribbon ribbon-top-right"><span>VENTURA</span></div>
+            <div class="ribbon ribbon-top-right"><span>eros</span></div>
             <img src="assets/img/eros.jpg" class="card-img-top" alt="Cabaña Garnacha" data-i18n-alt="cabin3_alt">
             <div class="card-body">
               <h5 class="card-title" data-i18n="cabin3_title">Cabaña Garnacha</h5>
-              <p class="card-price" data-i18n="cabin3_price">200€/noche</p>
+              <div class="season-prices mb-3">
+                <div class="d-flex justify-content-center mb-2">
+                  <span class="badge bg-light-green text-dark me-2"><i class="fas fa-sun me-1"></i> Temporada Alta: 160€</span>
+                </div>
+                <div class="d-flex justify-content-center mb-2">
+                  <span class="badge bg-light-wine text-dark"><i class="fas fa-moon me-1"></i> Temporada Baja: 120€</span>
+                </div>
+                <div class="d-flex justify-content-center">
+                  <span class="badge bg-light-weekend text-dark"><i class="fas fa-calendar-weekend me-1"></i> +20€ fin de semana</span>
+                </div>
+              </div>
               <p class="card-text" data-i18n="cabin3_description">Ideal para familias con niños y mascotas. Amplio espacio exterior y zona de barbacoa.</p>
               <div class="cabin-features mb-3">
                 <span class="badge bg-wine-red me-2 mb-2" data-i18n="cabin3_feature1">4 personas</span>
@@ -254,7 +314,17 @@
             <img src="assets/img/casaeros.jpg" class="card-img-top" alt="Cabaña Malbec" data-i18n-alt="cabin4_alt">
             <div class="card-body">
               <h5 class="card-title" data-i18n="cabin4_title">Cabaña Malbec</h5>
-              <p class="card-price" data-i18n="cabin4_price">235€/noche</p>
+              <div class="season-prices mb-3">
+                <div class="d-flex justify-content-center mb-2">
+                  <span class="badge bg-light-green text-dark me-2"><i class="fas fa-sun me-1"></i> Temporada Alta: 160€</span>
+                </div>
+                <div class="d-flex justify-content-center mb-2">
+                  <span class="badge bg-light-wine text-dark"><i class="fas fa-moon me-1"></i> Temporada Baja: 120€</span>
+                </div>
+                <div class="d-flex justify-content-center">
+                  <span class="badge bg-light-weekend text-dark"><i class="fas fa-calendar-weekend me-1"></i> +20€ fin de semana</span>
+                </div>
+              </div>
               <p class="card-text" data-i18n="cabin4_description">Acogedora cabaña para dos personas con detalles de diseño y máximo confort.</p>
               <div class="cabin-features mb-3">
                 <span class="badge bg-wine-red me-2 mb-2" data-i18n="cabin4_feature1">2 personas</span>
@@ -279,7 +349,17 @@
             <img src="assets/img/casagrecia.jpg" class="card-img-top" alt="Cabaña Garnacha Tinta" data-i18n-alt="cabin5_alt">
             <div class="card-body">
               <h5 class="card-title" data-i18n="cabin5_title">Cabaña Garnacha Tinta</h5>
-              <p class="card-price" data-i18n="cabin5_price">260€/noche</p>
+              <div class="season-prices mb-3">
+                <div class="d-flex justify-content-center mb-2">
+                  <span class="badge bg-light-green text-dark me-2"><i class="fas fa-sun me-1"></i> Temporada Alta: 220€</span>
+                </div>
+                <div class="d-flex justify-content-center mb-2">
+                  <span class="badge bg-light-wine text-dark"><i class="fas fa-moon me-1"></i> Temporada Baja: 160€</span>
+                </div>
+                <div class="d-flex justify-content-center">
+                  <span class="badge bg-light-weekend text-dark"><i class="fas fa-calendar-weekend me-1"></i> +20€ fin de semana</span>
+                </div>
+              </div>
               <p class="card-text" data-i18n="cabin5_description">Espaciosa cabaña familiar con dos dormitorios y amplia zona común.</p>
               <div class="cabin-features mb-3">
                 <span class="badge bg-wine-red me-2 mb-2" data-i18n="cabin5_feature1">4 personas</span>
@@ -304,7 +384,17 @@
             <img src="assets/img/casagrecia.jpg" class="card-img-top" alt="Cabaña Albillo Mayor" data-i18n-alt="cabin6_alt">
             <div class="card-body">
               <h5 class="card-title" data-i18n="cabin6_title">Cabaña Albillo Mayor</h5>
-              <p class="card-price" data-i18n="cabin6_price">255€/noche</p>
+              <div class="season-prices mb-3">
+                <div class="d-flex justify-content-center mb-2">
+                  <span class="badge bg-light-green text-dark me-2"><i class="fas fa-sun me-1"></i> Temporada Alta: 220€</span>
+                </div>
+                <div class="d-flex justify-content-center mb-2">
+                  <span class="badge bg-light-wine text-dark"><i class="fas fa-moon me-1"></i> Temporada Baja: 160€</span>
+                </div>
+                <div class="d-flex justify-content-center">
+                  <span class="badge bg-light-weekend text-dark"><i class="fas fa-calendar-weekend me-1"></i> +20€ fin de semana</span>
+                </div>
+              </div>
               <p class="card-text" data-i18n="cabin6_description">Luminosa cabaña tipo GRECIA con vista a los viñedos y decoración contemporánea.</p>
               <div class="cabin-features mb-3">
                 <span class="badge bg-wine-red me-2 mb-2" data-i18n="cabin6_feature1">4 personas</span>
@@ -329,7 +419,17 @@
             <img src="assets/img/casarivergrande.jpg" class="card-img-top" alt="Cabaña Mencía" data-i18n-alt="cabin7_alt">
             <div class="card-body">
               <h5 class="card-title" data-i18n="cabin7_title">Cabaña Mencía</h5>
-              <p class="card-price" data-i18n="cabin7_price">285€/noche</p>
+              <div class="season-prices mb-3">
+                <div class="d-flex justify-content-center mb-2">
+                  <span class="badge bg-light-green text-dark me-2"><i class="fas fa-sun me-1"></i> Temporada Alta: 280€</span>
+                </div>
+                <div class="d-flex justify-content-center mb-2">
+                  <span class="badge bg-light-wine text-dark"><i class="fas fa-moon me-1"></i> Temporada Baja: 240€</span>
+                </div>
+                <div class="d-flex justify-content-center">
+                  <span class="badge bg-light-weekend text-dark"><i class="fas fa-calendar-weekend me-1"></i> +20€ fin de semana</span>
+                </div>
+              </div>
               <p class="card-text" data-i18n="cabin7_description">Gran cabaña tipo RIVER ideal para grupos y familias con amplio espacio y todas las comodidades.</p>
               <div class="cabin-features mb-3">
                 <span class="badge bg-wine-red me-2 mb-2" data-i18n="cabin7_feature1">6 personas</span>
@@ -347,56 +447,6 @@
           </div>
         </div>
       </div>
-      
-      <!-- Cabin Pricing Section -->
-      <section class="mb-5">
-        <h3 class="text-center mb-4" data-aos="fade-up" data-i18n="prices_per_night">Precios por noche</h3>
-        
-        <div class="container">
-          <div class="table-responsive" data-aos="fade-up">
-            <table class="table table-hover pricing-table text-white">
-              <thead>
-                <tr>
-                  <th data-i18n="cabin_type">Tipo de Cabaña</th>
-                  <th data-i18n="low_season">Temporada Baja</th>
-                  <th data-i18n="high_season">Temporada Alta</th>
-                  <th data-i18n="weekend_supplement">Suplemento Fin de Semana</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>
-                    <strong>Casa EROS</strong><br>
-                    <small data-i18n="people">2 personas</small>
-                  </td>
-                  <td>120 €</td>
-                  <td>160 €</td>
-                  <td>20 € <span data-i18n="per_day">por día</span><br><small data-i18n="friday_saturday_sunday">(viernes, sábado y domingo)</small></td>
-                </tr>
-                <tr>
-                  <td>
-                    <strong>Casa GRECIA</strong><br>
-                    <small>4 personas</small>
-                  </td>
-                  <td>160 €</td>
-                  <td>220 €</td>
-                  <td>20 € <span data-i18n="per_day">por día</span><br><small data-i18n="friday_saturday_sunday">(viernes, sábado y domingo)</small></td>
-                </tr>
-                <tr>
-                  <td>
-                    <strong>Casa RIVER</strong><br>
-                    <small>6 personas</small>
-                  </td>
-                  <td>240 €</td>
-                  <td>280 €</td>
-                  <td>20 € <span data-i18n="per_day">por día</span><br><small data-i18n="friday_saturday_sunday">(viernes, sábado y domingo)</small></td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </section>
-     
       
       <!-- Promotional Packs Section -->
       <section class="mb-5">
@@ -561,7 +611,7 @@
                     <div class="form-check">
                       <input class="form-check-input" type="radio" name="cabinType" id="tempranillo" value="tempranillo" required>
                       <label class="form-check-label" for="tempranillo">
-                        Tempranillo (290€/noche)
+                        Tempranillo 
                       </label>
                     </div>
                   </div>
@@ -569,7 +619,7 @@
                     <div class="form-check">
                       <input class="form-check-input" type="radio" name="cabinType" id="cabernet" value="cabernet">
                       <label class="form-check-label" for="cabernet">
-                        Cabernet Sauvignon (240€/noche)
+                        Cabernet Sauvignon 
                       </label>
                     </div>
                   </div>
@@ -577,15 +627,22 @@
                     <div class="form-check">
                       <input class="form-check-input" type="radio" name="cabinType" id="garnacha" value="garnacha">
                       <label class="form-check-label" for="garnacha">
-                        Garnacha Tinta (260€/noche)
+                        Garnacha Tinta 
                       </label>
                     </div>
                   </div>
+                  
                   <div class="col-md-4 mb-3">
                     <div class="form-check">
                       <input class="form-check-input" type="radio" name="cabinType" id="malbec" value="malbec">
                       <label class="form-check-label" for="malbec">
-                        Malbec (235€/noche)
+                        Malbec 
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="cabinType" id="garnacha" value="garnacha">
+                      <label class="form-check-label" for="garnacha">
+                        Garnacha 
                       </label>
                     </div>
                   </div>
@@ -593,7 +650,7 @@
                     <div class="form-check">
                       <input class="form-check-input" type="radio" name="cabinType" id="albillo" value="albillo">
                       <label class="form-check-label" for="albillo">
-                        Albillo Mayor (255€/noche)
+                        Albillo Mayor
                       </label>
                     </div>
                   </div>
@@ -601,9 +658,10 @@
                     <div class="form-check">
                       <input class="form-check-input" type="radio" name="cabinType" id="mencia" value="mencia">
                       <label class="form-check-label" for="mencia">
-                        Mencía (285€/noche)
+                        Mencía 
                       </label>
                     </div>
+                  
                   </div>
                 </div>
               </div>
@@ -900,9 +958,11 @@
     document.addEventListener('DOMContentLoaded', function() {
       // Inicializar AOS
       AOS.init({
-        duration: 800,
-        easing: 'ease-in-out',
-        once: true
+        duration: 700,
+        easing: 'ease',
+        once: true,
+        offset: 100,
+        delay: 50
       });
       
       // Inicializar Flatpickr para las fechas (español por defecto)
